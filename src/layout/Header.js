@@ -5,15 +5,22 @@ import { ReactComponent as LOGO } from "../assets/images/header/logo.svg";
 import { ReactComponent as SEARCH } from "../assets/images/header/search.svg";
 import { ReactComponent as CART } from "../assets/images/header/cart.svg";
 import { ReactComponent as MENU } from "../assets/images/header/menu.svg";
+import { useHeaderColor } from "../context/HeaderContext";
 
 function Header() {
+  const { headerBackColor, headerTextColor } = useHeaderColor();
+
   return (
     <>
-      {/* <ParentContainer> */}
-      {/* <div className="container mx-auto h-11 bg-black"> */}
-      <div className="w-full h-11 bg-content px-5">
+      <div
+        className="w-full h-11 bg-content px-5"
+        style={{ backgroundColor: headerBackColor }}
+      >
         <div className="max-w-5xl mx-auto h-full">
-          <ul className="flex h-full md:justify-between text-white">
+          <ul
+            className="flex h-full md:justify-between text-white"
+            style={{ color: headerTextColor }}
+          >
             <li className="flex-grow md:flex-grow-0">
               <a href="#" className="inline-block px-2">
                 <LOGO />
@@ -121,8 +128,6 @@ function Header() {
           </ul>
         </div>
       </div>
-
-      {/* </ParentContainer> */}
     </>
   );
 }
