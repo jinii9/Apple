@@ -14,6 +14,7 @@ module.exports = {
         back: "#F5F5F7",
         content: "#1D1D1F",
         gray01: "6E6E73",
+        blue01: "#06c",
       },
     },
   },
