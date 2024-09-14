@@ -1,10 +1,15 @@
 import React, { useEffect } from "react";
 import Header from "./Header";
 import { Outlet, useLocation } from "react-router-dom";
-import { HeaderColorProvider, useHeaderColor } from "../context/HeaderContext";
+import {
+  HeaderMenuProvider,
+  useHeaderColor,
+  useHeaderMenu,
+} from "../context/HeaderContext";
 
 function MainLayout() {
   const { setHeaderColor } = useHeaderColor();
+  const { hoveredMenu } = useHeaderMenu();
   const location = useLocation();
 
   useEffect(() => {
@@ -24,7 +29,13 @@ function MainLayout() {
   return (
     <>
       <Header />
-      <Outlet />
+      <div
+        className={`relative ${
+          hoveredMenu ? "blur-sm" : ""
+        } transition-all duration-300 ease-in-out`}
+      >
+        <Outlet />
+      </div>
     </>
   );
 }

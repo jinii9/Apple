@@ -3,7 +3,7 @@ import { ReactComponent as LOGO } from "../assets/images/header/logo.svg";
 import { ReactComponent as SEARCH } from "../assets/images/header/search.svg";
 import { ReactComponent as CART } from "../assets/images/header/cart.svg";
 import { ReactComponent as MENU } from "../assets/images/header/menu.svg";
-import { useHeaderColor } from "../context/HeaderContext";
+import { useHeaderColor, useHeaderMenu } from "../context/HeaderContext";
 import { subMenus } from "../data/subMenu";
 import HeaderMenu from "../components/HeaderMenu.js";
 
@@ -11,9 +11,8 @@ const subMenuData = subMenus;
 
 function Header() {
   const { headerColor } = useHeaderColor();
-  const [hoveredMenu, setHoveredMenu] = useState("store");
+  const { hoveredMenu, setHoveredMenu } = useHeaderMenu();
 
-  console.log(headerColor);
   return (
     <>
       <div
@@ -34,14 +33,6 @@ function Header() {
             <li
               onMouseEnter={() => setHoveredMenu("store")}
               onMouseLeave={() => setHoveredMenu(null)}
-              // onMouseEnter={() => {
-              //   setHoveredMenu("store");
-              //   // toggleBlur(true);
-              // }}
-              // onMouseLeave={() => {
-              //   setHoveredMenu(null);
-              //   // toggleBlur(false);
-              // }}
             >
               <a
                 href="#"
@@ -50,7 +41,10 @@ function Header() {
                 스토어
               </a>
             </li>
-            <li>
+            <li
+              onMouseEnter={() => setHoveredMenu("mac")}
+              onMouseLeave={() => setHoveredMenu(null)}
+            >
               <a
                 href="#"
                 className="hidden md:flex items-center h-full text-xs px-2"
@@ -58,7 +52,10 @@ function Header() {
                 Mac
               </a>
             </li>
-            <li>
+            <li
+              onMouseEnter={() => setHoveredMenu("ipad")}
+              onMouseLeave={() => setHoveredMenu(null)}
+            >
               <a
                 href="#"
                 className="hidden md:flex items-center h-full text-xs px-2"
@@ -66,7 +63,10 @@ function Header() {
                 iPad
               </a>
             </li>
-            <li>
+            <li
+              onMouseEnter={() => setHoveredMenu("iphone")}
+              onMouseLeave={() => setHoveredMenu(null)}
+            >
               <a
                 href="#"
                 className="hidden md:flex items-center h-full text-xs px-2"
@@ -146,11 +146,7 @@ function Header() {
       </div>
       {/* 서브 메뉴 */}
 
-      {/* <HeaderMenu
-        hoveredMenu={hoveredMenu}
-        data={subMenuData}
-        headerBackColor={headerBackColor}
-      /> */}
+      <HeaderMenu hoveredMenu={hoveredMenu} data={subMenuData} />
     </>
   );
 }
