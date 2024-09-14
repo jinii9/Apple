@@ -6,6 +6,7 @@ import { ReactComponent as MENU } from "../assets/images/header/menu.svg";
 import { useHeaderColor, useHeaderMenu } from "../context/HeaderContext";
 import { subMenus } from "../data/subMenu";
 import HeaderMenu from "../components/HeaderMenu.js";
+import { Link } from "react-router-dom";
 
 const subMenuData = subMenus;
 
@@ -25,10 +26,9 @@ function Header() {
             style={{ color: headerColor.textColor }}
           >
             <li className="flex-grow md:flex-grow-0">
-              <a href="#" className="inline-block px-2">
-                {/* <LOGO fill={headerColor.textColor} /> */}
+              <Link to="/" className="inline-block px-2">
                 <LOGO style={{ fill: headerColor.textColor }} />
-              </a>
+              </Link>
             </li>
             <li
               onMouseEnter={() => setHoveredMenu("store")}
@@ -74,7 +74,10 @@ function Header() {
                 iPhone
               </a>
             </li>
-            <li>
+            <li
+              onMouseEnter={() => setHoveredMenu("watch")}
+              onMouseLeave={() => setHoveredMenu(null)}
+            >
               <a
                 href="#"
                 className="hidden md:flex items-center h-full text-xs px-2"
@@ -82,7 +85,10 @@ function Header() {
                 Watch
               </a>
             </li>
-            <li>
+            <li
+              onMouseEnter={() => setHoveredMenu("airpods")}
+              onMouseLeave={() => setHoveredMenu(null)}
+            >
               <a
                 href="#"
                 className="hidden md:flex items-center h-full text-xs px-2"
@@ -90,7 +96,10 @@ function Header() {
                 AirPods
               </a>
             </li>
-            <li>
+            <li
+              onMouseEnter={() => setHoveredMenu("tvHome")}
+              onMouseLeave={() => setHoveredMenu(null)}
+            >
               <a
                 href="#"
                 className="hidden md:flex items-center h-full text-xs px-2"
@@ -98,8 +107,10 @@ function Header() {
                 TV 및 홈
               </a>
             </li>
-
-            <li>
+            <li
+              onMouseEnter={() => setHoveredMenu("entertain")}
+              onMouseLeave={() => setHoveredMenu(null)}
+            >
               <a
                 href="#"
                 className="hidden md:flex items-center h-full text-xs px-2"
@@ -107,7 +118,10 @@ function Header() {
                 엔터테인먼트
               </a>
             </li>
-            <li>
+            <li
+              onMouseEnter={() => setHoveredMenu("accessories")}
+              onMouseLeave={() => setHoveredMenu(null)}
+            >
               <a
                 href="#"
                 className="hidden md:flex items-center h-full text-xs px-2"
@@ -115,7 +129,10 @@ function Header() {
                 액세서리
               </a>
             </li>
-            <li>
+            <li
+              onMouseEnter={() => setHoveredMenu("support")}
+              onMouseLeave={() => setHoveredMenu(null)}
+            >
               <a
                 href="#"
                 className="hidden md:flex items-center h-full text-xs px-2"

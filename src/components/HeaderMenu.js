@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useHeaderColor } from "../context/HeaderContext";
+import { extractOpacity } from "../utils/colorUtils";
 
 function HeaderMenu({ hoveredMenu, data }) {
   const { headerColor } = useHeaderColor();
+  const menuBackColor = extractOpacity(headerColor.backColor);
 
   const menuItems = data[hoveredMenu] || [];
 
@@ -10,7 +12,7 @@ function HeaderMenu({ hoveredMenu, data }) {
     <>
       <div
         className="absolute z-10 w-full py-14"
-        style={{ backgroundColor: headerColor.backColor }}
+        style={{ backgroundColor: menuBackColor }}
       >
         <div className="menuWrap flex gap-12 max-w-5xl mx-auto pt-11">
           {menuItems.length > 0 &&
