@@ -1,26 +1,25 @@
 import React, { createContext, useContext, useState } from "react";
 
+// header 색상
 const HeaderColorContext = createContext();
 
 export function HeaderColorProvider({ children }) {
-  const [headerBackColor, setHeaderBackColor] = useState("#ffffff");
-  const [headerTextColor, setHeaderTextColor] = useState("#000000");
+  const [headerColor, setHeaderColor] = useState({
+    backColor: "#ffffff",
+    textColor: "#000000",
+  });
 
   return (
     <HeaderColorContext.Provider
       value={{
-        headerBackColor,
-        setHeaderBackColor,
-        headerTextColor,
-        setHeaderTextColor,
+        headerColor,
+        setHeaderColor,
       }}
     >
       {children}
     </HeaderColorContext.Provider>
   );
 }
-
-// 커스텀 훅
 export function useHeaderColor() {
   return useContext(HeaderColorContext);
 }

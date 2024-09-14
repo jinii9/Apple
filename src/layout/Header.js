@@ -1,32 +1,47 @@
-import React from "react";
-import ParentContainer from "./ParentContainer";
-// import { ReactComponent as Heart } from "../../assets/images/Icons/Heart.svg";
+import React, { useEffect, useState } from "react";
 import { ReactComponent as LOGO } from "../assets/images/header/logo.svg";
 import { ReactComponent as SEARCH } from "../assets/images/header/search.svg";
 import { ReactComponent as CART } from "../assets/images/header/cart.svg";
 import { ReactComponent as MENU } from "../assets/images/header/menu.svg";
 import { useHeaderColor } from "../context/HeaderContext";
+import { subMenus } from "../data/subMenu";
+import HeaderMenu from "../components/HeaderMenu.js";
+
+const subMenuData = subMenus;
 
 function Header() {
-  const { headerBackColor, headerTextColor } = useHeaderColor();
+  const { headerColor } = useHeaderColor();
+  const [hoveredMenu, setHoveredMenu] = useState("store");
 
+  console.log(headerColor);
   return (
     <>
       <div
-        className="w-full h-11 bg-content px-5"
-        style={{ backgroundColor: headerBackColor }}
+        className="fixed top-0 z-50 w-full h-11 px-5"
+        style={{ backgroundColor: headerColor.backColor }}
       >
         <div className="max-w-5xl mx-auto h-full">
           <ul
-            className="flex h-full md:justify-between text-white"
-            style={{ color: headerTextColor }}
+            className="flex h-full md:justify-between"
+            style={{ color: headerColor.textColor }}
           >
             <li className="flex-grow md:flex-grow-0">
               <a href="#" className="inline-block px-2">
                 <LOGO />
               </a>
             </li>
-            <li>
+            <li
+              onMouseEnter={() => setHoveredMenu("store")}
+              onMouseLeave={() => setHoveredMenu(null)}
+              // onMouseEnter={() => {
+              //   setHoveredMenu("store");
+              //   // toggleBlur(true);
+              // }}
+              // onMouseLeave={() => {
+              //   setHoveredMenu(null);
+              //   // toggleBlur(false);
+              // }}
+            >
               <a
                 href="#"
                 className="hidden md:flex items-center h-full text-xs px-2"
@@ -128,6 +143,13 @@ function Header() {
           </ul>
         </div>
       </div>
+      {/* 서브 메뉴 */}
+
+      {/* <HeaderMenu
+        hoveredMenu={hoveredMenu}
+        data={subMenuData}
+        headerBackColor={headerBackColor}
+      /> */}
     </>
   );
 }
