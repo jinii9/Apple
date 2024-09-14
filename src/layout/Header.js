@@ -27,7 +27,8 @@ function Header() {
           >
             <li className="flex-grow md:flex-grow-0">
               <a href="#" className="inline-block px-2">
-                <LOGO />
+                {/* <LOGO fill={headerColor.textColor} /> */}
+                <LOGO style={{ fill: headerColor.textColor }} />
               </a>
             </li>
             <li
@@ -124,12 +125,12 @@ function Header() {
             </li>
             <li>
               <a href="#" className="inline-block px-4 md:px-2">
-                <SEARCH fill="#fff" />
+                <SEARCH fill={headerColor.textColor} />
               </a>
             </li>
             <li>
               <a href="#" className="inline-block px-4 md:px-2">
-                <CART fill="#fff" />
+                <CART fill={headerColor.textColor} />
               </a>
             </li>
             <li className="md:hidden">
@@ -137,7 +138,7 @@ function Header() {
                 href="#"
                 className="inline-block px-4 md:px-2 flex items-center h-full"
               >
-                <MENU fill="#fff" />
+                <MENU fill={headerColor.textColor} />
               </a>
             </li>
           </ul>
