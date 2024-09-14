@@ -28,7 +28,8 @@ export function useHeaderColor() {
 const HeaderMenuContext = createContext();
 
 export function HeaderMenuProvider({ children }) {
-  const [hoveredMenu, setHoveredMenu] = useState(null);
+  // const [hoveredMenu, setHoveredMenu] = useState(null);
+  const [hoveredMenu, setHoveredMenu] = useState("store");
 
   return (
     <HeaderMenuContext.Provider

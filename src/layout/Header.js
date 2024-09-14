@@ -145,8 +145,9 @@ function Header() {
         </div>
       </div>
       {/* 서브 메뉴 */}
-
-      <HeaderMenu hoveredMenu={hoveredMenu} data={subMenuData} />
+      {hoveredMenu !== null && (
+        <HeaderMenu hoveredMenu={hoveredMenu} data={subMenuData} />
+      )}
     </>
   );
 }
