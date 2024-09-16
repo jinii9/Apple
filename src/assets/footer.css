@@ -1,0 +1,9 @@
+.icon {
+  display: inline-block;
+  transition: transform 0.5s ease;
+  transform: scaleX(1.5); 
+}
+
+.icon.open {
+  transform: scaleX(1.5) scaleY(-1);
+}
