@@ -12,7 +12,7 @@ function HeaderMenu({ hoveredMenu, data }) {
   return (
     <>
       <div
-        className="menuWrap absolute z-10 w-full py-14"
+        className="menuWrap fixed z-100 w-full py-14"
         style={{ backgroundColor: menuBackColor }}
       >
         <div className="flex gap-12 max-w-5xl mx-auto pt-11">

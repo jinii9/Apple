@@ -1,0 +1,50 @@
+/* TODO: sceion 0 */
+.scroll-section {
+    position: relative;
+    /* padding-top: 50vh; */
+    padding-top: 55vh;
+
+    border: 3px solid red;
+}
+
+#scroll-section-0 h1 {
+    position: relative;
+    top: -10vh;
+    z-index: 5;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.main-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* top: 35vh; */
+    top: 50vh;
+
+    margin: 5px 0;
+    height: 3em;
+    font-size: 2.5rem;
+    opacity: 0;
+}
+
+.main-message p {
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+.sticky-elem {
+    display: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+}
+
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem {
+    display: block;
+}
