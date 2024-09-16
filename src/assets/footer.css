@@ -7,3 +7,12 @@
 .icon.open {
   transform: scaleX(1.5) scaleY(-1);
 }
+
+footerlinks {
+    background-color: var(--footer-pipe-color);
+    content: "";
+    height: 10px;
+    margin: 3px 0;
+    position: absolute;
+    width: 1px
+}

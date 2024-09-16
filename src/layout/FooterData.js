@@ -2,22 +2,22 @@ const ShopAndLearn = [
     {
         id: 1,
         name: "Store",
-        link: "https://www.apple.com/in/shop/goto/store",
+        link: "https://www.apple.com/kr/store",
     },
     {
         id: 2,
         name: "Mac",
-        link: "https://www.apple.com/in/mac/",
+        link: "https://www.apple.com/kr/mac/",
     },
     {
         id: 3,
         name: "iPad",
-        link: "https://www.apple.com/in/ipad/",
+        link: "https://www.apple.com/kr/ipad/",
     },
     {
         id: 4,
         name: "iPhone",
-        link: "https://www.apple.com/in/watch/",
+        link: "https://www.apple.com/kr/iphone/",
     },
 ];
 
@@ -57,56 +57,73 @@ const Services = [
 const AppleStore = [
     {
         id: 1,
-        name: "Ways to Buy",
-        link: "https://www.apple.com/in/apple-music/",
+        name: "매장 찾기",
+        link: "https://www.apple.com/kr/retail/",
     },
     {
         id: 2,
-        name: "Apple Trade In",
-        link: "https://www.apple.com/in/apple-tv-plus/",
+        name: "Genius Bar",
+        link: "https://www.apple.com/kr/retail/geniusbar/",
     },
     {
         id: 3,
-        name: "Recycling Programme",
-        link: "https://www.apple.com/in/apple-arcade/",
+        name: "Today at Apple",
+        link: "https://www.apple.com/kr/today/",
     },
     {
         id: 4,
-        name: "Order Status",
-        link: "https://www.apple.com/in/watch/",
+        name: "Apple 캠프",
+        link: "https://www.apple.com/kr/today/camp/",
     },
     {
         id: 5,
-        name: "Shopping Help",
-        link: "https://www.apple.com/in/watch/",
+        name: "Apple Store 앱",
+        link: "https://itunes.apple.com/kr/app/apple-store/id375380948?mt=8",
     },
+    {
+        id: 6,
+        name: "인증 리퍼비쉬 제품",
+        link: "https://itunes.apple.com/kr/app/apple-store/id375380948?mt=8",
+    },
+    {
+        id: 7,
+        name: "Apple Trade In",
+        link: "https://itunes.apple.com/kr/app/apple-store/id375380948?mt=8",
+    },
+    {
+        id: 8,
+        name: "할부 방식",
+        link: "https://itunes.apple.com/kr/app/apple-store/id375380948?mt=8",
+    },
+    
+
 ];
 
 const FooterLinks = [
     {
         id: 1,
         name: "개인정보 처리방침",
-        link: "https://www.apple.com/in/legal/privacy/",
+        link: "https://www.apple.com/kr/privacy/privacy-policy",
     },
     {
         id: 2,
         name: "약관",
-        link: "https://www.apple.com/in/apple-tv-plus/",
+        link: "https://www.apple.com/kr/legal/internet-services/terms/site.html",
     },
     {
         id: 3,
         name: "판매 및 환불",
-        link: "https://www.apple.com/in/apple-arcade/",
+        link: "https://www.apple.com/kr/shop/open/salespolicies",
     },
     {
         id: 4,
         name: "법적 고지",
-        link: "https://www.apple.com/in/watch/",
+        link: "https://www.apple.com/kr/legal",
     },
     {
         id: 5,
         name: "사이트 맵",
-        link: "https://www.apple.com/in/watch/",
+        link: "https://www.apple.com/kr/shop/browse/sitemap",
     },
 ];
 
