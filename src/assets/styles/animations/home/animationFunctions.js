@@ -1,4 +1,4 @@
-/** // TODO 각 스크롤 섹션 높이 세팅 */
+/** // TODO setLayout : 각 스크롤 섹션 높이 세팅 */
 export function setLayout(sceneInfo) {
   for (let i = 0; i < sceneInfo.length; i++) {
     if (sceneInfo[i].type === "sticky") {
@@ -25,13 +25,34 @@ export function setLayout(sceneInfo) {
   }
 
   document.body.setAttribute("id", `show-scene-${currentScene}`);
+
+  // canvas 크기 맞추기
+  const heightRatio = window.innerHeight / 1080;
+  sceneInfo[1].objs.canvas.style.transform = `scale(${heightRatio})`;
+  sceneInfo[1].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
+
   return { sceneInfo, currentScene };
 }
 
-/** // TODO currentScene 추적 */
+/** // TODO setCanvasImages : 캔버스 이미지 세팅 */
+export function setCanvasImages(sceneInfo) {
+  let imgElem;
+  for (let i = 0; i < sceneInfo[1].values.videoImageCount; i++) {
+    imgElem = new Image();
+    // imgElem.src = `../../../videos/home/001/${1 + i}.jpg`;
+    imgElem.src = `videos/home/001/${1 + i}.jpg`;
+
+    sceneInfo[1].objs.videoImages.push(imgElem);
+  }
+
+  return sceneInfo;
+}
+
+/** // TODO scrollLoop : currentScene 추적 */
 export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
   prevScrollHeight = 0;
   let enterNewScene = false;
+
   console.log("에러 확인", currentScene, sceneInfo[currentScene].scrollHeight);
 
   for (let i = 0; i < currentScene; i++) {
@@ -57,7 +78,7 @@ export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
   return { currentScene, prevScrollHeight };
 }
 
-/** // TODO 해당 씬의 현재 스크롤 비율 */
+/** // TODO calcValues : 해당 씬의 현재 스크롤 비율 */
 export function calcValues(values, currentYOffset, sceneInfo, currentScene) {
   let rv;
   const scrollHeight = sceneInfo[currentScene].scrollHeight;
@@ -97,10 +118,11 @@ export function playAnimation(
   const scrollHeight = sceneInfo[currentScene].scrollHeight;
   const scrollRatio = currentYOffset / scrollHeight;
 
-  console.log("current", currentScene, currentYOffset);
+  console.log("current", currentScene, currentYOffset, sceneInfo[currentScene]);
 
   switch (currentScene) {
     case 0:
+      // TODO text
       if (scrollRatio <= 0.22) {
         // in
         objs.messageA.style.opacity = calcValues(
@@ -194,9 +216,52 @@ export function playAnimation(
       break;
 
     case 1:
+      // TODO video
+      let sequence = Math.round(
+        calcValues(
+          values.imageSequence,
+          currentYOffset,
+          sceneInfo,
+          currentScene
+        )
+      );
+
+      // objs.context.drawImage(objs.videoImages[sequence], 0, 0);
+
+      // // 캔버스에 이미지 그리기
+      const img = objs.videoImages[sequence];
+      const context = objs.context;
+
+      // 캔버스 크기와 이미지 비율 계산
+      const canvasWidth = objs.canvas.width;
+      const canvasHeight = objs.canvas.height;
+      const imgWidth = img.width;
+      const imgHeight = img.height;
+
+      // 이미지 비율과 캔버스 비율을 비교하여 크기 조정
+      let drawWidth, drawHeight;
+
+      if (canvasWidth / canvasHeight > imgWidth / imgHeight) {
+        // 캔버스가 더 넓은 비율일 때
+        drawHeight = canvasHeight;
+        drawWidth = (imgWidth / imgHeight) * drawHeight;
+      } else {
+        // 이미지가 더 넓은 비율일 때
+        drawWidth = canvasWidth;
+        drawHeight = (imgHeight / imgWidth) * drawWidth;
+      }
+
+      const xOffset = (canvasWidth - drawWidth) / 2;
+      const yOffset = (canvasHeight - drawHeight) / 2;
+
+      context.clearRect(0, 0, canvasWidth, canvasHeight); // 캔버스 초기화
+      context.drawImage(img, xOffset, yOffset, drawWidth, drawHeight);
+      break;
+
+    case 2:
       console.log("1 play");
       break;
-    case 2:
+    case 3:
       console.log("2 play");
       break;
 

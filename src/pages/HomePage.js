@@ -15,7 +15,7 @@ function HomePage() {
 
   return (
     <div>
-      {/* // TODO section 0: 글자 스크롤 + 맥북 비디오 */}
+      {/* // TODO section 1: 글자 스크롤 + 맥북 비디오 */}
       <section className="scroll-section" id="scroll-section-0">
         <h1>MacBook Air</h1>
         <div className="sticky-elem main-message a">
@@ -28,204 +28,33 @@ function HomePage() {
           <p>강력함이 한가득.</p>
         </div>
       </section>
-      {/* // TODO section 1: 글자 스크롤 + 맥북 비디오 */}
+
+      {/* //TODO section 0: 비디오 */}
       <section className="scroll-section" id="scroll-section-1">
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni maxime
-          tempora rem tempore, expedita nisi, reprehenderit deserunt sit
-          perspiciatis, illum magnam omnis saepe rerum voluptatum? Suscipit
-          eaque quidem quaerat quae accusantium laborum dignissimos placeat!
-          Rerum ex, quas ipsum vero quod aspernatur voluptate officia labore
-          asperiores, quo animi perspiciatis error porro ea, repudiandae
-          consequuntur eum vitae minima voluptatibus! Sint, consequatur minima
-          deserunt adipisci repudiandae fuga laborum quo corrupti neque! Alias
-          non temporibus harum ex quibusdam numquam nulla voluptate ab magni,
-          esse officia facilis quam repudiandae accusantium incidunt architecto
-          omnis nesciunt quidem voluptatibus, unde ratione obcaecati sequi
-          laborum. Voluptatum obcaecati veniam deleniti. Lorem ipsum dolor sit,
-          amet consectetur adipisicing elit. Magni maxime tempora rem tempore,
-          expedita nisi, reprehenderit deserunt sit perspiciatis, illum magnam
-          omnis saepe rerum voluptatum? Suscipit eaque quidem quaerat quae
-          accusantium laborum dignissimos placeat! Rerum ex, quas ipsum vero
-          quod aspernatur voluptate officia labore asperiores, quo animi
-          perspiciatis error porro ea, repudiandae consequuntur eum vitae minima
-          voluptatibus! Sint, consequatur minima deserunt adipisci repudiandae
-          fuga laborum quo corrupti neque! Alias non temporibus harum ex
-          quibusdam numquam nulla voluptate ab magni, esse officia facilis quam
-          repudiandae accusantium incidunt architecto omnis nesciunt quidem
-          voluptatibus, unde ratione obcaecati sequi laborum. Voluptatum
-          obcaecati veniam deleniti. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Magni maxime tempora rem tempore, expedita nisi,
-          reprehenderit deserunt sit perspiciatis, illum magnam omnis saepe
-          rerum voluptatum? Suscipit eaque quidem quaerat quae accusantium
-          laborum dignissimos placeat! Rerum ex, quas ipsum vero quod aspernatur
-          voluptate officia labore asperiores, quo animi perspiciatis error
-          porro ea, repudiandae consequuntur eum vitae minima voluptatibus!
-          Sint, consequatur minima deserunt adipisci repudiandae fuga laborum
-          quo corrupti neque! Alias non temporibus harum ex quibusdam numquam
-          nulla voluptate ab magni, esse officia facilis quam repudiandae
-          accusantium incidunt architecto omnis nesciunt quidem voluptatibus,
-          unde ratione obcaecati sequi laborum. Voluptatum obcaecati veniam
-          deleniti. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Magni maxime tempora rem tempore, expedita nisi, reprehenderit
-          deserunt sit perspiciatis, illum magnam omnis saepe rerum voluptatum?
-          Suscipit eaque quidem quaerat quae accusantium laborum dignissimos
-          placeat! Rerum ex, quas ipsum vero quod aspernatur voluptate officia
-          labore asperiores, quo animi perspiciatis error porro ea, repudiandae
-          consequuntur eum vitae minima voluptatibus! Sint, consequatur minima
-          deserunt adipisci repudiandae fuga laborum quo corrupti neque! Alias
-          non temporibus harum ex quibusdam numquam nulla voluptate ab magni,
-          esse officia facilis quam repudiandae accusantium incidunt architecto
-          omnis nesciunt quidem voluptatibus, unde ratione obcaecati sequi
-          laborum. Voluptatum obcaecati veniam deleniti. Lorem ipsum dolor sit,
-          amet consectetur adipisicing elit. Magni maxime tempora rem tempore,
-          expedita nisi, reprehenderit deserunt sit perspiciatis, illum magnam
-          omnis saepe rerum voluptatum? Suscipit eaque quidem quaerat quae
-          accusantium laborum dignissimos placeat! Rerum ex, quas ipsum vero
-          quod aspernatur voluptate officia labore asperiores, quo animi
-          perspiciatis error porro ea, repudiandae consequuntur eum vitae minima
-          voluptatibus! Sint, consequatur minima deserunt adipisci repudiandae
-          fuga laborum quo corrupti neque! Alias non temporibus harum ex
-          quibusdam numquam nulla voluptate ab magni, esse officia facilis quam
-          repudiandae accusantium incidunt architecto omnis nesciunt quidem
-          voluptatibus, unde ratione obcaecati sequi laborum. Voluptatum
-          obcaecati veniam deleniti. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Magni maxime tempora rem tempore, expedita nisi,
-          reprehenderit deserunt sit perspiciatis, illum magnam omnis saepe
-          rerum voluptatum? Suscipit eaque quidem quaerat quae accusantium
-          laborum dignissimos placeat! Rerum ex, quas ipsum vero quod aspernatur
-          voluptate officia labore asperiores, quo animi perspiciatis error
-          porro ea, repudiandae consequuntur eum vitae minima voluptatibus!
-          Sint, consequatur minima deserunt adipisci repudiandae fuga laborum
-          quo corrupti neque! Alias non temporibus harum ex quibusdam numquam
-          nulla voluptate ab magni, esse officia facilis quam repudiandae
-          accusantium incidunt architecto omnis nesciunt quidem voluptatibus,
-          unde ratione obcaecati sequi laborum. Voluptatum obcaecati veniam
-          deleniti. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Magni maxime tempora rem tempore, expedita nisi, reprehenderit
-          deserunt sit perspiciatis, illum magnam omnis saepe rerum voluptatum?
-          Suscipit eaque quidem quaerat quae accusantium laborum dignissimos
-          placeat! Rerum ex, quas ipsum vero quod aspernatur voluptate officia
-          labore asperiores, quo animi perspiciatis error porro ea, repudiandae
-          consequuntur eum vitae minima voluptatibus! Sint, consequatur minima
-          deserunt adipisci repudiandae fuga laborum quo corrupti neque! Alias
-          non temporibus harum ex quibusdam numquam nulla voluptate ab magni,
-          esse officia facilis quam repudiandae accusantium incidunt architecto
-          omnis nesciunt quidem voluptatibus, unde ratione obcaecati sequi
-          laborum. Voluptatum obcaecati veniam deleniti. Lorem ipsum dolor sit,
-          amet consectetur adipisicing elit. Magni maxime tempora rem tempore,
-          expedita nisi, reprehenderit deserunt sit perspiciatis, illum magnam
-          omnis saepe rerum voluptatum? Suscipit eaque quidem quaerat quae
-          accusantium laborum dignissimos placeat! Rerum ex, quas ipsum vero
-          quod aspernatur voluptate officia labore asperiores, quo animi
-          perspiciatis error porro ea, repudiandae consequuntur eum vitae minima
-          voluptatibus! Sint, consequatur minima deserunt adipisci repudiandae
-          fuga laborum quo corrupti neque! Alias non temporibus harum ex
-          quibusdam numquam nulla voluptate ab magni, esse officia facilis quam
-          repudiandae accusantium incidunt architecto omnis nesciunt quidem
-          voluptatibus, unde ratione obcaecati sequi laborum. Voluptatum
-          obcaecati veniam deleniti.
-        </p>
+        <div className="sticky-elem sticky-elem-canvas">
+          <canvas id="video-canvas-0" width="1920" height="1080"></canvas>
+        </div>
       </section>
+
       {/* // TODO section 1: 글자 스크롤 + 맥북 비디오 */}
-      <section className="scroll-section" id="scroll-section-2">
+      {/* <section className="scroll-section" id="scroll-section-2">
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni maxime
-          tempora rem tempore, expedita nisi, reprehenderit deserunt sit
-          perspiciatis, illum magnam omnis saepe rerum voluptatum? Suscipit
-          eaque quidem quaerat quae accusantium laborum dignissimos placeat!
-          Rerum ex, quas ipsum vero quod aspernatur voluptate officia labore
-          asperiores, quo animi perspiciatis error porro ea, repudiandae
-          consequuntur eum vitae minima voluptatibus! Sint, consequatur minima
-          deserunt adipisci repudiandae fuga laborum quo corrupti neque! Alias
-          non temporibus harum ex quibusdam numquam nulla voluptate ab magni,
-          esse officia facilis quam repudiandae accusantium incidunt architecto
-          omnis nesciunt quidem voluptatibus, unde ratione obcaecati sequi
-          laborum. Voluptatum obcaecati veniam deleniti. Lorem ipsum dolor sit,
-          amet consectetur adipisicing elit. Magni maxime tempora rem tempore,
-          expedita nisi, reprehenderit deserunt sit perspiciatis, illum magnam
-          omnis saepe rerum voluptatum? Suscipit eaque quidem quaerat quae
-          accusantium laborum dignissimos placeat! Rerum ex, quas ipsum vero
-          quod aspernatur voluptate officia labore asperiores, quo animi
-          perspiciatis error porro ea, repudiandae consequuntur eum vitae minima
-          voluptatibus! Sint, consequatur minima deserunt adipisci repudiandae
-          fuga laborum quo corrupti neque! Alias non temporibus harum ex
-          quibusdam numquam nulla voluptate ab magni, esse officia facilis quam
-          repudiandae accusantium incidunt architecto omnis nesciunt quidem
-          voluptatibus, unde ratione obcaecati sequi laborum. Voluptatum
-          obcaecati veniam deleniti. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Magni maxime tempora rem tempore, expedita nisi,
-          reprehenderit deserunt sit perspiciatis, illum magnam omnis saepe
-          rerum voluptatum? Suscipit eaque quidem quaerat quae accusantium
-          laborum dignissimos placeat! Rerum ex, quas ipsum vero quod aspernatur
-          voluptate officia labore asperiores, quo animi perspiciatis error
-          porro ea, repudiandae consequuntur eum vitae minima voluptatibus!
-          Sint, consequatur minima deserunt adipisci repudiandae fuga laborum
-          quo corrupti neque! Alias non temporibus harum ex quibusdam numquam
-          nulla voluptate ab magni, esse officia facilis quam repudiandae
-          accusantium incidunt architecto omnis nesciunt quidem voluptatibus,
-          unde ratione obcaecati sequi laborum. Voluptatum obcaecati veniam
-          deleniti. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Magni maxime tempora rem tempore, expedita nisi, reprehenderit
-          deserunt sit perspiciatis, illum magnam omnis saepe rerum voluptatum?
-          Suscipit eaque quidem quaerat quae accusantium laborum dignissimos
-          placeat! Rerum ex, quas ipsum vero quod aspernatur voluptate officia
-          labore asperiores, quo animi perspiciatis error porro ea, repudiandae
-          consequuntur eum vitae minima voluptatibus! Sint, consequatur minima
-          deserunt adipisci repudiandae fuga laborum quo corrupti neque! Alias
-          non temporibus harum ex quibusdam numquam nulla voluptate ab magni,
-          esse officia facilis quam repudiandae accusantium incidunt architecto
-          omnis nesciunt quidem voluptatibus, unde ratione obcaecati sequi
-          laborum. Voluptatum obcaecati veniam deleniti. Lorem ipsum dolor sit,
-          amet consectetur adipisicing elit. Magni maxime tempora rem tempore,
-          expedita nisi, reprehenderit deserunt sit perspiciatis, illum magnam
-          omnis saepe rerum voluptatum? Suscipit eaque quidem quaerat quae
-          accusantium laborum dignissimos placeat! Rerum ex, quas ipsum vero
-          quod aspernatur voluptate officia labore asperiores, quo animi
-          perspiciatis error porro ea, repudiandae consequuntur eum vitae minima
-          voluptatibus! Sint, consequatur minima deserunt adipisci repudiandae
-          fuga laborum quo corrupti neque! Alias non temporibus harum ex
-          quibusdam numquam nulla voluptate ab magni, esse officia facilis quam
-          repudiandae accusantium incidunt architecto omnis nesciunt quidem
-          voluptatibus, unde ratione obcaecati sequi laborum. Voluptatum
-          obcaecati veniam deleniti. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Magni maxime tempora rem tempore, expedita nisi,
-          reprehenderit deserunt sit perspiciatis, illum magnam omnis saepe
-          rerum voluptatum? Suscipit eaque quidem quaerat quae accusantium
-          laborum dignissimos placeat! Rerum ex, quas ipsum vero quod aspernatur
-          voluptate officia labore asperiores, quo animi perspiciatis error
-          porro ea, repudiandae consequuntur eum vitae minima voluptatibus!
-          Sint, consequatur minima deserunt adipisci repudiandae fuga laborum
-          quo corrupti neque! Alias non temporibus harum ex quibusdam numquam
-          nulla voluptate ab magni, esse officia facilis quam repudiandae
-          accusantium incidunt architecto omnis nesciunt quidem voluptatibus,
-          unde ratione obcaecati sequi laborum. Voluptatum obcaecati veniam
-          deleniti. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Magni maxime tempora rem tempore, expedita nisi, reprehenderit
-          deserunt sit perspiciatis, illum magnam omnis saepe rerum voluptatum?
-          Suscipit eaque quidem quaerat quae accusantium laborum dignissimos
-          placeat! Rerum ex, quas ipsum vero quod aspernatur voluptate officia
-          labore asperiores, quo animi perspiciatis error porro ea, repudiandae
-          consequuntur eum vitae minima voluptatibus! Sint, consequatur minima
-          deserunt adipisci repudiandae fuga laborum quo corrupti neque! Alias
-          non temporibus harum ex quibusdam numquam nulla voluptate ab magni,
-          esse officia facilis quam repudiandae accusantium incidunt architecto
-          omnis nesciunt quidem voluptatibus, unde ratione obcaecati sequi
-          laborum. Voluptatum obcaecati veniam deleniti. Lorem ipsum dolor sit,
-          amet consectetur adipisicing elit. Magni maxime tempora rem tempore,
-          expedita nisi, reprehenderit deserunt sit perspiciatis, illum magnam
-          omnis saepe rerum voluptatum? Suscipit eaque quidem quaerat quae
-          accusantium laborum dignissimos placeat! Rerum ex, quas ipsum vero
-          quod aspernatur voluptate officia labore asperiores, quo animi
-          perspiciatis error porro ea, repudiandae consequuntur eum vitae minima
-          voluptatibus! Sint, consequatur minima deserunt adipisci repudiandae
-          fuga laborum quo corrupti neque! Alias non temporibus harum ex
-          quibusdam numquam nulla voluptate ab magni, esse officia facilis quam
-          repudiandae accusantium incidunt architecto omnis nesciunt quidem
-          voluptatibus, unde ratione obcaecati sequi laborum. Voluptatum
-          obcaecati veniam deleniti.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
+          sunt placeat quibusdam ipsum. Repudiandae vel ea dignissimos
+          recusandae eligendi. Omnis atque enim autem id placeat neque dolorem
+          impedit exercitationem. Tenetur debitis blanditiis iusto ut laudantium
+          facilis culpa adipisci nisi dolores nobis, necessitatibus itaque
+          ducimus velit ullam, ab a ad rerum, cumque distinctio deserunt error?
+          Facilis harum eius, ratione quibusdam assumenda exercitationem culpa
+          quasi voluptatibus fuga, praesentium illo, rem numquam! Impedit nisi
+          aperiam pariatur cumque rerum! Fuga quo molestiae, quibusdam quisquam
+          quos dolore laboriosam repellendus nulla blanditiis quis
+          necessitatibus facilis sapiente quas eveniet quasi modi! Doloribus
+          optio fugit exercitationem tempora aliquam.
         </p>
-      </section>
+      </section> */}
+      {/* // TODO section 1: 글자 스크롤 + 맥북 비디오 */}
+      {/* <section className="scroll-section" id="scroll-section-2"></section> */}
     </div>
   );
 }

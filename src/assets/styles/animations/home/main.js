@@ -1,5 +1,5 @@
-import { setLayout, scrollLoop } from "./animationFunctions";
-
+import { type } from "@testing-library/user-event/dist/type";
+import { setLayout, scrollLoop, setCanvasImages } from "./animationFunctions";
 export const initScrollAnimation = () => {
   let yOffset = 0;
   let prevScrollHeight = 0;
@@ -9,15 +9,19 @@ export const initScrollAnimation = () => {
   let sceneInfo = [
     {
       type: "sticky",
-      heightNum: 5,
+      heightNum: 10,
       scrollHeight: 0,
       objs: {
+        // text
         container: document.querySelector("#scroll-section-0"),
         messageA: document.querySelector("#scroll-section-0 .main-message.a"),
         messageB: document.querySelector("#scroll-section-0 .main-message.b"),
         messageC: document.querySelector("#scroll-section-0 .main-message.c"),
       },
       values: {
+        videoImageCount: 194,
+        imageSequence: [0, 193],
+        canvas_opacity: [1, 0, { start: 0.9, end: 1 }],
         // in
         messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
         messageB_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
@@ -36,27 +40,49 @@ export const initScrollAnimation = () => {
       },
     },
     {
-      type: "normal",
-      heightNum: 8,
+      type: "sticky",
+      heightNum: 10,
       scrollHeight: 0,
       objs: {
-        // html 객체 모음
+        // video
         container: document.querySelector("#scroll-section-1"),
+        canvas: document.querySelector("#video-canvas-0"),
+        context: document.querySelector("#video-canvas-0").getContext("2d"),
+        videoImages: [],
+      },
+      values: {
+        videoImageCount: 194,
+        imageSequence: [0, 193],
+        canvas_opacity: [1, 0, { start: 0.9, end: 1 }],
       },
     },
-    {
-      type: "normal",
-      heightNum: 8,
-      scrollHeight: 0,
-      objs: {
-        // html 객체 모음
-        container: document.querySelector("#scroll-section-2"),
-      },
-    },
+
+    // {
+    //   type: "sticky",
+    //   heightNum: 20,
+    //   scrollHeight: 0,
+    //   objs: {
+    //     // html 객체 모음
+    //     container: document.querySelector("#scroll-section-1"),
+    //   },
+    // },
+
+    // {
+    //   type: "normal",
+    //   heightNum: 8,
+    //   scrollHeight: 0,
+    //   objs: {
+    //     // html 객체 모음
+    //     container: document.querySelector("#scroll-section-2"),
+    //   },
+    // },
   ];
+
+  sceneInfo = setCanvasImages(sceneInfo);
 
   window.addEventListener("load", () => {
     ({ sceneInfo, currentScene } = setLayout(sceneInfo));
+    sceneInfo[1].objs.context.drawImage(sceneInfo[1].objs.videoImages[0], 0, 0);
   });
 
   window.addEventListener("resize", () => {
@@ -65,6 +91,7 @@ export const initScrollAnimation = () => {
 
   window.addEventListener("scroll", () => {
     yOffset = window.pageYOffset;
+
     ({ currentScene, prevScrollHeight } = scrollLoop(
       sceneInfo,
       currentScene,
@@ -72,4 +99,6 @@ export const initScrollAnimation = () => {
       yOffset
     ));
   });
+
+  sceneInfo = setCanvasImages(sceneInfo);
 };

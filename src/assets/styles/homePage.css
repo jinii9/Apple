@@ -48,3 +48,21 @@
 #show-scene-3 #scroll-section-3 .sticky-elem {
     display: block;
 }
+
+
+.sticky-elem-canvas {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* 100vh도 괜찮다. */
+    background-color: #888;
+}
+
+.sticky-elem-canvas canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* width: 100%; */
+    /* height: auto; */
+}
