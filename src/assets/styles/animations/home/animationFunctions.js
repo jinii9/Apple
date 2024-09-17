@@ -28,7 +28,7 @@ export function setLayout(sceneInfo) {
 
   // canvas 크기 맞추기
   const heightRatio = window.innerHeight / 1080;
-  sceneInfo[1].objs.canvas.style.transform = `scale(${heightRatio})`;
+  sceneInfo[0].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
   sceneInfo[1].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
 
   return { sceneInfo, currentScene };
@@ -36,17 +36,24 @@ export function setLayout(sceneInfo) {
 
 /** // TODO setCanvasImages : 캔버스 이미지 세팅 */
 export function setCanvasImages(sceneInfo) {
+  let imgElem2;
+  for (let i = 0; i < sceneInfo[0].values.videoImageCount; i++) {
+    imgElem2 = new Image();
+    imgElem2.src = `videos/home/002/${1 + i}.jpg`;
+    sceneInfo[0].objs.videoImages.push(imgElem2);
+  }
+
   let imgElem;
   for (let i = 0; i < sceneInfo[1].values.videoImageCount; i++) {
     imgElem = new Image();
     // imgElem.src = `../../../videos/home/001/${1 + i}.jpg`;
     imgElem.src = `videos/home/001/${1 + i}.jpg`;
-
     sceneInfo[1].objs.videoImages.push(imgElem);
   }
 
   return sceneInfo;
 }
+
 /** //TODO setCanvasImageSize : 캔버스 이미지 비율 맞추기  */
 export function setCanvasImageSize(objs, sequence) {
   const img = objs.videoImages[sequence];
@@ -68,6 +75,7 @@ export function setCanvasImageSize(objs, sequence) {
 
   const xOffset = (canvasWidth - drawWidth) / 2;
   const yOffset = (canvasHeight - drawHeight) / 2;
+
   return { canvasWidth, canvasHeight, xOffset, yOffset, drawWidth, drawHeight };
 }
 
@@ -75,8 +83,6 @@ export function setCanvasImageSize(objs, sequence) {
 export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
   prevScrollHeight = 0;
   let enterNewScene = false;
-
-  console.log("에러 확인", currentScene, sceneInfo[currentScene].scrollHeight);
 
   for (let i = 0; i < currentScene; i++) {
     prevScrollHeight += sceneInfo[i].scrollHeight;
@@ -141,11 +147,55 @@ export function playAnimation(
   const scrollHeight = sceneInfo[currentScene].scrollHeight;
   const scrollRatio = currentYOffset / scrollHeight;
 
-  console.log("current", currentScene, currentYOffset, sceneInfo[currentScene]);
+  //
+  let canvasWidth = 0;
+  let canvasHeight = 0;
+  let xOffsetCanvas = 0;
+  let yOffsetCanvas = 0;
+  let drawWidth = 0;
+  let drawHeight = 0;
 
   switch (currentScene) {
     case 0:
-      // TODO text
+      //TODO video
+      let sequence2 = Math.round(
+        calcValues(
+          values.imageSequence,
+          currentYOffset,
+          sceneInfo,
+          currentScene
+        )
+      );
+
+      // objs.context.drawImage(objs.videoImages[sequence2], 0, 0);
+      // 이미지 사이즈 맞추기
+      const context2 = objs.context;
+      const img2 = objs.videoImages[sequence2];
+      const sizeParams2 = setCanvasImageSize(objs, sequence2);
+      canvasWidth = sizeParams2.canvasWidth;
+      canvasHeight = sizeParams2.canvasHeight;
+      xOffsetCanvas = sizeParams2.xOffset;
+      yOffsetCanvas = sizeParams2.yOffset;
+      drawWidth = sizeParams2.drawWidth;
+      drawHeight = sizeParams2.drawHeight;
+
+      context2.clearRect(0, 0, canvasWidth, canvasHeight); // 캔버스 초기화
+      context2.drawImage(
+        img2,
+        xOffsetCanvas,
+        yOffsetCanvas,
+        drawWidth,
+        drawHeight
+      );
+
+      objs.canvas.style.opacity = calcValues(
+        values.canvas_opacity,
+        currentYOffset,
+        sceneInfo,
+        currentScene
+      );
+
+      //TODO text
       if (scrollRatio <= 0.22) {
         // in
         objs.messageA.style.opacity = calcValues(
@@ -253,18 +303,22 @@ export function playAnimation(
       // 이미지 사이즈 맞추기
       const context = objs.context;
       const img = objs.videoImages[sequence];
-
-      const {
-        canvasWidth,
-        canvasHeight,
-        xOffset,
-        yOffset,
-        drawWidth,
-        drawHeight,
-      } = setCanvasImageSize(objs, sequence);
+      const sizeParams = setCanvasImageSize(objs, sequence);
+      canvasWidth = sizeParams.canvasWidth;
+      canvasHeight = sizeParams.canvasHeight;
+      xOffsetCanvas = sizeParams.xOffset;
+      yOffsetCanvas = sizeParams.yOffset;
+      drawWidth = sizeParams.drawWidth;
+      drawHeight = sizeParams.drawHeight;
 
       context.clearRect(0, 0, canvasWidth, canvasHeight); // 캔버스 초기화
-      context.drawImage(img, xOffset, yOffset, drawWidth, drawHeight);
+      context.drawImage(
+        img,
+        xOffsetCanvas,
+        yOffsetCanvas,
+        drawWidth,
+        drawHeight
+      );
 
       if (scrollRatio <= 0.5) {
         // in

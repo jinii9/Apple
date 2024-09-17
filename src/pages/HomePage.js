@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useHeaderColor } from "../context/HeaderContext";
 import "../assets/styles/homePage.css";
 import { initScrollAnimation } from "../assets/styles/\banimations/home/main";
-
+// import {} from "/videos/home/apple-video.mp4"
 function HomePage() {
   useEffect(() => {
     // 이 컴포넌트에서 initScrollAnimation 함수를 호출하여 스크롤 애니메이션을 초기화합니다.
@@ -17,12 +17,16 @@ function HomePage() {
     <div>
       {/* // TODO section 1: 글자 스크롤 + 맥북 비디오 */}
       <section className="scroll-section" id="scroll-section-0">
-        <h1>MacBook Air</h1>
+        <div className="sticky-elem sticky-elem-canvas">
+          <canvas id="video-canvas-1" width="1920" height="1080"></canvas>
+        </div>
+
+        <h1>iPhone 16 Pro</h1>
         <div className="sticky-elem main-message a">
-          <p>날렵하게. 강력하게. M3답게.</p>
+          <p>사랑받기 위해 디자인되다.</p>
         </div>
         <div className="sticky-elem main-message b">
-          <p>어디서나 종횡무진할 수 있도록.</p>
+          <p>알면 알수록, iPhone.</p>
         </div>
         <div className="sticky-elem main-message c">
           <p>강력함이 한가득.</p>

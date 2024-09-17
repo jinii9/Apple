@@ -1,5 +1,10 @@
 import { type } from "@testing-library/user-event/dist/type";
-import { setLayout, scrollLoop, setCanvasImages } from "./animationFunctions";
+import {
+  setLayout,
+  scrollLoop,
+  setCanvasImages,
+  setCanvasImageSize,
+} from "./animationFunctions";
 export const initScrollAnimation = () => {
   let yOffset = 0;
   let prevScrollHeight = 0;
@@ -9,7 +14,7 @@ export const initScrollAnimation = () => {
   let sceneInfo = [
     {
       type: "sticky",
-      heightNum: 10,
+      heightNum: 5,
       scrollHeight: 0,
       objs: {
         // text
@@ -17,10 +22,14 @@ export const initScrollAnimation = () => {
         messageA: document.querySelector("#scroll-section-0 .main-message.a"),
         messageB: document.querySelector("#scroll-section-0 .main-message.b"),
         messageC: document.querySelector("#scroll-section-0 .main-message.c"),
+        // video
+        canvas: document.querySelector("#video-canvas-1"),
+        context: document.querySelector("#video-canvas-1").getContext("2d"),
+        videoImages: [],
       },
       values: {
-        videoImageCount: 194,
-        imageSequence: [0, 193],
+        videoImageCount: 725,
+        imageSequence: [0, 724],
         canvas_opacity: [1, 0, { start: 0.9, end: 1 }],
         // in
         messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
@@ -83,7 +92,9 @@ export const initScrollAnimation = () => {
 
   window.addEventListener("load", () => {
     ({ sceneInfo, currentScene } = setLayout(sceneInfo));
-    sceneInfo[1].objs.context.drawImage(sceneInfo[1].objs.videoImages[0], 0, 0);
+    // sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImages[0], 0, 0);
+
+    // sceneInfo[1].objs.context.drawImage(sceneInfo[1].objs.videoImages[0], 0, 0);
   });
 
   window.addEventListener("resize", () => {
