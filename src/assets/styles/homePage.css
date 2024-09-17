@@ -55,7 +55,7 @@
     width: 100%;
     height: 100%;
     /* 100vh도 괜찮다. */
-    background-color: #888;
+    /* background-color: #888; */
 }
 
 .sticky-elem-canvas canvas {

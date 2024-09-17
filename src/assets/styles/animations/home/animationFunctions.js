@@ -265,6 +265,26 @@ export function playAnimation(
 
       context.clearRect(0, 0, canvasWidth, canvasHeight); // 캔버스 초기화
       context.drawImage(img, xOffset, yOffset, drawWidth, drawHeight);
+
+      if (scrollRatio <= 0.5) {
+        // in
+        console.log("캔버스, 투명도", objs.canvas, values.canvas_opacity_in);
+        objs.canvas.style.opacity = calcValues(
+          values.canvas_opacity_in,
+          currentYOffset,
+          sceneInfo,
+          currentScene
+        );
+      } else {
+        //out
+        objs.canvas.style.opacity = calcValues(
+          values.canvas_opacity_out,
+          currentYOffset,
+          sceneInfo,
+          currentScene
+        );
+      }
+
       break;
 
     case 2:
