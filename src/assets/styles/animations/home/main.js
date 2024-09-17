@@ -102,3 +102,5 @@ export const initScrollAnimation = () => {
 
   sceneInfo = setCanvasImages(sceneInfo);
 };
+
+

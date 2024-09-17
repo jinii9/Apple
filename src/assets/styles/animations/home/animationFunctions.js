@@ -47,6 +47,29 @@ export function setCanvasImages(sceneInfo) {
 
   return sceneInfo;
 }
+/** //TODO setCanvasImageSize : 캔버스 이미지 비율 맞추기  */
+export function setCanvasImageSize(objs, sequence) {
+  const img = objs.videoImages[sequence];
+
+  const canvasWidth = objs.canvas.width;
+  const canvasHeight = objs.canvas.height;
+  const imgWidth = img.width;
+  const imgHeight = img.height;
+
+  let drawWidth, drawHeight;
+
+  if (canvasWidth / canvasHeight > imgWidth / imgHeight) {
+    drawHeight = canvasHeight;
+    drawWidth = (imgWidth / imgHeight) * drawHeight;
+  } else {
+    drawWidth = canvasWidth;
+    drawHeight = (imgHeight / imgWidth) * drawWidth;
+  }
+
+  const xOffset = (canvasWidth - drawWidth) / 2;
+  const yOffset = (canvasHeight - drawHeight) / 2;
+  return { canvasWidth, canvasHeight, xOffset, yOffset, drawWidth, drawHeight };
+}
 
 /** // TODO scrollLoop : currentScene 추적 */
 export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
@@ -227,32 +250,18 @@ export function playAnimation(
       );
 
       // objs.context.drawImage(objs.videoImages[sequence], 0, 0);
-
-      // // 캔버스에 이미지 그리기
-      const img = objs.videoImages[sequence];
+      // 이미지 사이즈 맞추기
       const context = objs.context;
+      const img = objs.videoImages[sequence];
 
-      // 캔버스 크기와 이미지 비율 계산
-      const canvasWidth = objs.canvas.width;
-      const canvasHeight = objs.canvas.height;
-      const imgWidth = img.width;
-      const imgHeight = img.height;
-
-      // 이미지 비율과 캔버스 비율을 비교하여 크기 조정
-      let drawWidth, drawHeight;
-
-      if (canvasWidth / canvasHeight > imgWidth / imgHeight) {
-        // 캔버스가 더 넓은 비율일 때
-        drawHeight = canvasHeight;
-        drawWidth = (imgWidth / imgHeight) * drawHeight;
-      } else {
-        // 이미지가 더 넓은 비율일 때
-        drawWidth = canvasWidth;
-        drawHeight = (imgHeight / imgWidth) * drawWidth;
-      }
-
-      const xOffset = (canvasWidth - drawWidth) / 2;
-      const yOffset = (canvasHeight - drawHeight) / 2;
+      const {
+        canvasWidth,
+        canvasHeight,
+        xOffset,
+        yOffset,
+        drawWidth,
+        drawHeight,
+      } = setCanvasImageSize(objs, sequence);
 
       context.clearRect(0, 0, canvasWidth, canvasHeight); // 캔버스 초기화
       context.drawImage(img, xOffset, yOffset, drawWidth, drawHeight);
