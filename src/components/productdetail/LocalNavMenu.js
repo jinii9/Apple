@@ -17,7 +17,7 @@ function LocalNavMenu({ isMenuVisible }) {
       <div>
         <div
           ref={menuRef}
-          className={`w-full absolute bg-white01 z-50 border-b border-gray-300 overflow-hidden transition-all duration-500 ease-in-out`}
+          className={`w-full absolute bg-white01 z-50 border-b border-gray-300 overflow-hidden transition-all duration-300 ease-in-out`}
           style={{ maxHeight: menuHeight }}
         >
           <div

@@ -39,7 +39,7 @@ function ProductAccordion() {
               <button className="flex w-full justify-between py-9">
                 <div className="text-3xl font-semibold">제품 정보</div>
                 <img
-                  className={`w-9 h-9 transition-transform duration-300 ease-in-out fill-white ${
+                  className={`w-11 h-11 transition-transform duration-300 ease-in-out fill-white ${
                     accordions.description.isIconFlipped
                       ? "transform scale-y-[-1]"
                       : "transform scale-y-100"
@@ -51,7 +51,7 @@ function ProductAccordion() {
             </h2>
             <div
               ref={descriptionHeightRef}
-              className="overflow-hidden transition-all duration-500 ease-in-out"
+              className="overflow-hidden transition-all duration-300 ease-in-out"
               style={{
                 height: accordions.description.isVisible
                   ? `${descriptionHeightRef.current?.scrollHeight}px`
@@ -157,7 +157,7 @@ function ProductAccordion() {
               <button className="flex w-full justify-between py-9">
                 <div className="text-3xl font-semibold">호환성</div>
                 <img
-                  className={`w-9 h-9 transition-transform duration-300 ease-in-out ${
+                  className={`w-11 h-11 transition-transform duration-300 ease-in-out ${
                     accordions.compatibility.isIconFlipped
                       ? "transform scale-y-[-1]"
                       : "transform scale-y-100"
@@ -169,7 +169,7 @@ function ProductAccordion() {
             </h2>
             <div
               ref={compatHeightRef}
-              className="overflow-hidden transition-all duration-500 ease-in-out border-b "
+              className="overflow-hidden transition-all duration-300 ease-in-out border-b "
               style={{
                 height: accordions.compatibility.isVisible
                   ? `${compatHeightRef.current?.scrollHeight}px`
