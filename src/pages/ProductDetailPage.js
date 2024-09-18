@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import LocalNavBar from "../components/productdetail/LocalNavBar";
+import ProductDetailMain from "../components/productdetail/ProductDetailMain";
 import { useHeaderColor } from "../context/HeaderContext";
 
 function ProductDetailPage() {
@@ -13,6 +14,7 @@ function ProductDetailPage() {
   return (
     <>
       <LocalNavBar />
+      <ProductDetailMain />
     </>
   );
 }
