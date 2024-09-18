@@ -81,6 +81,7 @@ export function setCanvasImageSize(objs, sequence) {
 
 /** // TODO scrollLoop : currentScene 추적 */
 export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
+  console.log("scrollLoop", sceneInfo, currentScene, prevScrollHeight, yOffset);
   prevScrollHeight = 0;
   let enterNewScene = false;
 
@@ -99,6 +100,11 @@ export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
   }
 
   document.body.setAttribute("id", `show-scene-${currentScene}`);
+  if (currentScene === 2) {
+    console.log("m", currentScene);
+    document.body.setAttribute("id", `show-scene-1`);
+    document.body.setAttribute("id", `show-scene-2`);
+  }
 
   if (enterNewScene) return { currentScene, prevScrollHeight };
 
@@ -322,7 +328,6 @@ export function playAnimation(
 
       if (scrollRatio <= 0.5) {
         // in
-        console.log("캔버스, 투명도", objs.canvas, values.canvas_opacity_in);
         objs.canvas.style.opacity = calcValues(
           values.canvas_opacity_in,
           currentYOffset,
