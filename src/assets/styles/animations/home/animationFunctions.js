@@ -81,7 +81,7 @@ export function setCanvasImageSize(objs, sequence) {
 
 /** // TODO scrollLoop : currentScene 추적 */
 export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
-  console.log("scrollLoop", sceneInfo, currentScene, prevScrollHeight, yOffset);
+  console.log("scrollLoop", currentScene, prevScrollHeight, yOffset);
   prevScrollHeight = 0;
   let enterNewScene = false;
 
@@ -90,8 +90,11 @@ export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
   }
 
   if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
-    currentScene++;
-    enterNewScene = true;
+    if (currentScene < sceneInfo.length - 1) {
+      // 마지막 Scene을 넘지 않도록 조건 추가
+      currentScene++;
+      enterNewScene = true;
+    }
   }
   if (yOffset < prevScrollHeight) {
     if (currentScene === 0) return { currentScene, prevScrollHeight };
