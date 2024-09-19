@@ -111,7 +111,7 @@ function HomePage() {
       </section>
 
       {/* // TODO section 2: 글 */}
-      <section className="scroll-section pt-10" id="scroll-section-3">
+      <section className="scroll-section pt-20" id="scroll-section-3">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -127,7 +127,7 @@ function HomePage() {
             <h1 className="text-3xl md:text-6xl font-bold mb-8 mt-2">
               어디서나 종횡무진할 수 있도록.
             </h1>
-            <div>
+            <div className="my-14">
               <video
                 id="video-1"
                 ref={videoRef1}
@@ -138,6 +138,16 @@ function HomePage() {
                 autoPlay
               ></video>
             </div>
+            <p className="text-base  md:text-xl text-gray01 font-bold">
+              <strong className="text-black">
+                엄청나게 가벼운 무게와 1cm 남짓에 불과한 두께로
+              </strong>
+              당신의 일상에 자연스레 스며드는 MacBook Air는 지구의 환경을
+              생각하는 마음을 담아 설계되었습니다. M3 칩 탑재 MacBook Air는
+              Apple 사상 최초로 재활용 소재 사용 비율 50%를 달성한 제품입니다.
+              그리고 다른 모든 MacBook Air 노트북과 마찬가지로 내구성이 뛰어난
+              재활용 알루미늄 외장을 갖추고 있죠.
+            </p>
           </div>
         </motion.div>
       </section>
