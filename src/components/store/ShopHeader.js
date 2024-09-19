@@ -29,17 +29,22 @@ function ShopHeader() {
       className="mx-[22px] min-h-[196px] relative w-auto lg:mx-[140px]"
       style={containerStyle}
     >
-      <div className="grid grid-cols-12 gap-4 relative">
-        <div className="shop-header-section col-span-8 max-w-[640px] py-[80px] pb-[64px]">
-          <h1 className="rs-shop-header text-[48px] font-semibold leading-[1.0835] tracking-tight inline text-black">
+      {/* Apply flex-col for small screens and grid for md and above */}
+      <div className="flex flex-col md:grid md:grid-cols-12 gap-4 md:relative">
+        {/* Header section */}
+        <div className="shop-header-section md:col-span-8 max-w-[640px] py-[80px] pb-[64px]">
+          <h1 className="rs-shop-header text-[32px] md:text-[48px] font-semibold leading-[1.0835] tracking-tight inline text-black">
             스토어.
           </h1>
-          <div className="rs-shop-subheader text-[48px] font-semibold leading-[1.0835] tracking-tight inline text-gray-500">
+          <div className="rs-shop-subheader text-[32px] md:text-[48px] font-semibold leading-[1.0835] tracking-tight inline text-gray-500">
             좋아하는 Apple 제품을 구입하는 가장 좋은 방법.
           </div>
         </div>
-        <div className="shop-chatstore-section col-span-4 absolute right-0 flex flex-col justify-end py-[90px] pb-[74px]">
+
+        {/* Chat and nearest store section with margin-top set to 0 */}
+        <div className="shop-chatstore-section md:col-span-4 md:absolute md:right-0 flex flex-col justify-end md:py-[90px] md:pb-[74px] mt-0">
           <div id="generic-2">
+            {/* Chat section */}
             <div className="rf-shop-chat-section flex flex-row text-[14px] font-normal leading-[1.4286] tracking-tight pb-4">
               <div className="rf-shop-chaticon-container w-[36px] h-[36px] mr-2 ">
                 <img
@@ -57,18 +62,20 @@ function ShopHeader() {
                 </div>
               </div>
             </div>
+
+            {/* Nearest store section */}
             <div className="rs-shop-neareststore flex flex-row text-[14px] font-normal leading-[1.4286] tracking-tight pb-4">
               <div className="rf-shop-storeicon-container w-[36px] h-[36px] mr-2">
                 <img
                   src={nearImage}
-                  alt="chat"
+                  alt="nearest store"
                   className="w-full h-full object-contain"
                 />
               </div>
               <div>
                 <div className="font-bold">Apple Store를 방문하세요</div>
                 <div className=" text-blue-400 cursor-pointer hover:underline">
-                  가까운 매장 찾기 〉
+                  가까운 매장 찾기 
                 </div>
               </div>
             </div>
