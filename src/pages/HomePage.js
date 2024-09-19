@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useHeaderColor } from "../context/HeaderContext";
 import "../assets/styles/homePage.css";
 import { initScrollAnimation } from "../assets/styles/\banimations/home/main";
 import { motion } from "framer-motion";
+import { useScrollVideoPlayback } from "../hooks/useScrollVideoPlayback";
 
 function HomePage() {
   useEffect(() => {
@@ -13,6 +14,8 @@ function HomePage() {
     // 컴포넌트 언마운트 시 클린업 함수 호출
     return cleanup;
   }, []);
+
+  const videoRef1 = useScrollVideoPlayback(0.5);
 
   return (
     <div>
@@ -126,14 +129,13 @@ function HomePage() {
             </h1>
             <div>
               <video
-                id="video-canvas-0"
-                // ref={videoRef2}
+                id="video-1"
+                ref={videoRef1}
                 width="1920"
                 height="1080"
                 src="/videos/home/video1.mp4"
                 muted
                 autoPlay
-                // loop
               ></video>
             </div>
           </div>
