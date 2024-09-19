@@ -14,7 +14,7 @@ import img9 from "../../assets/images/productdetail/9.jpg";
 
 const PrevArrow = ({ onClick }) => (
   <div
-    className="absolute -left-6 z-10 bg-gray02 p-2 rounded-full cursor-pointer"
+    className="absolute -left-6 z-10 bg-gray02 p-2 rounded-full cursor-pointer hidden md:flex"
     style={{ top: "50%", transform: "translateY(-50%)" }}
     onClick={onClick}
   >
@@ -39,7 +39,7 @@ const PrevArrow = ({ onClick }) => (
 
 const NextArrow = ({ onClick }) => (
   <div
-    className="absolute -right-6 z-10 bg-gray02 p-2 rounded-full cursor-pointer"
+    className="absolute -right-6 z-10 bg-gray02 p-2 rounded-full cursor-pointer hidden md:flex"
     style={{ top: "50%", transform: "translateY(-50%)" }}
     onClick={onClick}
   >
@@ -72,7 +72,6 @@ function RecommandationSlider() {
   const totalSlides = 9;
 
   var settings = {
-    className: "",
     dots: true,
     appendDots: (dots) => (
       <div
@@ -90,10 +89,10 @@ function RecommandationSlider() {
       </div>
     ),
     infinite: false,
-    swipeToSlide: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    swipeToSlide: false,
     beforeChange: (oldIndex, newIndex) => {
       setCurrentIndex(newIndex + 3);
     },
@@ -103,6 +102,7 @@ function RecommandationSlider() {
       {
         breakpoint: 1024,
         settings: {
+          swipeToSlide: false,
           slidesToShow: 3,
           slidesToScroll: 3,
           dots: true,
@@ -111,8 +111,9 @@ function RecommandationSlider() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          swipeToSlide: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           dots: true,
         },
       },
