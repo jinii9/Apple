@@ -13,7 +13,7 @@ export const initScrollAnimation = () => {
   let isImagesLoaded = false; // 이미지 로드 상태 플래그
 
   let sceneInfo = [
-    // 1번째 섹션
+    // 0번째 섹션
     {
       type: "sticky",
       heightNum: 5,
@@ -50,7 +50,7 @@ export const initScrollAnimation = () => {
         messageC_translateY_out: [0, -20, { start: 0.65, end: 0.7 }],
       },
     },
-    // 2번째 섹션
+    // 1번째 섹션
     {
       type: "sticky",
       heightNum: 10,
@@ -69,7 +69,7 @@ export const initScrollAnimation = () => {
         canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
       },
     },
-    // 3번째 섹션
+    // 2번째 섹션
     // {
     //   type: "normal",
     //   scrollHeight: 0,

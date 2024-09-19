@@ -81,7 +81,6 @@ export function setCanvasImageSize(objs, sequence) {
 
 /** // TODO scrollLoop : currentScene 추적 */
 export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
-  console.log("scrollLoop", currentScene, prevScrollHeight, yOffset);
   prevScrollHeight = 0;
   let enterNewScene = false;
 
@@ -89,12 +88,16 @@ export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
     prevScrollHeight += sceneInfo[i].scrollHeight;
   }
 
+  // scrollHeight 에러 해결 : 현재 씬이 유효한지 확인 -> 확인하지 않으면 sceneInfo[crrentScene].scrollHeight에서 에러나기 때문에
+  if (currentScene >= sceneInfo.length || currentScene < 0) {
+    // console.error("Invalid currentScene index:", currentScene);
+    return { currentScene, prevScrollHeight };
+  }
+
   if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
-    if (currentScene < sceneInfo.length - 1) {
-      // 마지막 Scene을 넘지 않도록 조건 추가
-      currentScene++;
-      enterNewScene = true;
-    }
+    currentScene++;
+    enterNewScene = true;
+    console.log("currentScene:", currentScene);
   }
   if (yOffset < prevScrollHeight) {
     if (currentScene === 0) return { currentScene, prevScrollHeight };
@@ -104,14 +107,16 @@ export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
 
   document.body.setAttribute("id", `show-scene-${currentScene}`);
   if (currentScene === 2) {
-    console.log("m", currentScene);
     document.body.setAttribute("id", `show-scene-1`);
     document.body.setAttribute("id", `show-scene-2`);
   }
 
   if (enterNewScene) return { currentScene, prevScrollHeight };
 
-  playAnimation(sceneInfo, currentScene, yOffset, prevScrollHeight);
+  if (currentScene < sceneInfo.length) {
+    // width 에러 해결
+    playAnimation(sceneInfo, currentScene, yOffset, prevScrollHeight);
+  }
 
   return { currentScene, prevScrollHeight };
 }

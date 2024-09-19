@@ -19,7 +19,7 @@ function HomePage() {
 
   return (
     <div>
-      {/* // TODO section 1: 글자 스크롤 + 맥북 비디오 */}
+      {/* // TODO section 0: 글자 스크롤 + 맥북 비디오 */}
       <section className="scroll-section" id="scroll-section-0">
         <div className="sticky-elem sticky-elem-canvas">
           <canvas id="video-canvas-1" width="1920" height="1080"></canvas>
