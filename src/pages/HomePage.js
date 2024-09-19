@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { useScrollVideoPlayback } from "../hooks/useScrollVideoPlayback";
 
 function HomePage() {
+  const videoRef1 = useScrollVideoPlayback(0.5);
+
   useEffect(() => {
     // 이 컴포넌트에서 initScrollAnimation 함수를 호출하여 스크롤 애니메이션을 초기화합니다.
     // 컴포넌트가 언마운트될 때 클린업 함수를 호출하여 메모리 누수를 방지합니다.
@@ -14,8 +16,6 @@ function HomePage() {
     // 컴포넌트 언마운트 시 클린업 함수 호출
     return cleanup;
   }, []);
-
-  const videoRef1 = useScrollVideoPlayback(0.5);
 
   return (
     <div>

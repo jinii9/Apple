@@ -10,6 +10,7 @@ export const initScrollAnimation = () => {
   let prevScrollHeight = 0;
   let currentScene = 0;
   // let enterNewScene = false;
+  let isImagesLoaded = false; // 이미지 로드 상태 플래그
 
   let sceneInfo = [
     // 1번째 섹션
@@ -78,13 +79,60 @@ export const initScrollAnimation = () => {
     // },
   ];
 
-  sceneInfo = setCanvasImages(sceneInfo);
+  /** //TODO 이미지 로드 확인 함수 */
+  function checkImagesLoaded() {
+    const allImages = sceneInfo.flatMap((scene) => scene.objs.videoImages);
+    const loadedImages = allImages.filter((img) => img.complete);
+    return allImages.length === loadedImages.length;
+  }
 
   window.addEventListener("load", () => {
     ({ sceneInfo, currentScene } = setLayout(sceneInfo));
-    // sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImages[0], 0, 0);
 
-    // sceneInfo[1].objs.context.drawImage(sceneInfo[1].objs.videoImages[0], 0, 0);
+    // 이미지 로드 완료 확인
+    if (checkImagesLoaded()) {
+      isImagesLoaded = true;
+
+      // sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImages[0],0,0);
+      // 캔버스에 첫 이미지 그리기
+      sceneInfo.forEach((scene) => {
+        if (scene.objs.context && scene.objs.videoImages.length > 0) {
+          // 첫 번째 이미지를 위한 크기 조정
+          const { xOffset, yOffset, drawWidth, drawHeight } =
+            setCanvasImageSize(scene.objs, 0);
+          scene.objs.context.drawImage(
+            scene.objs.videoImages[0],
+            xOffset,
+            yOffset,
+            drawWidth,
+            drawHeight
+          );
+        }
+      });
+    } else {
+      const intervalId = setInterval(() => {
+        if (checkImagesLoaded()) {
+          clearInterval(intervalId);
+
+          isImagesLoaded = true;
+          // 캔버스에 첫 이미지 그리기
+          sceneInfo.forEach((scene) => {
+            if (scene.objs.context && scene.objs.videoImages.length > 0) {
+              // 첫 번째 이미지를 위한 크기 조정
+              const { xOffset, yOffset, drawWidth, drawHeight } =
+                setCanvasImageSize(scene.objs, 0);
+              scene.objs.context.drawImage(
+                scene.objs.videoImages[0],
+                xOffset,
+                yOffset,
+                drawWidth,
+                drawHeight
+              );
+            }
+          });
+        }
+      }, 100); // 100ms 간격으로 체크
+    }
   });
 
   window.addEventListener("resize", () => {
@@ -92,6 +140,8 @@ export const initScrollAnimation = () => {
   });
 
   window.addEventListener("scroll", () => {
+    if (!isImagesLoaded) return;
+
     yOffset = window.pageYOffset;
 
     ({ currentScene, prevScrollHeight } = scrollLoop(
