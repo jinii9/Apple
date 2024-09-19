@@ -40,7 +40,7 @@ function HomePage() {
           <canvas id="video-canvas-0" width="1920" height="1080"></canvas>
         </div>
 
-        <div className="text-wrapper">
+        {/* <div className="text-wrapper">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -71,11 +71,11 @@ function HomePage() {
               </div>
             </div>
           </motion.div>
-        </div>
+        </div> */}
       </section>
 
       {/* // TODO section 1: 글자 스크롤 + 맥북 비디오 */}
-      {/* <section className="scroll-section" id="scroll-section-2">
+      <section className="scroll-section" id="scroll-section-2">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -86,30 +86,29 @@ function HomePage() {
             y: { duration: 1 },
           }}
         >
-          <div className="container mx-auto px-4 md:px-0">
-            <div className="md:mx-24">
-              <h1 className="text-3xl md:text-6xl font-bold mb-8">
-                날렵하게. 강력하게. M3답게.
-              </h1>
-              <p className="text-base  md:text-xl text-gray01 font-bold">
-                세상에서 가장 사랑받는 노트북 <strong>MacBook Air</strong>가
-                <strong>M3 칩</strong>과 만나 한층 강력해졌습니다. 일부터
-                놀이까지, 무엇이든 가뿐하죠. 최대 18시간의 배터리 사용 시간
-                <sup>1</sup>과 극강의 휴대성을 자랑하는 MacBook Air와 함께라면
-                어디서든, 어떤 일이든 너끈히 해낼 수 있습니다.
-              </p>
-              <div className="text-sm font-semibold mt-8">
-                <span className="text-red-500 mr-1">New</span>
-                M3 칩 탑재 MacBook Air ₩1,590,000부터 <br />
-                M2 칩 탑재 MacBook Air ₩1,390,000부터
-              </div>
+          {/* <div className="container mx-auto px-4 md:px-0"> */}
+          <div className="max-w-3xl mx-auto px-3 md:px-0">
+            <h1 className="text-3xl md:text-6xl font-bold mb-8">
+              날렵하게. 강력하게. M3답게.
+            </h1>
+            <p className="text-base  md:text-xl text-gray01 font-bold">
+              세상에서 가장 사랑받는 노트북 <strong>MacBook Air</strong>가
+              <strong>M3 칩</strong>과 만나 한층 강력해졌습니다. 일부터
+              놀이까지, 무엇이든 가뿐하죠. 최대 18시간의 배터리 사용 시간
+              <sup>1</sup>과 극강의 휴대성을 자랑하는 MacBook Air와 함께라면
+              어디서든, 어떤 일이든 너끈히 해낼 수 있습니다.
+            </p>
+            <div className="text-sm font-semibold mt-8">
+              <span className="text-red-500 mr-1">New</span>
+              M3 칩 탑재 MacBook Air ₩1,590,000부터 <br />
+              M2 칩 탑재 MacBook Air ₩1,390,000부터
             </div>
           </div>
         </motion.div>
-      </section> */}
+      </section>
 
       {/* // TODO section 2: 글 */}
-      {/* <section className="scroll-section pt-10" id="scroll-section-3">
+      <section className="scroll-section pt-10" id="scroll-section-3">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -120,14 +119,26 @@ function HomePage() {
             y: { duration: 1 },
           }}
         >
-          <div className="container mx-auto px-4 md:px-0 mt-10">
+          <div className="max-w-3xl mx-auto px-3 md:px-0">
             <p className="text-xs">가뿐한 휴대성</p>
             <h1 className="text-3xl md:text-6xl font-bold mb-8 mt-2">
               어디서나 종횡무진할 수 있도록.
             </h1>
+            <div>
+              <video
+                id="video-canvas-0"
+                // ref={videoRef2}
+                width="1920"
+                height="1080"
+                src="/videos/home/video1.mp4"
+                muted
+                autoPlay
+                // loop
+              ></video>
+            </div>
           </div>
         </motion.div>
-      </section> */}
+      </section>
     </div>
   );
 }
