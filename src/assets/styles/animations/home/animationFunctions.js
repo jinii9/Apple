@@ -88,6 +88,12 @@ export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
     prevScrollHeight += sceneInfo[i].scrollHeight;
   }
 
+  if (yOffset < prevScrollHeight) {
+    if (currentScene === 0) return { currentScene, prevScrollHeight };
+    enterNewScene = true;
+    currentScene--;
+  }
+
   // scrollHeight 에러 해결 : 현재 씬이 유효한지 확인 -> 확인하지 않으면 sceneInfo[crrentScene].scrollHeight에서 에러나기 때문에
   if (currentScene >= sceneInfo.length || currentScene < 0) {
     // console.error("Invalid currentScene index:", currentScene);
@@ -97,13 +103,9 @@ export function scrollLoop(sceneInfo, currentScene, prevScrollHeight, yOffset) {
   if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
     currentScene++;
     enterNewScene = true;
-    console.log("currentScene:", currentScene);
   }
-  if (yOffset < prevScrollHeight) {
-    if (currentScene === 0) return { currentScene, prevScrollHeight };
-    enterNewScene = true;
-    currentScene--;
-  }
+
+  console.log("currentScene:", currentScene);
 
   document.body.setAttribute("id", `show-scene-${currentScene}`);
   if (currentScene === 2) {
