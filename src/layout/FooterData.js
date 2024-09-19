@@ -24,33 +24,38 @@ const ShopAndLearn = [
 const Services = [
     {
         id: 1,
-        name: "Apple Music",
-        link: "https://www.apple.com/in/apple-music/",
+        name: "Apple One",
+        link: "https://www.apple.com/kr/apple-one/",
     },
     {
         id: 2,
         name: "Apple TV+",
-        link: "https://www.apple.com/in/apple-tv-plus/",
+        link: "https://www.apple.com/kr/apple-tv-plus/",
     },
     {
         id: 3,
-        name: "Apple Arcade",
-        link: "https://www.apple.com/in/apple-arcade/",
+        name: "Apple Music",
+        link: "https://www.apple.com/kr/apple-music/",
     },
     {
         id: 4,
-        name: "iCloud",
-        link: "https://www.apple.com/in/watch/",
+        name: "Apple Arcade",
+        link: "https://www.apple.com/kr/apple-arcade/",
     },
     {
         id: 5,
-        name: "Apple One",
-        link: "https://www.apple.com/in/watch/",
+        name: "Apple Podcasts",
+        link: "https://www.apple.com/kr/apple-podcasts/",
     },
     {
         id: 6,
         name: "Apple Books",
-        link: "https://www.apple.com/in/watch/",
+        link: "https://www.apple.com/kr/apple-books/",
+    },
+    {
+        id: 7,
+        name: "App Store",
+        link: "https://www.apple.com/kr/app-store/",
     },
 ];
 
@@ -131,37 +136,37 @@ const AboutApple = [
     {
         id: 1,
         name: "Newsroom",
-        link: "https://www.apple.com/in/newsroom/",
+        link: "https://www.apple.com/kr/newsroom/",
     },
     {
         id: 2,
-        name: "Apple Leadership",
-        link: "https://www.apple.com/in/leadership/",
+        name: "Apple 리더십",
+        link: "https://www.apple.com/kr/leadership/",
     },
     {
         id: 3,
-        name: "Career Oppurtunities",
-        link: "https://www.apple.com/careers/in/",
+        name: "채용안내",
+        link: "https://www.apple.com/jobs/kr/",
     },
     {
         id: 4,
-        name: "Investors",
-        link: "https://investor.apple.com/",
+        name: "윤리 및 규정준수",
+        link: "https://www.apple.com/compliance",
     },
     {
         id: 5,
-        name: "Ethics & Compliance",
-        link: "https://www.apple.com/compliance/",
+        name: "이벤트",
+        link: "https://www.apple.com/kr/apple-events/",
     },
     {
         id: 6,
-        name: "Events",
-        link: "https://www.apple.com/in/apple-events/",
+        name: "일자리 창출",
+        link: "https://www.apple.com/kr/job-creation/",
     },
     {
         id: 7,
-        name: "Contact Apple",
-        link: "https://www.apple.com/in/contact/",
+        name: "Apple 연락처",
+        link: "https://www.apple.com/kr/contact/",
     },
 ]
 

@@ -6,7 +6,7 @@ import FooterMdScreen from "./FooterMdScreen";
 function Footer() {
 
     const [width, setWidth] = useState(window.innerWidth);
-    const breakpoint = 768;
+    const breakpoint = 760;
 
     useEffect(() => {
         const handleResize = () => setWidth(window.innerWidth)
