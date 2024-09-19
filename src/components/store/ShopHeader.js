@@ -29,7 +29,6 @@ function ShopHeader() {
       className="mx-[22px] min-h-[196px] relative w-auto lg:mx-[140px]"
       style={containerStyle}
     >
-      {/* Apply flex-col for small screens and grid for md and above */}
       <div className="flex flex-col md:grid md:grid-cols-12 gap-4 md:relative">
         {/* Header section */}
         <div className="shop-header-section md:col-span-8 max-w-[640px] py-[80px] pb-[64px]">
@@ -41,7 +40,6 @@ function ShopHeader() {
           </div>
         </div>
 
-        {/* Chat and nearest store section with margin-top set to 0 */}
         <div className="shop-chatstore-section md:col-span-4 md:absolute md:right-0 flex flex-col justify-end md:py-[90px] md:pb-[74px] mt-0">
           <div id="generic-2">
             {/* Chat section */}

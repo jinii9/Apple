@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useHeaderColor } from "../context/HeaderContext";
 import ShopHeader from "../components/store/ShopHeader";
+import ShopCardsShelf from "../components/store/ShopCardsShelf";
 
 function StorePage() {
   const { setHeaderBackColor, setHeaderTextColor } = useHeaderColor();
@@ -29,6 +30,7 @@ function StorePage() {
     <>
       <div style={combinedStyle}>
         <ShopHeader />
+        <ShopCardsShelf />
       </div>
     </>
   );
