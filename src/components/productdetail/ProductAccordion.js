@@ -29,7 +29,7 @@ function ProductAccordion() {
 
   return (
     <div className="w-full tracking-tighter">
-      <div className="max-w-5xl mx-auto border-t border-b md:p-0 p-6">
+      <div className="max-w-5xl mx-auto border-t md:p-0 p-6">
         <ul className="accordion-list">
           <li className="product-description border-b">
             <h2

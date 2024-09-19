@@ -3,7 +3,7 @@ import productImage from "../../assets/images/productdetail/black.jpg";
 import truckIcon from "../../assets/images/productdetail/truck_icon.png";
 import shoppingBagIcon from "../../assets/images/productdetail/shopping_icon.png";
 import speechBubbleIcon from "../../assets/images/productdetail/speechbubble_icon.png";
-import bookMarkIcon from "../../assets/images/productdetail/bookmark_icon.png";
+import bookMarkIcon from "../../assets/images/productdetail/bookmark.svg";
 import thumbNav1 from "../../assets/images/productdetail/black_sm.jpg";
 import thumbNav2 from "../../assets/images/productdetail/white_sm.jpg";
 import thumbNav3 from "../../assets/images/productdetail/bronze_sm.jpg";
@@ -120,18 +120,19 @@ function ProductDetailMain() {
                       곳부터 다시 이어 보세요.
                     </span>
                   </div>
-                  <div className="flex mt-2">
+                  <div className="flex mt-2 items-center">
                     <span>
                       <img
                         src={bookMarkIcon}
                         alt=""
                         style={{
-                          width: "25px",
-                          height: "25px",
+                          width: "18px",
+                          height: "18px",
                         }}
                       />
                     </span>
                     <button className=" text-blue02 hover:underline flex justify-center items-center">
+                      {" "}
                       나중을 위해 저장
                     </button>
                   </div>

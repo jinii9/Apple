@@ -3,6 +3,7 @@ import LocalNavBar from "../components/productdetail/LocalNavBar";
 import ProductDetailMain from "../components/productdetail/ProductDetailMain";
 import { useHeaderColor } from "../context/HeaderContext";
 import ProductAccordion from "../components/productdetail/ProductAccordion";
+import RecommandationCarousel from "../components/productdetail/RecommandationCarousel";
 
 function ProductDetailPage() {
   const { setHeaderBackColor, setHeaderTextColor } = useHeaderColor();
@@ -17,6 +18,7 @@ function ProductDetailPage() {
       <LocalNavBar />
       <ProductDetailMain />
       <ProductAccordion />
+      <RecommandationCarousel />
     </>
   );
 }
