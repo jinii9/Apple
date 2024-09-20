@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import Header from "./Header";
 import { Outlet, useLocation } from "react-router-dom";
+import Footer from "./Footer";
+
 import {
   HeaderMenuProvider,
   useHeaderColor,
@@ -36,6 +38,7 @@ function MainLayout() {
       >
         <Outlet />
       </div>
+       <Footer/>
     </>
   );
 }

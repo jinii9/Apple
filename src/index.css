@@ -20,6 +20,16 @@ code {
     monospace;
 }
 
+
+marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -163,3 +173,4 @@ table {
 .translate-y-0 {
   transform: translateY(0);
 }
+
