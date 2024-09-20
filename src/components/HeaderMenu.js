@@ -11,7 +11,6 @@ function HeaderMenu({ hoveredMenu, data }) {
 
   const { setHoveredMenu } = useHeaderMenu();
   const handleMouseLeave = () => {
-    console.log("메뉴에서 벗어났습니다!");
     setHoveredMenu(null);
   };
 
