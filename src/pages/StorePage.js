@@ -3,6 +3,7 @@ import { useHeaderColor } from "../context/HeaderContext";
 import ShopHeader from "../components/store/ShopHeader";
 import ShopCardsShelfNav from "../components/store/ShopCardsShelfNav";
 import ShopCardsShelf from "../components/store/ShopCardsShelf";
+import ShopCardsShelf2 from "../components/store/ShopCardsShelf2";
 
 function StorePage() {
   const { setHeaderBackColor, setHeaderTextColor } = useHeaderColor();
@@ -33,6 +34,7 @@ function StorePage() {
         <ShopHeader />
         <ShopCardsShelfNav />
         <ShopCardsShelf />
+        <ShopCardsShelf2 />
       </div>
     </>
   );
