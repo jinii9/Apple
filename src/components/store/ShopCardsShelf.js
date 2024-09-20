@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css"; // Correct Swiper CSS import
+import "swiper/swiper-bundle.css";
 
-// Product card data (replace with real data or props)
 const products = [
   {
     title: "Mac",
@@ -63,15 +62,15 @@ const StoreCardsShelf = () => {
       if (screenWidth > 1440) {
         setContainerStyle({ marginLeft: "140px" });
       } else if (screenWidth >= 1024 && screenWidth <= 1440) {
-        const marginLeft = `calc(-268.46154px + 28.36538vw)`; // Adjust as needed
-        setContainerStyle({ marginLeft }); // Apply only margin-left dynamically
+        const marginLeft = `calc(-268.46154px + 28.36538vw)`;
+        setContainerStyle({ marginLeft });
       } else {
-        setContainerStyle({ marginLeft: "20px" }); // Default margin-left for smaller screens
+        setContainerStyle({ marginLeft: "20px" });
       }
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Call on component mount
+    handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -79,11 +78,11 @@ const StoreCardsShelf = () => {
   return (
     <div
       className="min-h-[196px] relative w-auto overflow-x-visible"
-      style={containerStyle} // Apply dynamic margin-left here
+      style={containerStyle}
     >
       <Swiper
-        slidesPerView="auto" // Ensures items take their natural width and overflow as needed
-        spaceBetween={0} // Keep consistent spacing, no dynamic change
+        slidesPerView="auto"
+        spaceBetween={0}
         pagination={{ clickable: true }}
       >
         {products.map((product, index) => (
