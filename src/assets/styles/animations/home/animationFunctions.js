@@ -27,7 +27,9 @@ export function setLayout(sceneInfo) {
   document.body.setAttribute("id", `show-scene-${currentScene}`);
 
   // canvas 크기 맞추기
-  const heightRatio = window.innerHeight / 1080;
+  // const heightRatio = window.innerHeight / 1080;
+  const heightRatio = window.innerHeight / 1000;
+
   sceneInfo[0].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
   sceneInfo[1].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
 
