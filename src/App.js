@@ -8,7 +8,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-        <Route path="/" element={<MapPage/>}>
+        <Route path="/map" element={<MapPage/>}></Route>
           <Route index element={<HomePage />} />
           
           {/* store */}
@@ -16,7 +16,7 @@ function App() {
 
           {/* map */}
           {/* cart */}
-          </Route>
+          
         </Route>
       </Routes>
     </>

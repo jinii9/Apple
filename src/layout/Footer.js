@@ -16,7 +16,7 @@ function Footer() {
     }, []);
 
     return (
-      <footer id="footer" className="mt-4 bg-stone-50">
+      <footer id="footer" className="mt-4 bg-stone50">
         <div className="container px-8 mx-auto text-stone-600">
           <div className="py-6 text-sm border-b border-stone-500">
             <ul style={{ fontSize: "12px" }}>

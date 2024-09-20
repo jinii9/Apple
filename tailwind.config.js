@@ -11,9 +11,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        back: "#F5F5F7",
+        back: "#f2f2f2",
         content: "#1D1D1F",
-        gray01: "6E6E73",
+        gray01: "#6E6E73",
       },
     },
   },
