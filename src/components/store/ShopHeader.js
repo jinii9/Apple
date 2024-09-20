@@ -31,11 +31,11 @@ function ShopHeader() {
     >
       <div className="flex flex-col md:grid md:grid-cols-12 gap-4 md:relative">
         {/* Header section */}
-        <div className="shop-header-section md:col-span-8 max-w-[640px] py-[80px] pb-[64px]">
+        <div className="shop-header-section md:col-span-8 max-w-[640px] py-[80px] pb-[24px] md:pb-[64px]">
           <h1 className="rs-shop-header text-[32px] md:text-[48px] font-semibold leading-[1.0835] tracking-tight inline text-black">
             스토어.
           </h1>
-          <div className="rs-shop-subheader text-[32px] md:text-[48px] font-semibold leading-[1.0835] tracking-tight inline text-gray-500">
+          <div className="rs-shop-subheader text-[32px]  md:text-[48px] font-semibold leading-[1.0835] tracking-tight inline text-gray-500">
             좋아하는 Apple 제품을 구입하는 가장 좋은 방법.
           </div>
         </div>
@@ -73,7 +73,7 @@ function ShopHeader() {
               <div>
                 <div className="font-bold">Apple Store를 방문하세요</div>
                 <div className=" text-blue-400 cursor-pointer hover:underline">
-                  가까운 매장 찾기 
+                  가까운 매장 찾기
                 </div>
               </div>
             </div>
