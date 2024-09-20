@@ -151,11 +151,12 @@ const ShopCardsShelf = () => {
           spaceBetween={20}
           pagination={{ clickable: true }}
           slidesOffsetBefore={slidesOffsetBefore}
+          className="h-[500px] lg:h-[600px]"
         >
           {products.map((product, index) => (
             <SwiperSlide
               key={index}
-              className="lg:p-3 w-[309px] h-[450px] lg:w-[400px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105 hover:shadow-xl"
+              className="lg:p-3 w-[309px] h-[450px] lg:w-[400px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105"
             >
               <div className="rounded-xl">
                 <a href={product.link} className="block">
