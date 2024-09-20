@@ -1,0 +1,48 @@
+/* 메뉴 드롭 애니메이션 */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+/* 메뉴items 점차 나타나는 애니메이션 */
+@keyframes fadeInSequentially {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.menuWrap {
+    position: relative;
+    animation: fadeInDown 0.7s;
+}
+
+
+
+.menuItemWrap {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInSequentially 1s forwards;
+}
+
+.menuItemWrap:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.menuItemWrap:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.menuItemWrap:nth-child(3) {
+    animation-delay: 0.4s;
+}
