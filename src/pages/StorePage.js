@@ -6,12 +6,6 @@ import ShopCardsShelf from "../components/store/ShopCardsShelf";
 import ShopCardsShelf2 from "../components/store/ShopCardsShelf2";
 
 function StorePage() {
-  const { setHeaderBackColor, setHeaderTextColor } = useHeaderColor();
-
-  useEffect(() => {
-    setHeaderBackColor("rgba(22, 22, 23, .8)");
-    setHeaderTextColor("#fff");
-  }, [setHeaderBackColor, setHeaderTextColor]);
 
   const bgStyle = {
     backgroundColor: "#f5f5f7",
