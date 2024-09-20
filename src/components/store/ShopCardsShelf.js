@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css"; // Correct Swiper CSS import
 
@@ -55,61 +55,63 @@ const products = [
 ];
 
 const StoreCardsShelf = () => {
-    return (
-      <div className="rs-cardsshelf rs-productnav-cardsshelf py-10">
-        <Swiper
-          spaceBetween={20}
-          slidesPerView={4}
-          navigation={true}
-          pagination={{ clickable: true }}
-          breakpoints={{
-            // Responsive breakpoints
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 30,
-            },
-          }}
-        >
-          {/* Map over the products array */}
-          {/** Commented out due to the user's request */}
-          {products.map((product, index) => (
-            <SwiperSlide key={index}>
-              <div className="rf-cards-scroller-itemview text-center">
-                <div className="rf-productnav-card-content rounded-[18px] box-border min-w-[136px] overflow-hidden p-[18px_8px_16px]">
-                  <div className="rf-productnav-card-image mb-2">
-                    <img
-                      src={product.imageUrl}
-                      alt={product.title}
-                      className="w-full h-auto object-cover rounded-lg"
-                    />
-                  </div>
-                  <div className="rf-productnav-card-info">
-                    <a
-                      href={product.link}
-                      className="rf-productnav-card-title text-lg font-semibold text-gray-800 hover:text-blue-500"
-                    >
-                      {product.title}
-                    </a>
-                  </div>
+  const [containerStyle, setContainerStyle] = useState({});
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth > 1440) {
+        setContainerStyle({ marginLeft: "140px" });
+      } else if (screenWidth >= 1024 && screenWidth <= 1440) {
+        const marginLeft = `calc(-268.46154px + 28.36538vw)`; // Adjust as needed
+        setContainerStyle({ marginLeft }); // Apply only margin-left dynamically
+      } else {
+        setContainerStyle({ marginLeft: "20px" }); // Default margin-left for smaller screens
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call on component mount
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <div
+      className="min-h-[196px] relative w-auto overflow-x-visible"
+      style={containerStyle} // Apply dynamic margin-left here
+    >
+      <Swiper
+        slidesPerView="auto" // Ensures items take their natural width and overflow as needed
+        spaceBetween={0} // Keep consistent spacing, no dynamic change
+        pagination={{ clickable: true }}
+      >
+        {products.map((product, index) => (
+          <SwiperSlide key={index} style={{ width: "auto" }}>
+            <div className="rf-cards-scroller-itemview text-center">
+              <div className="rf-productnav-card-content rounded-[18px] box-border w-[136px] h-[150px] overflow-hidden p-[18px_8px_16px]">
+                <div className="rf-productnav-card-image mb-2">
+                  <img
+                    src={product.imageUrl}
+                    alt={product.title}
+                    className="w-full h-auto object-cover rounded-lg"
+                  />
+                </div>
+                <div className="rf-productnav-card-info">
+                  <a
+                    href={product.link}
+                    className="rf-productnav-card-title text-lg font-semibold text-gray-800 hover:text-blue-500"
+                  >
+                    {product.title}
+                  </a>
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    );
-  };
-  
-  export default StoreCardsShelf;
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+};
+
+export default StoreCardsShelf;
