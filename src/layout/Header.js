@@ -32,7 +32,7 @@ function Header() {
             </li>
             <li
               onMouseEnter={() => setHoveredMenu("store")}
-              onMouseLeave={() => setHoveredMenu(null)}
+              // onMouseLeave={() => setHoveredMenu(null)}
             >
               <a
                 href="#"
@@ -43,7 +43,7 @@ function Header() {
             </li>
             <li
               onMouseEnter={() => setHoveredMenu("mac")}
-              onMouseLeave={() => setHoveredMenu(null)}
+              // onMouseLeave={() => setHoveredMenu(null)}
             >
               <a
                 href="#"
@@ -54,7 +54,7 @@ function Header() {
             </li>
             <li
               onMouseEnter={() => setHoveredMenu("ipad")}
-              onMouseLeave={() => setHoveredMenu(null)}
+              // onMouseLeave={() => setHoveredMenu(null)}
             >
               <a
                 href="#"
@@ -65,7 +65,7 @@ function Header() {
             </li>
             <li
               onMouseEnter={() => setHoveredMenu("iphone")}
-              onMouseLeave={() => setHoveredMenu(null)}
+              // onMouseLeave={() => setHoveredMenu(null)}
             >
               <a
                 href="#"
@@ -76,7 +76,7 @@ function Header() {
             </li>
             <li
               onMouseEnter={() => setHoveredMenu("watch")}
-              onMouseLeave={() => setHoveredMenu(null)}
+              // onMouseLeave={() => setHoveredMenu(null)}
             >
               <a
                 href="#"
@@ -87,7 +87,7 @@ function Header() {
             </li>
             <li
               onMouseEnter={() => setHoveredMenu("airpods")}
-              onMouseLeave={() => setHoveredMenu(null)}
+              // onMouseLeave={() => setHoveredMenu(null)}
             >
               <a
                 href="#"
@@ -98,7 +98,7 @@ function Header() {
             </li>
             <li
               onMouseEnter={() => setHoveredMenu("tvHome")}
-              onMouseLeave={() => setHoveredMenu(null)}
+              // onMouseLeave={() => setHoveredMenu(null)}
             >
               <a
                 href="#"
@@ -109,7 +109,7 @@ function Header() {
             </li>
             <li
               onMouseEnter={() => setHoveredMenu("entertain")}
-              onMouseLeave={() => setHoveredMenu(null)}
+              // onMouseLeave={() => setHoveredMenu(null)}
             >
               <a
                 href="#"
@@ -120,7 +120,7 @@ function Header() {
             </li>
             <li
               onMouseEnter={() => setHoveredMenu("accessories")}
-              onMouseLeave={() => setHoveredMenu(null)}
+              // onMouseLeave={() => setHoveredMenu(null)}
             >
               <a
                 href="#"
@@ -131,7 +131,7 @@ function Header() {
             </li>
             <li
               onMouseEnter={() => setHoveredMenu("support")}
-              onMouseLeave={() => setHoveredMenu(null)}
+              // onMouseLeave={() => setHoveredMenu(null)}
             >
               <a
                 href="#"
