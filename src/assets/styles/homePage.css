@@ -1,0 +1,107 @@
+/* TODO: sceion 0 */
+.scroll-section {
+    position: relative;
+    padding-top: 55vh;
+
+    /* border: 3px solid red; */
+}
+
+#scroll-section-0 {
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    /* background-color: black; */
+}
+
+
+
+#scroll-section-0 h1 {
+    position: relative;
+    top: -10vh;
+    z-index: 5;
+    font-size: 7rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.main-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 50vh;
+
+    margin: 5px 0;
+    height: 3em;
+    font-size: 4rem;
+    font-weight: 700;
+    opacity: 0;
+}
+
+.main-message p {
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+.sticky-elem {
+    display: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+}
+
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem {
+    display: block;
+}
+
+
+.sticky-elem-canvas {
+    top: 0;
+    /* width: 100%; */
+    height: 100%;
+}
+
+.sticky-elem-canvas canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* width: 100%; */
+    /* height: auto; */
+}
+
+
+/* dddd */
+/* 메뉴items 점차 나타나는 애니메이션 */
+@keyframes fadeInSequentially {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+z .menuWrap {
+    position: relative;
+    animation: fadeInDown 0.7s;
+}
+
+.menuItemWrap {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInSequentially 1s forwards;
+}
+
+.text-wrapper {
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
+    top: 1070vh;
+    width: 100%;
+    /* top: calc(50vh + var(--hw-height) / 2 + var(--copy-offset-y)); */
+}
