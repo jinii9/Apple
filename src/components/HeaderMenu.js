@@ -17,7 +17,7 @@ function HeaderMenu({ hoveredMenu, data }) {
   return (
     <>
       <div
-        className="menuWrap absolute z-10 w-full py-14"
+        className="menuWrap fixed z-40 w-full py-14"
         style={{ backgroundColor: menuBackColor }}
         onMouseLeave={handleMouseLeave}
       >
