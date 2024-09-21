@@ -1,42 +1,71 @@
-import React, { useState } from "react";
-import productImage from "../../assets/images/productdetail/black.jpg";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import truckIcon from "../../assets/images/productdetail/truck_icon.png";
 import shoppingBagIcon from "../../assets/images/productdetail/shopping_icon.png";
 import speechBubbleIcon from "../../assets/images/productdetail/speechbubble_icon.png";
 import bookMarkIcon from "../../assets/images/productdetail/bookmark.svg";
-import thumbNav1 from "../../assets/images/productdetail/black_sm.jpg";
-import thumbNav2 from "../../assets/images/productdetail/white_sm.jpg";
-import thumbNav3 from "../../assets/images/productdetail/bronze_sm.jpg";
-import thumbNav4 from "../../assets/images/productdetail/silver_sm.jpg";
-import thumbNav5 from "../../assets/images/productdetail/front_sm.jpg";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/actions";
 
-function ProductDetailMain() {
-  const [isClicked, setClicked] = useState(false);
+function ProductDetailMain({ product }) {
+  // const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const [mainImage, setMainImage] = useState(product.img[0].url);
 
-  const handleForm = () => {
-    setClicked(!isClicked);
+  // 메인 이미지가 변경되면 리렌더링합니다.
+  useEffect(() => {
+    setMainImage(product.img[0].url);
+  }, [id, product.img]);
+
+  // iPhone 케이스 크기 선택 시 해당 iPhone으로 라우팅합니다.
+  const handleSelectChange = (e) => {
+    const selectedIndex = e.target.value;
+    navigate(`/store/product/${parseInt(selectedIndex) + 1}`);
   };
 
+  // 장바구니에 상품을 추가합니다.
+  // const handleAddToCart = () => {
+  //   dispatch(addToCart(product));
+  // };
+
   return (
-    <div className="w-full tracking-tighter">
+    <div className="w-full">
       <div className="md:my-12 md:p-0 p-6">
         <div className="flex flex-col flex-wrap md:flex-row justify-between max-w-5xl h-full mx-auto px-4">
           <div className="mainLeft flex-col md:w-4/12 order-2 md:order-1">
-            <span className="font-bold text-brown01">New</span>
-            <h1 className="text-3xl font-bold ">
-              MagSafe형 iPhone 16 Pro 투명 케이스
+            <span
+              className={`font-semibold text-brown01 ${
+                product.isNew ? "visible" : "invisible"
+              }`}
+            >
+              New
+            </span>
+            <h1
+              className="font-bold tracking-tighter"
+              style={{ fontSize: "32px", lineHeight: "1.21875" }}
+            >
+              {product.product_name}
             </h1>
-            <div className="price mt-3.5">
-              <span>₩69,000</span>
+            <div
+              className="price mt-3.5 font-normal"
+              style={{ fontSize: "17px" }}
+            >
+              <span>₩{product.price}</span>
             </div>
             <div className="priceFooter pt-2">
-              <a href="#" className="text-blue02 hover:underline">
+              <a
+                href="https://www.apple.com/kr/shop/go/finance?revision=R20240921-1_AUTO_TEST_REVISION"
+                className="text-blue02 hover:underline"
+              >
                 할부 옵션 제공
               </a>
             </div>
             <div className="relative mt-8">
-              <span
-                className="text-[12px] 
+              {product.isSelectable && (
+                <div>
+                  <span
+                    className="text-[12px] 
                 font-normal 
                 tracking-tight 
                 leading-[1.3333733333] 
@@ -49,23 +78,20 @@ function ProductDetailMain() {
                 left-3
                 whitespace-nowrap
                 bg-white px-1"
-              >
-                크기
-              </span>
-              <select
-                onClick={handleForm}
-                name=""
-                id=""
-                className={`rounded-lg w-full pl-4 pt-5 pb-2 pr-10 border cursor-pointer text-lg appearance-none ${
-                  isClicked ? "outline-blue02" : "border-gray-300"
-                }
-        `}
-              >
-                <option>iPhone 16</option>
-                <option>iPhone 16 Plus</option>
-                <option>iPhone 16 Pro</option>
-                <option>iPhone 16 Pro Max</option>
-              </select>
+                  >
+                    크기
+                  </span>
+                  <select
+                    onChange={handleSelectChange}
+                    className={`focus: outline-blue02 rounded-xl w-full pl-4 pt-5 pb-2 pr-10 border border-gray03 cursor-pointer text-lg appearance-none`}
+                  >
+                    <option value={0}>iPhone 16</option>
+                    <option value={1}>iPhone 16 Plus</option>
+                    <option value={2}>iPhone 16 Pro</option>
+                    <option value={3}>iPhone 16 Pro Max</option>
+                  </select>
+                </div>
+              )}
             </div>
             <div
               className="buyFormWrapper border-t mt-8"
@@ -73,14 +99,14 @@ function ProductDetailMain() {
             >
               <div>
                 <div className="flex mt-8">
-                  <span>
+                  <span className="mr-1">
                     <img
                       src={truckIcon}
-                      style={{ width: "25px", height: "25px" }}
+                      style={{ width: "30px", height: "30px" }}
                     />
                   </span>
-                  <div>
-                    <span className="font-bold">출고:</span>
+                  <div className="mt-1.5">
+                    <span>출고:</span>
                     <ul>
                       <li>1 영업일</li>
                       <li>무료 배송</li>
@@ -92,13 +118,13 @@ function ProductDetailMain() {
                 </div>
                 <div>
                   <div className="flex pt-4">
-                    <span>
+                    <span className="mr-1">
                       <img
                         src={shoppingBagIcon}
-                        style={{ width: "25px", height: "25px" }}
+                        style={{ width: "30px", height: "30px" }}
                       />
                     </span>
-                    <div>
+                    <div className="mt-1.5">
                       <span>픽업:</span>
                       <br />
                       <button className="text-blue02 hover:underline">
@@ -108,7 +134,10 @@ function ProductDetailMain() {
                   </div>
                 </div>
                 <div>
-                  <button className="bg-blue02 rounded-lg w-full text-white py-2 px-4 mt-8">
+                  <button
+                    // onClick={handleAddToCart}
+                    className="bg-blue02 active:bg-blue_active rounded-lg w-full text-white py-2 px-4 mt-8 "
+                  >
                     장바구니에 담기
                   </button>
                 </div>
@@ -121,18 +150,17 @@ function ProductDetailMain() {
                     </span>
                   </div>
                   <div className="flex mt-2 items-center">
-                    <span>
+                    <span className="mr-1">
                       <img
                         src={bookMarkIcon}
                         alt=""
                         style={{
-                          width: "18px",
-                          height: "18px",
+                          width: "15px",
+                          height: "15px",
                         }}
                       />
                     </span>
                     <button className=" text-blue02 hover:underline flex justify-center items-center">
-                      {" "}
                       나중을 위해 저장
                     </button>
                   </div>
@@ -146,12 +174,15 @@ function ProductDetailMain() {
                       style={{ width: "25px", height: "25px" }}
                     ></img>
                   </div>
-                  <div className="pl-2">
+                  <div className="pl-2 tracking-tighter">
                     <div className="font-bold">
                       제품 구입에 필요한 도움을 받아보세요.
                     </div>
                     <div style={{ fontSize: "12px" }}>
-                      <a href="#" className="text-blue02 hover:underline">
+                      <a
+                        href="https://contactretail.apple.com/"
+                        className="text-blue02 hover:underline"
+                      >
                         지금 채팅하기{" "}
                       </a>
                       서비스를 이용하거나
@@ -163,60 +194,26 @@ function ProductDetailMain() {
               </div>
             </div>
           </div>
-          <div className="productImage flex-col md:w-7/12 order-1 md:order-2">
+          <div className="mainImage flex-col md:w-7/12 order-1 md:order-2">
             <img
-              src={productImage}
+              src={mainImage}
               alt=""
-              className="md:max-w-xl"
-              //   style={{ height: "572px", width: "572px" }}
+              className="md:max-w-xl transition-opacity duration-300"
+              style={{ opacity: mainImage ? 1 : 0 }}
             />
-            <div className="thumbNavWrapper flex justify-center items-center order-2">
-              <ul className="flex-wrap inline-flex">
-                <li className="hover:border-b-2 pt-4 mr-4">
-                  <button>
-                    <img
-                      src={thumbNav1}
-                      alt=""
-                      style={{ height: "38px", width: "38px" }}
-                    />
-                  </button>
-                </li>
-                <li className="hover:border-b-2 pt-4 mr-4">
-                  <button>
-                    <img
-                      src={thumbNav2}
-                      alt=""
-                      style={{ height: "38px", width: "38px" }}
-                    />
-                  </button>
-                </li>
-                <li className="hover:border-b-2 pt-4 mr-4">
-                  <button>
-                    <img
-                      src={thumbNav3}
-                      alt=""
-                      style={{ height: "38px", width: "38px" }}
-                    />
-                  </button>
-                </li>
-                <li className="hover:border-b-2 pt-4 mr-4">
-                  <button>
-                    <img
-                      src={thumbNav4}
-                      alt=""
-                      style={{ height: "38px", width: "38px" }}
-                    />
-                  </button>
-                </li>
-                <li className="hover:border-b-2 pt-4 mr-4">
-                  <button>
-                    <img
-                      src={thumbNav5}
-                      alt=""
-                      style={{ height: "38px", width: "38px" }}
-                    />
-                  </button>
-                </li>
+            <div className="thumbNavWrapper flex justify-center items-center order-2 py-6 md:py-0 box-border">
+              <ul className="relative flex-wrap inline-flex">
+                {product.img.map((img, index) => (
+                  <li key={index} className="hover:border-b-2 pt-2 mr-4">
+                    <button onClick={() => setMainImage(img.url)}>
+                      <img
+                        src={img.url}
+                        alt=""
+                        style={{ height: "38px", width: "38px" }}
+                      />
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

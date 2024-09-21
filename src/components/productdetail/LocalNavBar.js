@@ -12,7 +12,7 @@ function LocalNavBar() {
   };
 
   return (
-    <>
+    <div className="my-10">
       <div
         onClick={handleMenuToggle}
         className={`w-full h-14 bg-white01 ${
@@ -27,7 +27,7 @@ function LocalNavBar() {
             액세서리
           </a>
           <div className="flex justify-center items-center cursor-pointer">
-            <a href="#" className="text-xs hidden md:flex mr-2.5">
+            <a href="#" className="text-sm hidden md:flex mr-2.5">
               모두 검색
             </a>
             <NavBarIcon
@@ -41,7 +41,7 @@ function LocalNavBar() {
         </div>
       </div>
       {isMenuVisible && <LocalNavMenu isMenuVisible={isMenuVisible} />}
-    </>
+    </div>
   );
 }
 

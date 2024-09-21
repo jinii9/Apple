@@ -20,10 +20,13 @@ function App() {
             <Route index element={<HomePage />} />
             {/* store */}
             <Route path="/store" element={<StorePage />}></Route>
-            {/* detail */}
-            <Route path="/store/detail" element={<ProductDetailPage />}></Route>
+            {/* product-detail */}
+            <Route
+              path="/store/product/:id"
+              element={<ProductDetailPage />}
+            ></Route>
             {/* map */}
-            <Route path="/map" element={<MapPage/>}></Route>
+            <Route path="/map" element={<MapPage />}></Route>
             {/* cart */}
             <Route path="/shop/bag" element={<CartPage />} />
           </Route>
