@@ -94,7 +94,7 @@ function ProductDetailMain({ product }) {
               )}
             </div>
             <div
-              className="buyFormWrapper border-t mt-8"
+              className="buyFormWrap border-t mt-8"
               style={{ fontSize: "14px" }}
             >
               <div>
@@ -194,19 +194,20 @@ function ProductDetailMain({ product }) {
               </div>
             </div>
           </div>
-          <div className="mainImage flex-col md:w-7/12 order-1 md:order-2">
+          <div className="imageWrap flex-col md:w-7/12 order-1 md:order-2">
             <img
               src={mainImage}
               alt=""
               className="md:max-w-xl transition-opacity duration-300"
               style={{ opacity: mainImage ? 1 : 0 }}
             />
-            <div className="thumbNavWrapper flex justify-center items-center order-2 py-6 md:py-0 box-border">
+            <div className="thumbNavWrap flex justify-center items-center order-2 py-6 md:py-0 box-border">
               <ul className="relative flex-wrap inline-flex">
                 {product.img.map((img, index) => (
                   <li key={index} className="hover:border-b-2 pt-2 mr-4">
                     <button onClick={() => setMainImage(img.url)}>
                       <img
+                        className="m-1"
                         src={img.url}
                         alt=""
                         style={{ height: "38px", width: "38px" }}

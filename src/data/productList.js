@@ -17,6 +17,7 @@ export const productList = [
     isNew: true,
     isSelectable: true,
     isMagSafe: true,
+    isiPhone: true,
     img: [
       {
         id: "1",
@@ -61,6 +62,7 @@ export const productList = [
     isNew: true,
     isSelectable: true,
     isMagSafe: true,
+    isiPhone: true,
     img: [
       {
         id: "1",
@@ -101,6 +103,7 @@ export const productList = [
     isNew: true,
     isSelectable: true,
     isMagSafe: true,
+    isiPhone: true,
     img: [
       {
         id: "1",
@@ -141,6 +144,7 @@ export const productList = [
     isNew: true,
     isSelectable: true,
     isMagSafe: true,
+    isiPhone: true,
     img: [
       {
         id: "1",
@@ -197,6 +201,7 @@ export const productList = [
     isNew: true,
     isSelectable: false,
     isMagSafe: true,
+    isiPhone: true,
     img: [
       {
         id: "1",
