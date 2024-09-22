@@ -151,6 +151,7 @@ const ShopCardsShelf = () => {
           spaceBetween={20}
           pagination={{ clickable: true }}
           slidesOffsetBefore={slidesOffsetBefore}
+          slidesOffsetAfter={40}
           className="h-[480px] lg:h-[550px]"
         >
           {products.map((product, index) => (

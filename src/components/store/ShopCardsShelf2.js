@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 
-// Product card data
 const products = [
   {
     eyebrow: "APPLE 스페셜리스트",
@@ -50,7 +49,7 @@ const combinedProducts = [
 const ShopCardsShelf2 = () => {
   const [containerStyle, setContainerStyle] = useState({});
   const [slidesOffsetBefore, setSlidesOffsetBefore] = useState(0);
-  const [isReady, setIsReady] = useState(false); // New state for conditional rendering
+  const [isReady, setIsReady] = useState(false);
 
   const handleResize = () => {
     const screenWidth = window.innerWidth;
@@ -74,9 +73,8 @@ const ShopCardsShelf2 = () => {
   };
 
   useEffect(() => {
-    // Initial call to set the offset
     handleResize();
-    setIsReady(true); // Set Swiper as ready once the initial setup is done
+    setIsReady(true);
 
     window.addEventListener("resize", handleResize);
 
@@ -91,13 +89,14 @@ const ShopCardsShelf2 = () => {
           <span className="text-gray-500">언제든, 당신에게 맞는 방식으로.</span>
         </div>
       </div>
-      {isReady && ( // Conditional rendering based on isReady state
+      {isReady && (
         <div>
           <Swiper
             slidesPerView="auto"
             spaceBetween={20}
             pagination={{ clickable: true }}
             slidesOffsetBefore={slidesOffsetBefore}
+            slidesOffsetAfter={40}
             className="h-[500px] lg:h-[550px]"
           >
             {products.map((product, index) => (
@@ -137,7 +136,6 @@ const ShopCardsShelf2 = () => {
               </SwiperSlide>
             ))}
 
-            {/* Combined products in one SwiperSlide */}
             <SwiperSlide
               key="combined"
               className="lg:p-3 w-[309px] h-[450px] lg:w-[480px] lg:h-[500px]"

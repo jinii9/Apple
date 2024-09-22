@@ -10,7 +10,7 @@ const products = [
       "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1723930332796",
     link: "https://www.apple.com/kr/shop/product/MA7E4FE/A/magsafe%ED%98%95-iphone-16-pro-%ED%88%AC%EB%AA%85-%EC%BC%80%EC%9D%B4%EC%8A%A4",
     badge: "New",
-    colors: [], // No color options provided
+    colors: [], 
   },
   {
     title: "46mm 플럼 스포츠 루프",
@@ -159,7 +159,7 @@ const products = [
       "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX2D3?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1713841707336",
     link: "https://www.apple.com/kr/shop/product/MA7E4FE/A/magsafe%ED%98%95-iphone-16-pro-%ED%88%AC%EB%AA%85-%EC%BC%80%EC%9D%B4%EC%8A%A4",
     badge: "",
-    colors: [], // No color options provided
+    colors: [], 
   },
   {
     title: "iPad Pro 13(M4 모델)용 Magic Keyboard - 한국어 - 블랙",
@@ -210,8 +210,8 @@ const ShopCardsShelf4 = () => {
       setSlidesOffsetBefore(calculatedOffset);
     };
 
-    handleResize(); // Run once on mount
-    setIsReady(true); // Mark as ready after calculating offset
+    handleResize(); 
+    setIsReady(true); 
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
@@ -233,7 +233,8 @@ const ShopCardsShelf4 = () => {
             slidesPerView="auto"
             spaceBetween={20}
             pagination={{ clickable: true }}
-            slidesOffsetBefore={slidesOffsetBefore} // Apply offset after ready
+            slidesOffsetBefore={slidesOffsetBefore} 
+            slidesOffsetAfter={40}
             className="h-[480px] lg:h-[550px]"
           >
             <SwiperSlide className="lg:p-3 w-[309px] h-[450px] lg:w-[400px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105">
@@ -275,7 +276,8 @@ const ShopCardsShelf4 = () => {
                     </div>
                     <div className="rf-ccard-content-info w-full p-4">
                       {/* Swatch colors */}
-                      <div className="flex justify-center mt-3 mb-4">
+                      <div className="flex justify-center items-center mb-4 h-[40px]">
+
                         <ul
                           className="rf-recommcard-content-swatchescontainer flex gap-2"
                           aria-label={`${product.title} 선택 가능한 색상`}

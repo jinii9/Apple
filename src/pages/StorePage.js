@@ -6,6 +6,7 @@ import ShopCardsShelf from "../components/store/ShopCardsShelf";
 import ShopCardsShelf2 from "../components/store/ShopCardsShelf2";
 import ShopCardsShelf3 from "../components/store/ShopCardsShelf3";
 import ShopCardsShelf4 from "../components/store/ShopCardsShelf4";
+import ShopCardsShelf5 from "../components/store/ShopCardsShelf5";
 
 function StorePage() {
 
@@ -34,6 +35,7 @@ function StorePage() {
         <ShopCardsShelf2 />
         <ShopCardsShelf3 />
         <ShopCardsShelf4 />
+        <ShopCardsShelf5 />
       </div>
     </>
   );
