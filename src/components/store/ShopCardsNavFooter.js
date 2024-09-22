@@ -31,17 +31,17 @@ function ShopCardsNavFooter() {
       </div>
 
       {/* 버튼 리스트 */}
-      <div className="flex space-x-4 mt-6">
-        <button className="px-4 py-2 border border-black rounded-full text-sm hover:bg-gray-500 hover:text-white transition duration-300 ease-in-out">
+      <div className="flex flex-nowrap space-x-4 mt-6 overflow-x-auto">
+        <button className="text-xs md:text-sm px-2 md:px-4 py-2 border border-black rounded-full  hover:bg-gray-500 hover:text-white transition duration-300 ease-in-out">
           주문 상태
         </button>
-        <button className="px-4 py-2 border border-black rounded-full text-sm hover:bg-gray-500 hover:text-white transition duration-300 ease-in-out">
+        <button className="text-xs md:text-sm px-2 md:px-4 py-2 border border-black rounded-full  hover:bg-gray-500 hover:text-white transition duration-300 ease-in-out">
           쇼핑 도움말
         </button>
-        <button className="px-4 py-2 border border-black rounded-full text-sm hover:bg-gray-500 hover:text-white transition duration-300 ease-in-out">
+        <button className="text-xs md:text-sm px-3 md:px-4 py-2 border border-black rounded-full  hover:bg-gray-500 hover:text-white transition duration-300 ease-in-out">
           반품
         </button>
-        <button className="px-4 py-2 border border-black rounded-full text-sm hover:bg-gray-500 hover:text-white transition duration-300 ease-in-out">
+        <button className="text-xs md:text-sm px-3 md:px-4 py-2 border border-black rounded-full  hover:bg-gray-500 hover:text-white transition duration-300 ease-in-out">
           관심 목록
         </button>
       </div>
