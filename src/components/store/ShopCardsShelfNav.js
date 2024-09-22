@@ -88,7 +88,7 @@ const StoreCardsShelfNav = () => {
         {products.map((product, index) => (
           <SwiperSlide key={index} style={{ width: "auto" }}>
             <div className="rf-cards-scroller-itemview text-center">
-              <div className="rf-productnav-card-content rounded-[18px] box-border w-[136px] h-[150px] overflow-hidden p-[18px_8px_16px]">
+              <div className="rf-productnav-card-content rounded-[18px] box-border w-[136px] h-[150px] overflow-hidden p-[18px_8px_16px] cursor-pointer">
                 <div className="rf-productnav-card-image mb-2">
                   <img
                     src={product.imageUrl}

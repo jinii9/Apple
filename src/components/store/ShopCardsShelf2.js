@@ -105,7 +105,7 @@ const ShopCardsShelf2 = () => {
                 key={index}
                 className="lg:p-3 w-[309px] h-[450px] lg:w-[480px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105"
               >
-                <div className="rounded-xl h-full w-full relative">
+                <div className="rounded-xl h-full w-full relative shadow-lg">
                   <a href={product.link} className="block h-full w-full">
                     <div className="rf-ccard-img-full-wrapper h-full w-full">
                       <img

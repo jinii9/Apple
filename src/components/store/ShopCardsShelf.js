@@ -158,7 +158,7 @@ const ShopCardsShelf = () => {
               key={index}
               className="lg:p-3 w-[309px] h-[450px] lg:w-[400px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105"
             >
-              <div className="rounded-xl">
+              <div className="rounded-xl shadow-lg">
                 <a href={product.link} className="block">
                   <div className="flex flex-row">
                     <div className="rf-ccard-img-full-wrapper">
