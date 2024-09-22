@@ -4,45 +4,35 @@ import "swiper/swiper-bundle.css";
 
 const products = [
   {
-    eyebrow: "APPLE TV+",
-    header: "매달 새로운 Apple Original 콘텐츠 감상.°",
-    description: "",
+    eyebrow: "교육",
+    header: "교육 할인가로 새로운 iPad 또는 Mac을 더 부담 없이.³",
     imageUrl:
-      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/card-50-instigators-202407_GEO_KR?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1719955830106",
+      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-40-bts-edu-macbook-air-ipad-air-202406?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1716334899885",
     link: "",
+    eyebrowColor: "#1d1d1f",
+    textColor: "#1d1d1f",
+  },
+  {
+    eyebrow: "비즈니스",
+    header: "대기업부터 중소기업까지 Apple이 함께합니다.³",
+    imageUrl:
+      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-card-40-business-202409_GEO_KR?wid=800&hei=1000&fmt=jpeg&qlt=95&.v=1724793636533",
+    link: "",
+    eyebrowColor: "#86868b",
     textColor: "#ffffff",
   },
   {
-    eyebrow: "",
-    header: "네 가지 Apple 서비스. 한 번의 간편한 가입.",
-    description: "",
+    eyebrow: "인증 리퍼비쉬 제품",
+    header: "1년 보증이 제공되는 리퍼비쉬 Apple 제품을 쇼핑하세요.",
     imageUrl:
-      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-50-subscriptions-202108?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1626375547000",
+      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-40-refurb-202408_GEO_KR?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1722037990131",
     link: "",
-    textColor: "#1d1d1f",
-  },
-  {
-    eyebrow: "",
-    header: "보다 오래 안심할 수 있도록.",
-    description:
-      "이제 AppleCare+가 우발적인 손상에 대한 수리 서비스를 횟수 제한 없이 제공합니다.",
-    imageUrl:
-      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-50-applecare-202409?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1723747544269",
-    link: "",
-    textColor: "#1d1d1f",
-  },
-  {
-    eyebrow: "홈",
-    header: "앱 하나로 집안 전체를 관리하는 방법을 알아보세요.  ",
-    description: "",
-    imageUrl:
-      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-50-homekit-202405_GEO_KR?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1715960296048",
-    link: "",
+    eyebrowColor: "#626273",
     textColor: "#1d1d1f",
   },
 ];
 
-const ShopCardsShelf6 = () => {
+const ShopCardsShelf7 = () => {
   const [containerStyle, setContainerStyle] = useState({});
   const [slidesOffsetBefore, setSlidesOffsetBefore] = useState(0);
   const [isReady, setIsReady] = useState(false);
@@ -81,9 +71,9 @@ const ShopCardsShelf6 = () => {
     <>
       <div className="relative w-auto" style={containerStyle}>
         <div className="w-4/5 flex-col text-lg lg:text-2xl font-bold mb-3">
-          <h2 className="inline-block">Apple 경험.</h2>
+          <h2 className="inline-block">특별 할인.</h2>
           <span className="text-gray-500">
-            Apple 제품 및 서비스로 더욱더 많은 걸 누리다.
+            비즈니스, 학교 등을 위한 혜택.
           </span>
         </div>
       </div>
@@ -100,9 +90,9 @@ const ShopCardsShelf6 = () => {
             {products.map((product, index) => (
               <SwiperSlide
                 key={index}
-                className="lg:p-3 w-[309px] h-[450px] lg:w-[480px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105"
+                className="lg:p-3 w-[309px] h-[450px] lg:w-[400px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105"
               >
-                <div className="w-[309px] h-[450px] lg:w-[480px] lg:h-[500px] rounded-xl relative shadow-lg">
+                <div className="w-[309px] h-[450px]  lg:w-[400px] lg:h-[500px] rounded-xl relative shadow-lg">
                   <a href={product.link} className="block h-full w-full">
                     <div className="rf-ccard-img-full-wrapper h-full w-full">
                       <img
@@ -117,7 +107,7 @@ const ShopCardsShelf6 = () => {
                     >
                       {/* eyeborw 조건부 height 조절 */}
                       {product.eyebrow ? (
-                        <p className="text-xs font-bold">{product.eyebrow}</p>
+                        <p className="text-xs font-bold" style={{color:product.eyebrowColor}}>{product.eyebrow}</p>
                       ) : (
                         <div className="h-[20px] md:h-0"></div> 
                       )}
@@ -125,11 +115,6 @@ const ShopCardsShelf6 = () => {
                         <h3 className="text-xl md:text-2xl font-semibold pt-4">
                           {product.header}
                         </h3>
-                      </div>
-                      <div className="rf-ccard-content-desc">
-                        <p className="text-sm pt-3 font-bold text-gray-500">
-                          {product.description}
-                        </p>
                       </div>
                     </div>
                   </a>
@@ -143,4 +128,4 @@ const ShopCardsShelf6 = () => {
   );
 };
 
-export default ShopCardsShelf6;
+export default ShopCardsShelf7;
