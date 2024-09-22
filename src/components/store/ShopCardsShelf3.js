@@ -118,8 +118,8 @@ const ShopCardsShelf3 = () => {
   return (
     <>
       <div className="relative w-auto" style={containerStyle}>
-        <div className="flex text-lg lg:text-2xl font-bold mb-3">
-          <h2>남다른 Apple Store.</h2>
+        <div className="w-full flex-col text-lg lg:text-2xl font-bold mb-3">
+          <h2 className="inline-block">남다른 Apple Store.</h2>
           <span className="text-gray-500">
             이곳에서 쇼핑해야 하는 더욱더 많은 이유.
           </span>
@@ -131,7 +131,7 @@ const ShopCardsShelf3 = () => {
           spaceBetween={20}
           pagination={{ clickable: true }}
           slidesOffsetBefore={slidesOffsetBefore}
-          className="h-[480px] lg:h-[550px]"
+          className="h-[250px] lg:h-[300px]"
         >
           {products.map((product, index) => (
             <SwiperSlide
