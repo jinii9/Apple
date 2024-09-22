@@ -9,6 +9,7 @@ import ShopCardsShelf4 from "../components/store/ShopCardsShelf4";
 import ShopCardsShelf5 from "../components/store/ShopCardsShelf5";
 import ShopCardsShelf6 from "../components/store/ShopCardsShelf6";
 import ShopCardsShelf7 from "../components/store/ShopCardsShelf7";
+import ShopCardsNavFooter from "../components/store/ShopCardsNavFooter";
 
 function StorePage() {
 
@@ -40,6 +41,7 @@ function StorePage() {
         <ShopCardsShelf5 />
         <ShopCardsShelf6 />
         <ShopCardsShelf7 />
+        <ShopCardsNavFooter />
       </div>
     </>
   );
