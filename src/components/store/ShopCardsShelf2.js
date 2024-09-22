@@ -98,7 +98,7 @@ const ShopCardsShelf2 = () => {
             spaceBetween={20}
             pagination={{ clickable: true }}
             slidesOffsetBefore={slidesOffsetBefore}
-            className="h-[500px] lg:h-[600px]"
+            className="h-[500px] lg:h-[550px]"
           >
             {products.map((product, index) => (
               <SwiperSlide
