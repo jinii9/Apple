@@ -1,25 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useResizeHandler } from "../hooks/useResizeHandler";
 
 function ShopCardsNavFooter() {
-  const [containerStyle, setContainerStyle] = useState({});
-
-  useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-
-      if (screenWidth >= 1024 && screenWidth <= 1440) {
-        const marginInline = `calc(-268.46154px + 28.36538vw)`;
-        setContainerStyle({ marginInline });
-      } else {
-        setContainerStyle({}); // 범위를 벗어나면 Reset
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const { containerStyle, slidesOffsetBefore, isReady } = useResizeHandler();
 
   return (
     <div
