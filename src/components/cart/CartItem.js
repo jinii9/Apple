@@ -1,6 +1,8 @@
 import React from "react";
 
-function CartItem() {
+function CartItem({ item }) {
+  console.log(item);
+
   return <div>CartItem</div>;
 }
 

@@ -1,8 +1,11 @@
-import React, { useState } from "react";
-
-const cartItems = [{}];
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import CartItem from "../components/cart/CartItem";
 
 function CartPage() {
+  const cartItems = useSelector((state) => state.cart.carts);
+
   return (
     <>
       {/* container 대신에 max-w-5xl */}
@@ -23,8 +26,13 @@ function CartPage() {
             </div>
           </div>
         </div>
+
         {/* 카트 */}
-        <div className="cartWrap"></div>
+        <div className="cartWrap">
+          {cartItems.map((item) => (
+            <CartItem key={item.id} item={item} />
+          ))}
+        </div>
       </div>
     </>
   );
