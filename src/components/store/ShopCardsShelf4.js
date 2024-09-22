@@ -276,7 +276,7 @@ const ShopCardsShelf4 = () => {
                     </div>
                     <div className="rf-ccard-content-info w-full p-4">
                       {/* Swatch colors */}
-                      <div className="flex justify-center items-center mb-4 h-[40px]">
+                      <div className="flex justify-center items-center mb-4 h-[15px] md:h-[40px]">
 
                         <ul
                           className="rf-recommcard-content-swatchescontainer flex gap-2"
@@ -330,7 +330,7 @@ const ShopCardsShelf4 = () => {
                   </div>
                   <div className="rf-ccard-content-info w-full p-10 absolute text-black">
                     <div className="rf-ccard-content-header">
-                      <h3 className="text-2xl font-semibold pt-4">
+                      <h3 className="text-2xl font-semibold md:pt-4">
                         모든 액세서리를 살펴보세요.
                       </h3>
                     </div>

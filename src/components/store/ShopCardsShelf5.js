@@ -247,7 +247,7 @@ const ShopCardsShelf5 = () => {
                     </div>
                     <div className="rf-ccard-content-info w-full p-4">
                       {/* Swatch colors */}
-                      <div className="flex justify-center items-center mb-4 h-[40px]">
+                      <div className="flex justify-center items-center mb-4 h-[15px] md:h-[40px]">
                         <ul
                           className="rf-recommcard-content-swatchescontainer flex gap-2"
                           aria-label={`${product.title} 선택 가능한 색상`}
