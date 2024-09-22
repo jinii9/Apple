@@ -41,13 +41,15 @@ function CartItem({ item }) {
           {/* 설명1 */}
           <div className="flex">
             <div className="w-[50%] pr-5">
-              <h1 className="font-bold text-2xl ">{item.product_name}</h1>
+              <h1 className="font-bold text-lg md:text-2xl">
+                {item.product_name}
+              </h1>
             </div>
 
             <div className="w-[14%] pl-5">
-              <div className="inline-block relative text-2xl font-bold ">
+              <div className="inline-block relative text-lg md:text-2xl font-bold">
                 <select
-                  className="appearance-none bg-transparent pr-10 cursor-pointer"
+                  className="appearance-none bg-transparent pr-3 md:pr-10 cursor-pointer"
                   value={seletedCnt}
                   onChange={handleSelectChange}
                 >
@@ -64,12 +66,16 @@ function CartItem({ item }) {
                 </select>
 
                 <span className="absolute right-3 transform top-1/2 -translate-y-1/2 pointer-events-none">
-                  <ARROW
-                    width="20"
-                    height="20"
-                    stroke="#0071e3"
-                    strokeWidth="14"
-                  />
+                  <div className="w-2 md:w-5 md:h-5">
+                    <ARROW
+                      width="100%"
+                      height="100%"
+                      // width="20"
+                      // height="20"
+                      stroke="#0071e3"
+                      strokeWidth="14"
+                    />
+                  </div>
                 </span>
               </div>
             </div>
@@ -87,7 +93,10 @@ function CartItem({ item }) {
           </div>
 
           {/* 설명2: 픽업 */}
-          <div className="flex ml-2">
+          <div
+            className="flex ml-2 mt-5 pt-5"
+            style={{ borderTop: "1px solid #D2D2D7" }}
+          >
             <span>
               <CART />
             </span>
