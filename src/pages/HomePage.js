@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useHeaderColor } from "../context/HeaderContext";
 import "../assets/styles/homePage.css";
-import { initScrollAnimation } from "../assets/styles/\banimations/home/main";
+import { initScrollAnimation } from "../assets/styles/animtaions/home/main";
 import { motion } from "framer-motion";
 import { useScrollVideoPlayback } from "../hooks/useScrollVideoPlayback";
 

@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useHeaderColor } from "../context/HeaderContext";
+import React, { useEffect, useRef } from "react";
+import { useHeaderColor, useHeaderMenu } from "../context/HeaderContext";
 import { extractOpacity } from "../utils/colorUtils";
 import "../assets/styles/header.css";
 
@@ -9,11 +9,17 @@ function HeaderMenu({ hoveredMenu, data }) {
 
   const menuItems = data[hoveredMenu] || [];
 
+  const { setHoveredMenu } = useHeaderMenu();
+  const handleMouseLeave = () => {
+    setHoveredMenu(null);
+  };
+
   return (
     <>
       <div
         className="menuWrap fixed z-40 w-full py-14"
         style={{ backgroundColor: menuBackColor }}
+        onMouseLeave={handleMouseLeave}
       >
         <div className="flex gap-12 max-w-5xl mx-auto pt-11">
           {menuItems.length > 0 &&
