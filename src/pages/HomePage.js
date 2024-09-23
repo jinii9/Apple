@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useHeaderColor } from "../context/HeaderContext";
 import "../assets/styles/homePage.css";
 import { initScrollAnimation } from "../assets/styles/animtaions/home/main";
@@ -8,6 +8,7 @@ import { useScrollVideoPlayback } from "../hooks/useScrollVideoPlayback";
 function HomePage() {
   const videoRef1 = useScrollVideoPlayback(0.5);
   const videoRef2 = useScrollVideoPlayback(0.5);
+  const [seletedRatio, setSelectedRatio] = useState("midnight");
 
   useEffect(() => {
     // 이 컴포넌트에서 initScrollAnimation 함수를 호출하여 스크롤 애니메이션을 초기화합니다.
@@ -17,6 +18,11 @@ function HomePage() {
     // 컴포넌트 언마운트 시 클린업 함수 호출
     return cleanup;
   }, []);
+
+  const handleRatioBtn = (option) => {
+    setSelectedRatio(option);
+    console.log(option);
+  };
 
   return (
     <div>
@@ -43,39 +49,6 @@ function HomePage() {
         <div className="sticky-elem sticky-elem-canvas">
           <canvas id="video-canvas-0" width="1920" height="1080"></canvas>
         </div>
-
-        {/* <div className="text-wrapper">
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-            transition={{
-              ease: "easeInOut",
-              duration: 2,
-              y: { duration: 1 },
-            }}
-          >
-            <div className="container mx-auto px-4 md:px-0">
-              <div className="md:mx-24">
-                <h1 className="text-3xl md:text-6xl font-bold mb-8">
-                  날렵하게. 강력하게. M3답게.
-                </h1>
-                <p className="text-base  md:text-xl text-gray01 font-bold">
-                  세상에서 가장 사랑받는 노트북 <strong>MacBook Air</strong>가
-                  <strong>M3 칩</strong>과 만나 한층 강력해졌습니다. 일부터
-                  놀이까지, 무엇이든 가뿐하죠. 최대 18시간의 배터리 사용 시간
-                  <sup>1</sup>과 극강의 휴대성을 자랑하는 MacBook Air와 함께라면
-                  어디서든, 어떤 일이든 너끈히 해낼 수 있습니다.
-                </p>
-                <div className="text-sm font-semibold mt-8">
-                  <span className="text-red-500 mr-1">New</span>
-                  M3 칩 탑재 MacBook Air ₩1,590,000부터 <br />
-                  M2 칩 탑재 MacBook Air ₩1,390,000부터
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div> */}
       </section>
 
       {/* // TODO section 1: 글자 스크롤 + 맥북 비디오 */}
@@ -191,47 +164,87 @@ function HomePage() {
       {/* TODO */}
       <section className="scroll-section pt-10" id="scroll-section-4">
         <div className="max-w-4xl mx-auto px-3 md:px-0">
-          <div className="flex justify-between">
+          <div className="flex flex-wrap gap-10">
             {/* left */}
             <div className="flex flex-col justify-between">
-              <div className="flex justify-center">
+              <div className="flex justify-center bg-[#fbfbfb]">
                 <img
-                  src="/images/home/midnight_notebook3.jpg"
+                  src={`/images/home/${seletedRatio}_notebook3.jpg`}
                   alt=""
-                  // className="w-80"
                 />
               </div>
-              <div className="flex justify-center items-end">
+              <div className="flex justify-center items-end bg-[#fbfbfb]">
                 <img
-                  src="/images/home/midnight_notebook1.jpg"
+                  src={`/images/home/${seletedRatio}_notebook1.jpg`}
                   alt=""
-                  // className="w-80"
                 />
               </div>
             </div>
 
             {/* right */}
-            <div>
+            <div className="flex-1 flex flex-col bg-[#fbfbfb]">
               <div className="flex justify-center">
                 <img
-                  src="/images/home/midnight_notebook2.jpg"
+                  src={`/images/home/${seletedRatio}_notebook2.jpg`}
                   alt=""
                   className="w-64"
                 />
               </div>
-              <div>
-                <ul className="pt-4">
-                  <li className="my-1 py-2">
-                    <label className="flex items-center cursor-pointer">
+              <div className="flex items-center justify-center">
+                <ul className="pt-4 flex  w-2/3">
+                  <li className="flex-1 my-1 py-2">
+                    <label className="flex flex-col items-center cursor-pointer">
+                      <input
+                        type="radio"
+                        name="option"
+                        value="midnight"
+                        onChange={() => handleRatioBtn("midnight")}
+                        className="hidden peer"
+                      />
+                      <span className="w-8 h-8 border border-gray-300 rounded-full bg-[#161617] transition-all peer-checked:shadow-[0_0_0_2px_white,0_0_0_4px_#0071e3]"></span>
+                      <span className="text-xs p-1">미드나이트</span>
+                    </label>
+                  </li>
+                  <li className="flex-1 my-1 py-2">
+                    <label className="flex flex-col items-center cursor-pointer">
                       <input
                         type="radio"
                         name="option"
                         className="hidden peer"
+                        value="starlight"
+                        onChange={() => handleRatioBtn("starlight")}
                       />
-                      {/* <div className="flex flex-col justify"> */}
-                      <span className="w-8 h-8 border border-gray-300 rounded-full bg-[#161617] transition-all peer-checked:shadow-[0_0_0_2px_white,0_0_0_4px_#0071e3]"></span>
-                      <span className="">Option 1</span>
-                      {/* </div> */}
+                      <span className="w-8 h-8 border border-gray-300 rounded-full bg-[#F0E4D3] transition-all peer-checked:shadow-[0_0_0_2px_white,0_0_0_4px_#0071e3]"></span>
+                      <span className="text-xs p-1">스타라이트</span>
+                    </label>
+                  </li>
+                  <li className="flex-1 my-1 py-2">
+                    <label className="flex flex-col items-center cursor-pointer">
+                      <input
+                        type="radio"
+                        name="option"
+                        className="hidden peer"
+                        value="spacegray"
+                        onChange={() => handleRatioBtn("spacegray")}
+                      />
+                      <span className="w-8 h-8 border border-gray-300 rounded-full bg-[#7D7E80] transition-all peer-checked:shadow-[0_0_0_2px_white,0_0_0_4px_#0071e3]"></span>
+                      <span className="text-xs p-1 text-center">
+                        스페이스 <br />
+                        그레이
+                      </span>
+                    </label>
+                  </li>
+                  <li className="flex-1 my-1 py-2">
+                    <label className="flex flex-col items-center cursor-pointer">
+                      <input
+                        type="radio"
+                        name="option"
+                        className="hidden peer"
+                        value="silver"
+                        onChange={() => handleRatioBtn("silver")}
+                      />
+                      <span className="w-8 h-8 border border-gray-300 rounded-full bg-[#E3E4E6] transition-all peer-checked:shadow-[0_0_0_2px_white,0_0_0_4px_#0071e3]"></span>
+                      <span className="text-xs p-1">실버</span>
                     </label>
                   </li>
                 </ul>
