@@ -30,8 +30,8 @@ export const initScrollAnimation = () => {
         videoImages: [],
       },
       values: {
-        videoImageCount: 725,
-        imageSequence: [0, 724],
+        videoImageCount: 364,
+        imageSequence: [0, 364],
         canvas_opacity: [1, 0, { start: 0.9, end: 1 }],
         // in
         messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
