@@ -2,6 +2,7 @@
 .scroll-section {
     position: relative;
     padding-top: 55vh;
+    background-color: white;
 
     /* border: 3px solid red; */
 }
