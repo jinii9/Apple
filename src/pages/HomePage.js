@@ -21,7 +21,6 @@ function HomePage() {
 
   const handleRatioBtn = (option) => {
     setSelectedRatio(option);
-    console.log(option);
   };
 
   return (
@@ -161,19 +160,19 @@ function HomePage() {
         </motion.div>
       </section>
 
-      {/* TODO */}
-      <section className="scroll-section pt-10" id="scroll-section-4">
+      {/* TODO 노트북 색상 변경 */}
+      <section className="scroll-section pt-10 pb-40" id="scroll-section-4">
         <div className="max-w-4xl mx-auto px-3 md:px-0">
-          <div className="flex flex-wrap gap-10">
+          <div className="flex flex-wrap gap-10 justify-center lg:justify-between items-center lg:items-stretch">
             {/* left */}
-            <div className="flex flex-col justify-between">
-              <div className="flex justify-center bg-[#fbfbfb]">
+            <div className="flex flex-col justify-between gap-10">
+              <div className="flex justify-center bg-[#fbfbfb] py-10">
                 <img
                   src={`/images/home/${seletedRatio}_notebook3.jpg`}
                   alt=""
                 />
               </div>
-              <div className="flex justify-center items-end bg-[#fbfbfb]">
+              <div className="flex justify-center items-end bg-[#fbfbfb] py-10">
                 <img
                   src={`/images/home/${seletedRatio}_notebook1.jpg`}
                   alt=""
@@ -182,7 +181,7 @@ function HomePage() {
             </div>
 
             {/* right */}
-            <div className="flex-1 flex flex-col bg-[#fbfbfb]">
+            <div className="max-w-3xl p-10 flex flex-col bg-[#fbfbfb]">
               <div className="flex justify-center">
                 <img
                   src={`/images/home/${seletedRatio}_notebook2.jpg`}
@@ -190,8 +189,8 @@ function HomePage() {
                   className="w-64"
                 />
               </div>
-              <div className="flex items-center justify-center">
-                <ul className="pt-4 flex  w-2/3">
+              <div className="flex">
+                <ul className="pt-4 flex w-full">
                   <li className="flex-1 my-1 py-2">
                     <label className="flex flex-col items-center cursor-pointer">
                       <input
@@ -250,6 +249,11 @@ function HomePage() {
                 </ul>
               </div>
             </div>
+            <p className="text-base  md:text-xl text-gray01 font-bold px-2 lg:px-0">
+              <strong className="text-black">꿈같은 네 가지 컬러. </strong>
+              어떤 선택을 해도 탈지구급. 여기에 MagSafe 충전 케이블도 각각의
+              마감에 맞춘 색상으로 제공되죠.
+            </p>
           </div>
         </div>
       </section>
