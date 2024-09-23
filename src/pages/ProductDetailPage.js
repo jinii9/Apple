@@ -9,7 +9,7 @@ import { productList } from "../data/productList";
 function ProductDetailPage() {
   // URL에서 id를 가져옵니다.
   const { id } = useParams();
-  const product = productList.find((item) => item.id === id);
+  const product = productList.find((item) => item.id === Number(id));
 
   if (!product) {
     return (

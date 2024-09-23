@@ -14,7 +14,7 @@ function LocalNavBar() {
   return (
     <div className="my-11">
       <div
-        className={`w-full h-14 bg-white01 ${
+        className={`w-full h-14 bg-white ${
           isFlipped ? "border-none" : "border-b"
         } border-gray-300`}
       >
