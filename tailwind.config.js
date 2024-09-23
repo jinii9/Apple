@@ -16,6 +16,15 @@ module.exports = {
         gray01: "#6E6E73",
 
       },
+      keyframes: {
+        slideUp: {
+          '10%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        slideUp: 'slideUp 0.7s ease-out',
+      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],
