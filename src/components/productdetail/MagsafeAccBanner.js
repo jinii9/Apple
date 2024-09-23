@@ -11,7 +11,6 @@ function MagsafeAccBanner() {
           src="https://www.apple.com/105/media/ww/iphone/family/2024/cf19f185-dd7e-4350-97ff-e44860713b54/anim/welcome/xlarge_2x.mp4"
         ></video>
       </div>
-
       <div
         className="max-w-5xl px-10 md:p-0 border-b text-center"
         style={{ backgroundColor: "#f5f5f7" }}
