@@ -187,6 +187,59 @@ function HomePage() {
           </div>
         </motion.div>
       </section>
+
+      {/* TODO */}
+      <section className="scroll-section pt-10" id="scroll-section-4">
+        <div className="max-w-4xl mx-auto px-3 md:px-0">
+          <div className="flex justify-between">
+            {/* left */}
+            <div className="flex flex-col justify-between">
+              <div className="flex justify-center">
+                <img
+                  src="/images/home/midnight_notebook3.jpg"
+                  alt=""
+                  // className="w-80"
+                />
+              </div>
+              <div className="flex justify-center items-end">
+                <img
+                  src="/images/home/midnight_notebook1.jpg"
+                  alt=""
+                  // className="w-80"
+                />
+              </div>
+            </div>
+
+            {/* right */}
+            <div>
+              <div className="flex justify-center">
+                <img
+                  src="/images/home/midnight_notebook2.jpg"
+                  alt=""
+                  className="w-64"
+                />
+              </div>
+              <div>
+                <ul className="pt-4">
+                  <li className="my-1 py-2">
+                    <label className="flex items-center cursor-pointer">
+                      <input
+                        type="radio"
+                        name="option"
+                        className="hidden peer"
+                      />
+                      {/* <div className="flex flex-col justify"> */}
+                      <span className="w-8 h-8 border border-gray-300 rounded-full bg-[#161617] transition-all peer-checked:shadow-[0_0_0_2px_white,0_0_0_4px_#0071e3]"></span>
+                      <span className="">Option 1</span>
+                      {/* </div> */}
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
