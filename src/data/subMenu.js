@@ -3,7 +3,7 @@ export const subMenus = {
     {
       Title: "쇼핑하기",
       items: [
-        { menu: "최신 제품 쇼핑하기", link: "/" },
+        { menu: "최신 제품 쇼핑하기", link: "/store" },
         { menu: "Mac", link: "/" },
         { menu: "iPad", link: "/" },
         { menu: "iPhone", link: "/" },
