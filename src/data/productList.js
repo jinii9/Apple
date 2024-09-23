@@ -18,6 +18,8 @@ export const productList = [
     isSelectable: true,
     isMagSafe: true,
     isiPhone: true,
+    badge: "New",
+    colors: [],
     img: [
       {
         id: "1",
@@ -63,6 +65,8 @@ export const productList = [
     isSelectable: true,
     isMagSafe: true,
     isiPhone: true,
+    badge: "New",
+    colors: [],
     img: [
       {
         id: "1",
@@ -104,6 +108,8 @@ export const productList = [
     isSelectable: true,
     isMagSafe: true,
     isiPhone: true,
+    badge: "New",
+    colors: [],
     img: [
       {
         id: "1",
@@ -145,6 +151,8 @@ export const productList = [
     isSelectable: true,
     isMagSafe: true,
     isiPhone: true,
+    badge: "New",
+    colors: [],
     img: [
       {
         id: "1",
@@ -202,6 +210,29 @@ export const productList = [
     isSelectable: false,
     isMagSafe: true,
     isiPhone: true,
+    badge: "New",
+    colors: [
+      {
+        name: "다크 그린",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6Y4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=90&.v=1723690482379",
+      },
+      {
+        name: "블랙",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6W4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=90&.v=1723690482358",
+      },
+      {
+        name: "딥 블루",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6X4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=90&.v=1723690482434",
+      },
+      {
+        name: "블랙베리",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7A4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=90&.v=1723690482371",
+      },
+    ],
     img: [
       {
         id: "1",
@@ -235,6 +266,34 @@ export const productList = [
     isNew: true,
     isSelectable: false,
     isMagSafe: false,
+    badge: "New",
+    colors: [
+      {
+        name: "다크 그린",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7J4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=95&.v=1723690618119",
+      },
+      {
+        name: "블랙",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7G4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=95&.v=1723690617884",
+      },
+      {
+        name: "딥 블루",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7H4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=95&.v=1723690617898",
+      },
+      {
+        name: "샤르트뢰즈",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7L4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=95&.v=1723690617884",
+      },
+      {
+        name: "블랙베리",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7K4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=95&.v=1723690617883",
+      },
+    ],
     img: [
       {
         id: "1",
@@ -301,6 +360,8 @@ export const productList = [
     isNew: false,
     isSelectable: false,
     isMagSafe: false,
+    badge: "",
+    colors: [],
     img: [
       {
         id: "1",
@@ -338,6 +399,8 @@ export const productList = [
     isNew: false,
     isSelectable: false,
     isMagSafe: false,
+    badge: "",
+    colors: [],
     img: [
       {
         id: "1",
@@ -371,6 +434,8 @@ export const productList = [
     isNew: false,
     isSelectable: false,
     isMagSafe: false,
+    badge: "",
+    colors: [],
     img: [
       {
         id: "1",
@@ -406,6 +471,8 @@ export const productList = [
     isNew: false,
     isSelectable: false,
     isMagSafe: false,
+    badge: "",
+    colors: [],
     img: [
       {
         id: "1",
