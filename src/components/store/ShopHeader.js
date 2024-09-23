@@ -26,7 +26,7 @@ function ShopHeader() {
 
   return (
     <div
-      className="mx-[22px] min-h-[196px] relative w-auto lg:mx-[140px]"
+      className="mx-[22px] min-h-[196px] relative w-auto lg:mx-[140px] lg:mt-10"
       style={containerStyle}
     >
       <div className="flex flex-col md:grid md:grid-cols-12 gap-4 md:relative">

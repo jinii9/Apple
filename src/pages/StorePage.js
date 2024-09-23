@@ -4,6 +4,12 @@ import ShopHeader from "../components/store/ShopHeader";
 import ShopCardsShelfNav from "../components/store/ShopCardsShelfNav";
 import ShopCardsShelf from "../components/store/ShopCardsShelf";
 import ShopCardsShelf2 from "../components/store/ShopCardsShelf2";
+import ShopCardsShelf3 from "../components/store/ShopCardsShelf3";
+import ShopCardsShelf4 from "../components/store/ShopCardsShelf4";
+import ShopCardsShelf5 from "../components/store/ShopCardsShelf5";
+import ShopCardsShelf6 from "../components/store/ShopCardsShelf6";
+import ShopCardsShelf7 from "../components/store/ShopCardsShelf7";
+import ShopCardsNavFooter from "../components/store/ShopCardsNavFooter";
 
 function StorePage() {
 
@@ -16,7 +22,8 @@ function StorePage() {
     letterSpacing: 0,
     lineHeight: "1.1875",
     wordBreak: "keep-all",
-    display: "inline",
+    backgroundColor: "#f5f5f7",
+
   };
 
   // 스타일 객체 병합
@@ -29,6 +36,12 @@ function StorePage() {
         <ShopCardsShelfNav />
         <ShopCardsShelf />
         <ShopCardsShelf2 />
+        <ShopCardsShelf3 />
+        <ShopCardsShelf4 />
+        <ShopCardsShelf5 />
+        <ShopCardsShelf6 />
+        <ShopCardsShelf7 />
+        <ShopCardsNavFooter />
       </div>
     </>
   );

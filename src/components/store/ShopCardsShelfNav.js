@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
+import { useResizeHandler } from "../hooks/useResizeHandler";
 
 const products = [
   {
@@ -54,26 +54,7 @@ const products = [
 ];
 
 const StoreCardsShelfNav = () => {
-  const [containerStyle, setContainerStyle] = useState({});
-
-  useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-      if (screenWidth > 1440) {
-        setContainerStyle({ marginLeft: "140px" });
-      } else if (screenWidth >= 1024 && screenWidth <= 1440) {
-        const marginLeft = `calc(-268.46154px + 28.36538vw)`;
-        setContainerStyle({ marginLeft });
-      } else {
-        setContainerStyle({ marginLeft: "20px" });
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const { containerStyle, slidesOffsetBefore, isReady } = useResizeHandler();
 
   return (
     <div
@@ -88,7 +69,7 @@ const StoreCardsShelfNav = () => {
         {products.map((product, index) => (
           <SwiperSlide key={index} style={{ width: "auto" }}>
             <div className="rf-cards-scroller-itemview text-center">
-              <div className="rf-productnav-card-content rounded-[18px] box-border w-[136px] h-[150px] overflow-hidden p-[18px_8px_16px]">
+              <div className="rf-productnav-card-content rounded-[18px] box-border w-[136px] h-[150px] overflow-hidden p-[18px_8px_16px] cursor-pointer">
                 <div className="rf-productnav-card-image mb-2">
                   <img
                     src={product.imageUrl}
