@@ -20,8 +20,8 @@ function ProductAccordion({ product }) {
   useEffect(() => {
     setAccordions({
       description: {
-        isIconFlipped: false,
-        isVisible: false,
+        isIconFlipped: true,
+        isVisible: true,
       },
       compatibility: {
         isIconFlipped: false,
