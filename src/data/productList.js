@@ -1,9 +1,9 @@
 export const productList = [
   /* MagSafe형 iPhone 16 시리즈 투명 케이스 */
   {
-    id: "1",
+    id: 1,
     product_name: `MagSafe형 iPhone 16 투명 케이스`,
-    price: "69,000",
+    price: 69000,
     model_code: "A3243",
     overview: [
       "얇고 가벼운 데다 탁월한 그립감을 선사하는 Apple 제작 투명 케이스는 iPhone 16의 아름다운 색상을 그대로 보여 주면서도 폰을 철저히 보호해 줍니다.",
@@ -15,19 +15,43 @@ export const productList = [
     in_the_box: [`MagSafe형 iPhone 16 투명 케이스`],
     compatible_devices: [`iPhone 16`],
     isNew: true,
+    isSelectable: true,
+    isMagSafe: true,
+    isiPhone: true,
+    badge: "New",
+    colors: [],
+    count: 0,
     img: [
-      { id: "1", url: "../assets/images/iPhone_16_t_case/MA6A4.jpg" },
-      { id: "2", url: "../assets/images/iPhone_16_t_case/MA6A4_AV1.jpg" },
-      { id: "3", url: "../assets/images/iPhone_16_t_case/MA6A4_AV2.jpg" },
-      { id: "4", url: "../assets/images/iPhone_16_t_case/MA6A4_AV3.jpg" },
-      { id: "5", url: "../assets/images/iPhone_16_t_case/MA6A4_AV4.jpg" },
-      { id: "6", url: "../assets/images/iPhone_16_t_case/MA6A4_AV5.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6A4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723935350333",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6A4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723935347103",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6A4_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723935350271",
+      },
+      {
+        id: "4",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6A4_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723935349409",
+      },
+      {
+        id: "5",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6A4_AV4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723935350248",
+      },
+      {
+        id: "6",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6A4_AV5?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1724816185174",
+      },
     ],
   },
   {
-    id: "2",
+    id: 2,
     product_name: `MagSafe형 iPhone 16 Plus 투명 케이스`,
-    price: "69,000",
+    price: 69000,
     model_code: "A3244",
     overview: [
       "얇고 가벼운 데다 탁월한 그립감을 선사하는 Apple 제작 투명 케이스는 iPhone 16 Plus의 아름다운 색상을 그대로 보여 주면서도 폰을 철저히 보호해 줍니다.",
@@ -39,18 +63,39 @@ export const productList = [
     in_the_box: [`MagSafe형 iPhone 16 Plus 투명 케이스`],
     compatible_devices: [`iPhone 16 Plus`],
     isNew: true,
+    isSelectable: true,
+    isMagSafe: true,
+    isiPhone: true,
+    badge: "New",
+    colors: [],
+    count: 0,
     img: [
-      { id: "1", url: "../assets/images/iPhone_16_Plus_t_case/MA7D4.jpg" },
-      { id: "2", url: "../assets/images/iPhone_16_Plus_t_case/MA7D4_AV1.jpg" },
-      { id: "3", url: "../assets/images/iPhone_16_Plus_t_case/MA7D4_AV2.jpg" },
-      { id: "4", url: "../assets/images/iPhone_16_Plus_t_case/MA7D4_AV3.jpg" },
-      { id: "5", url: "../assets/images/iPhone_16_Plus_t_case/MA7D4_AV4.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7D4_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1723162498919",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7D4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1723162498901",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7D4?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1723162499227",
+      },
+      {
+        id: "4",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7D4_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1723162498857",
+      },
+      {
+        id: "5",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7D4_AV4?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1723162498889",
+      },
     ],
   },
   {
-    id: "3",
+    id: 3,
     product_name: `MagSafe형 iPhone 16 Pro 투명 케이스`,
-    price: "69,000",
+    price: 69000,
     model_code: "A3245",
     overview: [
       "얇고 가벼운 데다 탁월한 그립감을 선사하는 Apple 제작 투명 케이스는 iPhone 16 Pro의 아름다운 색상을 그대로 보여 주면서도 폰을 철저히 보호해 줍니다.",
@@ -62,18 +107,39 @@ export const productList = [
     in_the_box: [`MagSafe형 iPhone 16 Pro 투명 케이스`],
     compatible_devices: [`iPhone 16 Pro`],
     isNew: true,
+    isSelectable: true,
+    isMagSafe: true,
+    isiPhone: true,
+    badge: "New",
+    colors: [],
+    count: 0,
     img: [
-      { id: "1", url: "../assets/images/iPhone_16_Pro_t_case/MA7E4.jpg" },
-      { id: "2", url: "../assets/images/iPhone_16_Pro_t_case/MA7E4_AV1.jpg" },
-      { id: "3", url: "../assets/images/iPhone_16_Pro_t_case/MA7E4_AV2.jpg" },
-      { id: "4", url: "../assets/images/iPhone_16_Pro_t_case/MA7E4_AV3.jpg" },
-      { id: "5", url: "../assets/images/iPhone_16_Pro_t_case/MA7E4_AV4.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930332796",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930328706",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930328743",
+      },
+      {
+        id: "4",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930328567",
+      },
+      {
+        id: "5",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1724816499443",
+      },
     ],
   },
   {
-    id: "4",
+    id: 4,
     product_name: `MagSafe형 iPhone 16 Pro Max 투명 케이스`,
-    price: "69,000",
+    price: 69000,
     model_code: "A3246",
     overview: [
       "얇고 가벼운 데다 탁월한 그립감을 선사하는 Apple 제작 투명 케이스는 iPhone 16 Pro Max의 아름다운 색상을 그대로 보여 주면서도 폰을 철저히 보호해 줍니다.",
@@ -85,27 +151,36 @@ export const productList = [
     in_the_box: [`MagSafe형 iPhone 16 Pro Max 투명 케이스`],
     compatible_devices: [`iPhone 16 Pro Max`],
     isNew: true,
+    isSelectable: true,
+    isMagSafe: true,
+    isiPhone: true,
+    badge: "New",
+    colors: [],
+    count: 0,
     img: [
-      { id: "1", url: "../assets/images/iPhone_16_Pro_Max_t_case/MA7F4.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930328567",
+      },
       {
         id: "2",
-        url: "../assets/images/iPhone_16_Pro_Max_t_case/MA7F4_AV1.jpg",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930328706",
       },
       {
         id: "3",
-        url: "../assets/images/iPhone_16_Pro_Max_t_case/MA7F4_AV2.jpg",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930328743",
       },
       {
         id: "4",
-        url: "../assets/images/iPhone_16_Pro_Max_t_case/MA7F4_AV3.jpg",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930332796",
       },
     ],
   },
   /* MagSafe형 iPhone 파인우븐 카드지갑 */
   {
-    id: "5",
+    id: 5,
     product_name: `MagSafe형 iPhone 파인우븐 카드지갑`,
-    price: "85,000",
+    price: 85000,
     model_code: "A3323",
     overview: [
       "멋과 기능을 모두 살려 디자인된 새로운 MagSafe형 iPhone 파인우븐 카드지갑은 당신의 신분증과 신용카드를 간편하게 휴대하기에 딱 좋은 방법입니다. ‘나의 찾기’ 기능까지 지원하기 때문에 카드지갑이 당신의 폰과 분리된 경우, 알림을 받을 수 있죠.**",
@@ -136,37 +211,118 @@ export const productList = [
       "iPhone 12",
     ],
     isNew: true,
+    isSelectable: false,
+    isMagSafe: true,
+    isiPhone: true,
+    badge: "New",
+    colors: [
+      {
+        name: "다크 그린",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6Y4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=90&.v=1723690482379",
+      },
+      {
+        name: "블랙",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6W4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=90&.v=1723690482358",
+      },
+      {
+        name: "딥 블루",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6X4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=90&.v=1723690482434",
+      },
+      {
+        name: "블랙베리",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7A4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=90&.v=1723690482371",
+      },
+    ],
     img: [
-      { id: "1", url: "../assets/images/iPhone_pine_wallet/MA6Y4.jpg" },
-      { id: "2", url: "../assets/images/iPhone_pine_wallet/MA6Y4_AV1.jpg" },
-      { id: "3", url: "../assets/images/iPhone_pine_wallet/MA6Y4_AV2.jpg" },
-      { id: "4", url: "../assets/images/iPhone_pine_wallet/MA6Y4_AV3.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6W4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723573541163",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6W4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723573541537",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6W4_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1724181940844",
+      },
+      {
+        id: "4",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6W4_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1724181940880",
+      },
     ],
   },
   /* AirTag 파인우븐 키링 */
   {
-    id: "6",
+    id: 6,
     product_name: "AirTag 파인우븐 키링",
-    price: "58,000",
+    price: 58000,
     model_code: "A3363",
     overview: [
       "파인우븐 키링은 혁신적인 소재로 섬세하게 제작됩니다. 스테인리스 스틸은 강력한 만큼 근사하고, 견고한 마이크로 트윌 소재는 스웨이드 같은 느낌의 부드러운 질감을 선사하며 68% 포스트 컨슈머(post-consumer) 재활용 원료를 사용하기 때문에 가죽을 사용할 때보다 탄소 배출량을 대폭 감축할 수 있죠. 이 키링은 당신의 AirTag를 빈틈없이 감싸주기 때문에 분리될 염려도 전혀 없습니다. AirTag는 별도로 판매됩니다.",
     ],
     in_the_box: ["AirTag 파인우븐 키링"],
     compatible_devices: [],
+    count: 0,
     isNew: true,
+    isSelectable: false,
+    isMagSafe: false,
+    badge: "New",
+    colors: [
+      {
+        name: "다크 그린",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7J4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=95&.v=1723690618119",
+      },
+      {
+        name: "블랙",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7G4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=95&.v=1723690617884",
+      },
+      {
+        name: "딥 블루",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7H4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=95&.v=1723690617898",
+      },
+      {
+        name: "샤르트뢰즈",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7L4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=95&.v=1723690617884",
+      },
+      {
+        name: "블랙베리",
+        imageUrl:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7K4_SW_COLOR?wid=64&hei=64&fmt=jpeg&qlt=95&.v=1723690617883",
+      },
+    ],
     img: [
-      { id: "1", url: "../assets/images/AirTag_pine_keyring/MA7L4.jpg" },
-      { id: "2", url: "../assets/images/AirTag_pine_keyring/MA7L4_AV1.jpg" },
-      { id: "3", url: "../assets/images/AirTag_pine_keyring/MA7H4.jpg" },
-      { id: "4", url: "../assets/images/AirTag_pine_keyring/MA7H4_AV1.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7K4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723856728623",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7K4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723856728297",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7L4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723856728705",
+      },
+      {
+        id: "4",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7L4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723856728169",
+      },
     ],
   },
   /* 전원 어댑터 */
   {
-    id: "7",
+    id: 7,
     product_name: "20W USB-C 전원 어댑터",
-    price: "28,000",
+    price: 28000,
     model_code: "A2464",
     overview: [
       "Apple 20W USB-C 전원 어댑터는 집이나 사무실에서 혹은 이동 중에 빠르고 효율적으로 충전할 수 있게 해줍니다. iPhone 8 이후 모델과 페어링하면 급속 충전이 가능해 약 30분에 50%까지 충전할 수 있고,¹ iPad Pro 및 iPad Air와 페어링하면 최상의 충전 성능을 구현할 수 있죠. 이 어댑터는 모든 USB-C 지원 기기와 호환됩니다.",
@@ -207,16 +363,30 @@ export const productList = [
       "iPhone 8 Plus",
     ],
     isNew: false,
+    isSelectable: false,
+    isMagSafe: false,
+    badge: "",
+    colors: [],
+    count: 0,
     img: [
-      { id: "1", url: "../assets/images/20w_adaptor/MU822.jpg" },
-      { id: "2", url: "../assets/images/20w_adaptor/MU822_AV1.jpg" },
-      { id: "3", url: "../assets/images/20w_adaptor/MU822_AV2.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MU822?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1542407282469",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MU822_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1542407278345",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MU822_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1544468114955",
+      },
     ],
   },
   {
-    id: "8",
+    id: 8,
     product_name: "240W USB-C 충전 케이블(2m)",
-    price: "45,000",
+    price: 45000,
     model_code: "A2794",
     overview: [
       "양 끝에 USB-C 커넥터가 달린 2m 길이의 이 우븐 디자인 충전 케이블은 USB-C 기기 간 충전, 동기화, 데이터 전송에 알맞은 제품입니다. 최대 240W 출력의 충전을 지원하며 USB 2 속도로 데이터를 전송할 수 있습니다. 이 USB-C 충전 케이블을 호환되는 USB-C 전원 어댑터와 연결하면 벽면 콘센트를 통해 편리하게 기기를 충전할 수 있고, 급속 충전 기능까지 활용할 수 있죠. USB-C 전원 어댑터는 별도로 판매됩니다.",
@@ -233,15 +403,26 @@ export const productList = [
       "iPhone 15 Plus",
     ],
     isNew: false,
+    isSelectable: false,
+    isMagSafe: false,
+    badge: "",
+    colors: [],
+    count: 0,
     img: [
-      { id: "1", url: "../assets/images/240w_cable/MU2G3.jpg" },
-      { id: "2", url: "../assets/images/240w_cable/MU2G3_AV1.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MU2G3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1693236163178",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MU2G3_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1693236162212",
+      },
     ],
   },
   {
-    id: "9",
+    id: 9,
     product_name: "60W USB-C 충전 케이블(1m)",
-    price: "28,000",
+    price: 28000,
     model_code: "A2795",
     overview: [
       "양 끝에 USB-C 커넥터가 달린 1m 길이의 이 우븐 디자인 충전 케이블은 USB-C 기기 간 충전, 동기화, 데이터 전송에 알맞은 제품입니다. 최대 60W 출력의 충전을 지원하며 USB 2 속도로 데이터를 전송할 수 있습니다. 이 USB-C 충전 케이블을 호환되는 USB-C 전원 어댑터와 페어링하면 벽면 콘센트를 통해 편리하게 기기를 충전할 수 있고, 급속 충전 기능의 이점도 누릴 수 있습니다. USB-C 전원 어댑터는 별도로 판매합니다.",
@@ -258,15 +439,26 @@ export const productList = [
       "iPhone 15 Plus",
     ],
     isNew: false,
+    isSelectable: false,
+    isMagSafe: false,
+    badge: "",
+    colors: [],
+    count: 0,
     img: [
-      { id: "1", url: "../assets/images/60w_cable/MQKJ3.jpg" },
-      { id: "2", url: "../assets/images/60w_cable/MQKJ3_AV1.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MQKJ3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1701898734502",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MQKJ3_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1674496556083",
+      },
     ],
   },
   {
-    id: "10",
+    id: 10,
     product_name: "USB-C-Lightning 어댑터",
-    price: "45,000",
+    price: 45000,
     model_code: "A2868",
     overview: [
       "USB-C-Lightning 어댑터는 Lightning 액세서리를 USB-C 지원 iPhone 및 iPad에 연결해 한 개의 어댑터로 충전, 데이터 전송, 오디오 전송 등 세 개의 주요 기능을 손쉽게 이용할 수 있게 해줍니다. 어댑터 케이블의 외피는 편조로 짜여있어 견고함도 자랑합니다.",
@@ -285,10 +477,24 @@ export const productList = [
       "iPhone 15 Plus",
     ],
     isNew: false,
+    isSelectable: false,
+    isMagSafe: false,
+    badge: "",
+    colors: [],
+    count: 0,
     img: [
-      { id: "1", url: "../assets/images/USB-C_adaptor/MUQX3.jpg" },
-      { id: "2", url: "../assets/images/USB-C_adaptor/MUQX3_AV1.jpg" },
-      { id: "3", url: "../assets/images/USB-C_adaptor/MUQX3_AV2.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MUQX3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1692831819729",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MUQX3_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1692831818783",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MUQX3_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1692831819191",
+      },
     ],
   },
 ];
