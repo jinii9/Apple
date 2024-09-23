@@ -3,6 +3,7 @@ import "swiper/swiper-bundle.css";
 import { useResizeHandler } from "../hooks/useResizeHandler";
 import { productList } from "../../data/productList"; // Import the productList
 import { useNavigate } from "react-router-dom"; // React Router's useNavigate
+import { addComma } from "../../utils/priceFormat"
 
 const ShopCardsShelf4 = () => {
   const { containerStyle, slidesOffsetBefore, isReady } = useResizeHandler();
@@ -112,7 +113,7 @@ const ShopCardsShelf4 = () => {
                         </h3>
                       </div>
                       <div className="rf-ccard-content-desc">
-                        <p className="text-sm pt-3">₩{product.price}</p>
+                        <p className="text-sm pt-3">₩{addComma(product.price)}</p>
                       </div>
                     </div>
                   </div>
