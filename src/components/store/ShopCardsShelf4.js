@@ -11,6 +11,7 @@ const ShopCardsShelf4 = () => {
   // Function to handle click event and navigate to product page
   const handleOnClick = (productId) => {
     navigate(`/store/product/${productId}`);
+    window.scroll(0, 0);  // Initialize the scroll position on navigating to product page  
   };
 
   return (
