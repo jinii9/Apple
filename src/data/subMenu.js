@@ -14,7 +14,7 @@ export const subMenus = {
     {
       Title: "빠른 링크",
       items: [
-        { menu: "매장 찾기", link: "/" },
+        { menu: "매장 찾기", link: "/map" },
         { menu: "주문 상태", link: "/" },
         { menu: "Apple Trade In", link: "/" },
         { menu: "할부 방식", link: "/" },
