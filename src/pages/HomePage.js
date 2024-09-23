@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useHeaderColor } from "../context/HeaderContext";
 import "../assets/styles/homePage.css";
 import { initScrollAnimation } from "../assets/styles/animtaions/home/main";
 import { motion } from "framer-motion";
@@ -136,7 +135,7 @@ function HomePage() {
             y: { duration: 1 },
           }}
         >
-          <div className="max-w-4xl mx-auto px-3 md:px-0">
+          <div className="max-w-4xl mx-auto px-3 md:px-0 relative">
             <div className="my-14">
               <video
                 id="video-1"
@@ -147,6 +146,27 @@ function HomePage() {
                 muted
                 autoPlay
               ></video>
+              {/* 텍스트 */}
+              <motion.div
+                className="absolute top-1/2 left-28"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1.1 }} // 딜레이를 추가
+              >
+                <h1 className="font-bold md:text-6xl">34.5cm</h1>
+                <h3 className="font-bold md:text-2xl">디스플레이</h3>
+              </motion.div>
+
+              {/* 텍스트 */}
+              <motion.div
+                className="absolute top-1/2 right-28"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1.1 }} // 딜레이를 추가
+              >
+                <h1 className="font-bold md:text-6xl">38.9cm</h1>
+                <h3 className="font-bold md:text-2xl">디스플레이</h3>
+              </motion.div>
             </div>
             <p className="text-base  md:text-xl text-gray01 font-bold">
               <strong className="text-black">
