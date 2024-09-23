@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { productList } from "../../data/productList";
+import { addComma } from "../../utils/priceFormat";
 
 const PrevArrow = ({ onClick }) => (
   <div
@@ -190,7 +191,7 @@ function RecommandationCarousel() {
                       </a>
                     </h3>
                     <div className="flex justify-center pt-2.5 font-normal">
-                      <span>₩{product.price}</span>
+                      <span>₩{addComma(product.price)}</span>
                     </div>
                   </div>
                 </div>
