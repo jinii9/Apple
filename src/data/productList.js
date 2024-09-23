@@ -1,9 +1,9 @@
 export const productList = [
   /* MagSafe형 iPhone 16 시리즈 투명 케이스 */
   {
-    id: "1",
+    id: 1,
     product_name: `MagSafe형 iPhone 16 투명 케이스`,
-    price: "69,000",
+    price: 69000,
     model_code: "A3243",
     overview: [
       "얇고 가벼운 데다 탁월한 그립감을 선사하는 Apple 제작 투명 케이스는 iPhone 16의 아름다운 색상을 그대로 보여 주면서도 폰을 철저히 보호해 줍니다.",
@@ -20,6 +20,7 @@ export const productList = [
     isiPhone: true,
     badge: "New",
     colors: [],
+    count: 0,
     img: [
       {
         id: "1",
@@ -48,9 +49,9 @@ export const productList = [
     ],
   },
   {
-    id: "2",
+    id: 2,
     product_name: `MagSafe형 iPhone 16 Plus 투명 케이스`,
-    price: "69,000",
+    price: 69000,
     model_code: "A3244",
     overview: [
       "얇고 가벼운 데다 탁월한 그립감을 선사하는 Apple 제작 투명 케이스는 iPhone 16 Plus의 아름다운 색상을 그대로 보여 주면서도 폰을 철저히 보호해 줍니다.",
@@ -67,6 +68,7 @@ export const productList = [
     isiPhone: true,
     badge: "New",
     colors: [],
+    count: 0,
     img: [
       {
         id: "1",
@@ -91,9 +93,9 @@ export const productList = [
     ],
   },
   {
-    id: "3",
+    id: 3,
     product_name: `MagSafe형 iPhone 16 Pro 투명 케이스`,
-    price: "69,000",
+    price: 69000,
     model_code: "A3245",
     overview: [
       "얇고 가벼운 데다 탁월한 그립감을 선사하는 Apple 제작 투명 케이스는 iPhone 16 Pro의 아름다운 색상을 그대로 보여 주면서도 폰을 철저히 보호해 줍니다.",
@@ -110,6 +112,7 @@ export const productList = [
     isiPhone: true,
     badge: "New",
     colors: [],
+    count: 0,
     img: [
       {
         id: "1",
@@ -134,9 +137,9 @@ export const productList = [
     ],
   },
   {
-    id: "4",
+    id: 4,
     product_name: `MagSafe형 iPhone 16 Pro Max 투명 케이스`,
-    price: "69,000",
+    price: 69000,
     model_code: "A3246",
     overview: [
       "얇고 가벼운 데다 탁월한 그립감을 선사하는 Apple 제작 투명 케이스는 iPhone 16 Pro Max의 아름다운 색상을 그대로 보여 주면서도 폰을 철저히 보호해 줍니다.",
@@ -153,6 +156,7 @@ export const productList = [
     isiPhone: true,
     badge: "New",
     colors: [],
+    count: 0,
     img: [
       {
         id: "1",
@@ -174,9 +178,9 @@ export const productList = [
   },
   /* MagSafe형 iPhone 파인우븐 카드지갑 */
   {
-    id: "5",
+    id: 5,
     product_name: `MagSafe형 iPhone 파인우븐 카드지갑`,
-    price: "85,000",
+    price: 85000,
     model_code: "A3323",
     overview: [
       "멋과 기능을 모두 살려 디자인된 새로운 MagSafe형 iPhone 파인우븐 카드지갑은 당신의 신분증과 신용카드를 간편하게 휴대하기에 딱 좋은 방법입니다. ‘나의 찾기’ 기능까지 지원하기 때문에 카드지갑이 당신의 폰과 분리된 경우, 알림을 받을 수 있죠.**",
@@ -254,15 +258,16 @@ export const productList = [
   },
   /* AirTag 파인우븐 키링 */
   {
-    id: "6",
+    id: 6,
     product_name: "AirTag 파인우븐 키링",
-    price: "58,000",
+    price: 58000,
     model_code: "A3363",
     overview: [
       "파인우븐 키링은 혁신적인 소재로 섬세하게 제작됩니다. 스테인리스 스틸은 강력한 만큼 근사하고, 견고한 마이크로 트윌 소재는 스웨이드 같은 느낌의 부드러운 질감을 선사하며 68% 포스트 컨슈머(post-consumer) 재활용 원료를 사용하기 때문에 가죽을 사용할 때보다 탄소 배출량을 대폭 감축할 수 있죠. 이 키링은 당신의 AirTag를 빈틈없이 감싸주기 때문에 분리될 염려도 전혀 없습니다. AirTag는 별도로 판매됩니다.",
     ],
     in_the_box: ["AirTag 파인우븐 키링"],
     compatible_devices: [],
+    count: 0,
     isNew: true,
     isSelectable: false,
     isMagSafe: false,
@@ -315,9 +320,9 @@ export const productList = [
   },
   /* 전원 어댑터 */
   {
-    id: "7",
+    id: 7,
     product_name: "20W USB-C 전원 어댑터",
-    price: "28,000",
+    price: 28000,
     model_code: "A2464",
     overview: [
       "Apple 20W USB-C 전원 어댑터는 집이나 사무실에서 혹은 이동 중에 빠르고 효율적으로 충전할 수 있게 해줍니다. iPhone 8 이후 모델과 페어링하면 급속 충전이 가능해 약 30분에 50%까지 충전할 수 있고,¹ iPad Pro 및 iPad Air와 페어링하면 최상의 충전 성능을 구현할 수 있죠. 이 어댑터는 모든 USB-C 지원 기기와 호환됩니다.",
@@ -362,6 +367,7 @@ export const productList = [
     isMagSafe: false,
     badge: "",
     colors: [],
+    count: 0,
     img: [
       {
         id: "1",
@@ -378,9 +384,9 @@ export const productList = [
     ],
   },
   {
-    id: "8",
+    id: 8,
     product_name: "240W USB-C 충전 케이블(2m)",
-    price: "45,000",
+    price: 45000,
     model_code: "A2794",
     overview: [
       "양 끝에 USB-C 커넥터가 달린 2m 길이의 이 우븐 디자인 충전 케이블은 USB-C 기기 간 충전, 동기화, 데이터 전송에 알맞은 제품입니다. 최대 240W 출력의 충전을 지원하며 USB 2 속도로 데이터를 전송할 수 있습니다. 이 USB-C 충전 케이블을 호환되는 USB-C 전원 어댑터와 연결하면 벽면 콘센트를 통해 편리하게 기기를 충전할 수 있고, 급속 충전 기능까지 활용할 수 있죠. USB-C 전원 어댑터는 별도로 판매됩니다.",
@@ -401,6 +407,7 @@ export const productList = [
     isMagSafe: false,
     badge: "",
     colors: [],
+    count: 0,
     img: [
       {
         id: "1",
@@ -413,9 +420,9 @@ export const productList = [
     ],
   },
   {
-    id: "9",
+    id: 9,
     product_name: "60W USB-C 충전 케이블(1m)",
-    price: "28,000",
+    price: 28000,
     model_code: "A2795",
     overview: [
       "양 끝에 USB-C 커넥터가 달린 1m 길이의 이 우븐 디자인 충전 케이블은 USB-C 기기 간 충전, 동기화, 데이터 전송에 알맞은 제품입니다. 최대 60W 출력의 충전을 지원하며 USB 2 속도로 데이터를 전송할 수 있습니다. 이 USB-C 충전 케이블을 호환되는 USB-C 전원 어댑터와 페어링하면 벽면 콘센트를 통해 편리하게 기기를 충전할 수 있고, 급속 충전 기능의 이점도 누릴 수 있습니다. USB-C 전원 어댑터는 별도로 판매합니다.",
@@ -436,6 +443,7 @@ export const productList = [
     isMagSafe: false,
     badge: "",
     colors: [],
+    count: 0,
     img: [
       {
         id: "1",
@@ -448,9 +456,9 @@ export const productList = [
     ],
   },
   {
-    id: "10",
+    id: 10,
     product_name: "USB-C-Lightning 어댑터",
-    price: "45,000",
+    price: 45000,
     model_code: "A2868",
     overview: [
       "USB-C-Lightning 어댑터는 Lightning 액세서리를 USB-C 지원 iPhone 및 iPad에 연결해 한 개의 어댑터로 충전, 데이터 전송, 오디오 전송 등 세 개의 주요 기능을 손쉽게 이용할 수 있게 해줍니다. 어댑터 케이블의 외피는 편조로 짜여있어 견고함도 자랑합니다.",
@@ -473,6 +481,7 @@ export const productList = [
     isMagSafe: false,
     badge: "",
     colors: [],
+    count: 0,
     img: [
       {
         id: "1",
