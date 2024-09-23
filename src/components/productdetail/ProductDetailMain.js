@@ -5,7 +5,6 @@ import shoppingBagIcon from "../../assets/images/productdetail/shopping_icon.png
 import speechBubbleIcon from "../../assets/images/productdetail/speechbubble_icon.png";
 import bookMarkIcon from "../../assets/images/productdetail/bookmark.svg";
 import { useDispatch } from "react-redux";
-import { addComma } from "../../utils/priceFormat";
 
 function ProductDetailMain({ product }) {
   const dispatch = useDispatch();
@@ -55,7 +54,7 @@ function ProductDetailMain({ product }) {
               className="price mt-3.5 font-normal"
               style={{ fontSize: "17px" }}
             >
-              <span>₩{addComma(product.price)}</span>
+              <span>₩{product.price}</span>
             </div>
             <div className="priceFooter pt-2">
               <a
