@@ -2,9 +2,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { useResizeHandler } from "../hooks/useResizeHandler";
 import { productList } from "../../data/productList"; // Import the productList
+import { useNavigate } from "react-router-dom"; // React Router's useNavigate
 
 const ShopCardsShelf4 = () => {
   const { containerStyle, slidesOffsetBefore, isReady } = useResizeHandler();
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  // Function to handle click event and navigate to product page
+  const handleOnClick = (productId) => {
+    navigate(`/store/product/${productId}`);
+  };
 
   return (
     <>
@@ -26,7 +33,10 @@ const ShopCardsShelf4 = () => {
             slidesOffsetAfter={40}
             className="h-[480px] lg:h-[550px]"
           >
-            <SwiperSlide className="lg:p-3 w-[309px] h-[450px] lg:w-[400px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105">
+            <SwiperSlide
+              className="lg:p-3 w-[309px] h-[450px] lg:w-[400px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105"
+              onClick={() => handleOnClick("special-slide")}
+            >
               <div className="w-[309px] h-[450px] lg:w-[400px] lg:h-[500px]rounded-xl shadow-lg">
                 <div className="flex flex-row">
                   <div className="rf-ccard-img-full-wrapper">
@@ -57,6 +67,7 @@ const ShopCardsShelf4 = () => {
               <SwiperSlide
                 key={product.id}
                 className="lg:p-3 w-[309px] h-[450px] lg:w-[313px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105"
+                onClick={() => handleOnClick(product.id)} // Use handleOnClick on each product
               >
                 <div className="lg:p-3 w-[309px] h-[450px] lg:w-[313px] lg:h-[500px] rounded-xl shadow-lg bg-white">
                   <div className="flex-col pt-10">
