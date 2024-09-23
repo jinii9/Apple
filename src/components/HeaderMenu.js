@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useHeaderColor, useHeaderMenu } from "../context/HeaderContext";
 import { extractOpacity } from "../utils/colorUtils";
 import "../assets/styles/header.css";
+import { Link } from "react-router-dom";
 
 function HeaderMenu({ hoveredMenu, data }) {
   const { headerColor } = useHeaderColor();
@@ -38,7 +39,7 @@ function HeaderMenu({ hoveredMenu, data }) {
                         i === 0 ? "text-2xl" : "text-xs"
                       }`}
                     >
-                      <a href={item.link}>{item.menu}</a>
+                      <Link to={item.link}>{item.menu}</Link>
                     </li>
                   ))}
                 </ul>

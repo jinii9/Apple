@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
+import { useResizeHandler } from "../hooks/useResizeHandler";
 
-// Product card data (based on the HTML structure provided)
 const products = [
   {
     title: "iPhone 16 Pro",
@@ -106,36 +105,7 @@ const products = [
   },
 ];
 const ShopCardsShelf = () => {
-  const [containerStyle, setContainerStyle] = useState({});
-  const [slidesOffsetBefore, setSlidesOffsetBefore] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-      let calculatedMargin;
-      let calculatedOffset;
-
-      if (screenWidth > 1440) {
-        calculatedMargin = "140px";
-        calculatedOffset = 140;
-      } else if (screenWidth >= 1024 && screenWidth <= 1440) {
-        calculatedMargin = `calc(-268.46154px + 28.36538vw)`;
-        const offsetValue = screenWidth * 0.28 - 268.46154;
-        calculatedOffset = Math.max(20, offsetValue);
-      } else {
-        calculatedMargin = "20px";
-        calculatedOffset = 20;
-      }
-
-      setContainerStyle({ marginLeft: calculatedMargin });
-      setSlidesOffsetBefore(calculatedOffset);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const { containerStyle, slidesOffsetBefore, isReady } = useResizeHandler();
 
   return (
     <>
@@ -151,6 +121,7 @@ const ShopCardsShelf = () => {
           spaceBetween={20}
           pagination={{ clickable: true }}
           slidesOffsetBefore={slidesOffsetBefore}
+          slidesOffsetAfter={40}
           className="h-[480px] lg:h-[550px]"
         >
           {products.map((product, index) => (
@@ -158,7 +129,7 @@ const ShopCardsShelf = () => {
               key={index}
               className="lg:p-3 w-[309px] h-[450px] lg:w-[400px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105"
             >
-              <div className="rounded-xl">
+              <div className="rounded-xl shadow-lg">
                 <a href={product.link} className="block">
                   <div className="flex flex-row">
                     <div className="rf-ccard-img-full-wrapper">

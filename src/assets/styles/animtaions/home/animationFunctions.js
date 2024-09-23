@@ -27,11 +27,32 @@ export function setLayout(sceneInfo) {
   document.body.setAttribute("id", `show-scene-${currentScene}`);
 
   // canvas 크기 맞추기
-  // const heightRatio = window.innerHeight / 1080;
-  const heightRatio = window.innerHeight / 1000;
+  const width = window.innerWidth;
+  const height = window.innerHeight;
 
-  sceneInfo[0].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
-  sceneInfo[1].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
+  // canvas의 width와 height를 화면 크기에 맞춤
+  sceneInfo[0].objs.canvas.style.width = `${width}px`;
+  sceneInfo[0].objs.canvas.style.height = `${height}px`;
+
+  sceneInfo[1].objs.canvas.style.width = `${width}px`;
+  sceneInfo[1].objs.canvas.style.height = `${height}px`;
+
+  // canvas의 transform 설정
+  sceneInfo[0].objs.canvas.style.transform = `translate3d(-50%, -50%, 0)`;
+  sceneInfo[1].objs.canvas.style.transform = `translate3d(-50%, -50%, 0)`;
+
+  // 필요시 canvas overflow 속성 설정 (hidden)
+  sceneInfo[0].objs.canvas.style.overflow = "hidden";
+  sceneInfo[1].objs.canvas.style.overflow = "hidden";
+
+  // const width = window.innerWidth;
+  // const height = window.innerHeight;
+  // console.log(width, height);
+  // const widthRatio = width / 1920;
+  // const heightRatio = window.innerHeight / 1080;
+
+  // sceneInfo[0].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${widthRatio})`;
+  // sceneInfo[1].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${widthRatio})`;
 
   return { sceneInfo, currentScene };
 }

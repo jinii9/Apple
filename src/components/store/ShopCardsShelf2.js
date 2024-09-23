@@ -1,78 +1,53 @@
-import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
+import { useResizeHandler } from "../hooks/useResizeHandler";
 
-// Product card data
 const products = [
   {
-    title: "iPhone 16 Pro",
-    description: "궁극의 iPhone.",
-    price: "₩1,550,000부터",
+    eyebrow: "APPLE 스페셜리스트",
+    header: "스페셜리스트와 함께하는 일대일 쇼핑. 온라인에서도 매장에서도.",
+    description: "",
     imageUrl:
       "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-50-specialist-help-202309?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1701194078821",
     link: "",
-    textColor: "#fff",
-  },
-  {
-    title: "Apple Watch Series 10",
-    description: "얇아진 두께. 더 커진 존재감.",
-    price: "₩599,000부터",
-    imageUrl:
-      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-40-watch-s10-202409?wid=800&hei=1000&fmt=jpeg&qlt=90&.v=1724095131742",
-    link: "/kr/shop/buy-watch/apple-watch",
     textColor: "#1d1d1f",
   },
   {
-    title: "iPhone 16",
-    description: "막강한 성능.",
-    price: "₩1,250,000부터",
+    eyebrow: "TODAY AT APPLE",
+    header: "Apple Store의 무료 세션에 참여해 보세요.",
+    description:
+      "최신 기능과 더불어 Apple 기기를 더욱 심도 있게 활용하는 법을 알아보세요.",
     imageUrl:
-      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-40-iphone-16-202409?wid=800&hei=1000&fmt=jpeg&qlt=90&.v=1725661572506",
-    link: "https://www.apple.com/kr/shop/buy-iphone/iphone-16",
-    textColor: "#fff",
+      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-50-TAA-202310?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1697149577145",
+    link: "",
+    textColor: "#1d1d1f",
+  },
+];
+
+const combinedProducts = [
+  {
+    eyebrow: "",
+    header:
+      "무료 온라인 개인 맞춤 세션에서 새 기기를 설정하는 방법을 배워보세요.",
+    description: "",
+    imageUrl:
+      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-25-apps-202108?wid=960&hei=480&fmt=p-jpg&qlt=95&.v=1626223748000",
+    link: "",
+    textColor: "#1d1d1f",
   },
   {
-    title: "Apple Watch Ultra 2",
-    description: "블랙으로 계속되는 전력 질주.",
-    price: "₩1,149,000부터",
+    eyebrow: "",
+    header: "Genius Bar에서 직접 전문가의 도움을 받을 수 있습니다.",
+    description: "",
     imageUrl:
-      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-40-watch-ultra-202409_GEO_KR?wid=800&hei=1000&fmt=jpeg&qlt=90&.v=1725655434794",
-    link: "/kr/shop/buy-watch/apple-watch-ultra",
-    textColor: "#fff",
+      "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-25-genius-202108?wid=960&hei=480&fmt=p-jpg&qlt=95&.v=1626384443000",
+    link: "",
+    textColor: "#1d1d1f",
   },
 ];
 
 const ShopCardsShelf2 = () => {
-  const [containerStyle, setContainerStyle] = useState({});
-  const [slidesOffsetBefore, setSlidesOffsetBefore] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-      let calculatedMargin;
-      let calculatedOffset;
-
-      if (screenWidth > 1440) {
-        calculatedMargin = "140px";
-        calculatedOffset = 140;
-      } else if (screenWidth >= 1024 && screenWidth <= 1440) {
-        calculatedMargin = `calc(-268.46154px + 28.36538vw)`;
-        const offsetValue = screenWidth * 0.28 - 268.46154;
-        calculatedOffset = Math.max(20, offsetValue);
-      } else {
-        calculatedMargin = "20px";
-        calculatedOffset = 20;
-      }
-
-      setContainerStyle({ marginLeft: calculatedMargin });
-      setSlidesOffsetBefore(calculatedOffset);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const { containerStyle, slidesOffsetBefore, isReady } = useResizeHandler();
 
   return (
     <>
@@ -82,48 +57,122 @@ const ShopCardsShelf2 = () => {
           <span className="text-gray-500">언제든, 당신에게 맞는 방식으로.</span>
         </div>
       </div>
-      <div>
-        <Swiper
-          slidesPerView="auto"
-          spaceBetween={20}
-          pagination={{ clickable: true }}
-          slidesOffsetBefore={slidesOffsetBefore}
-          className="h-[500px] lg:h-[600px]"
-        >
-          {products.map((product, index) => (
+      {isReady && (
+        <div>
+          <Swiper
+            slidesPerView="auto"
+            spaceBetween={20}
+            pagination={{ clickable: true }}
+            slidesOffsetBefore={slidesOffsetBefore}
+            slidesOffsetAfter={40}
+            className="h-[500px] lg:h-[550px]"
+          >
+            {products.map((product, index) => (
+              <SwiperSlide
+                key={index}
+                className="lg:p-3 w-[309px] h-[450px] lg:w-[480px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105"
+              >
+                <div className="rounded-xl h-full w-full relative shadow-lg">
+                  <a href={product.link} className="block h-full w-full">
+                    <div className="rf-ccard-img-full-wrapper h-full w-full">
+                      <img
+                        src={product.imageUrl}
+                        alt={product.header}
+                        className="w-full h-full object-cover rounded-xl"
+                      />
+                    </div>
+                    <div
+                      className="rf-ccard-content-info w-full p-4 lg:p-10 absolute top-0"
+                      style={{ color: product.textColor }}
+                    >
+                      <div className="text-xs font-bold text-gray-500">
+                        <p>{product.eyebrow}</p>
+                      </div>
+                      <div className="rf-ccard-content-header">
+                        <h3 className="text-xl font-semibold pt-4">
+                          {product.header}
+                        </h3>
+                      </div>
+                      <div className="rf-ccard-content-desc">
+                        <p className="text-sm pt-3 font-bold">
+                          {product.description}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </SwiperSlide>
+            ))}
+
             <SwiperSlide
-              key={index}
-              className="lg:p-3 w-[309px] h-[450px] lg:w-[480px] lg:h-[500px] rounded-xl transform transition duration-500 lg:hover:scale-105"
+              key="combined"
+              className="lg:p-3 w-[309px] h-[450px] lg:w-[480px] lg:h-[500px]"
             >
-              <div className="rounded-xl h-full w-full relative">
-                <a href={product.link} className="block h-full w-full">
-                  <div className="rf-ccard-img-full-wrapper h-full w-full">
-                    <img
-                      src={product.imageUrl}
-                      alt={product.title}
-                      className="w-full h-full object-cover rounded-xl" // Added object-cover here
-                    />
-                  </div>
-                  <div
-                    className="rf-ccard-content-info w-full p-10 absolute bottom-0"
-                    style={{ color: product.textColor }}
+              <div className="flex flex-col space-y-5 lg:space-y-2">
+                <div className="rounded-xl h-[215px] lg:h-[235px] w-full relative bg-white shadow-lg transform transition duration-500 lg:hover:scale-105">
+                  <a
+                    href={combinedProducts[0].link}
+                    className="block h-full w-full"
                   >
-                    <div className="rf-ccard-content-header">
-                      <h3 className="text-2xl font-semibold pt-4">
-                        {product.title}
-                      </h3>
+                    <div className="rf-ccard-img-full-wrapper h-full w-full">
+                      <img
+                        src={combinedProducts[0].imageUrl}
+                        alt={combinedProducts[0].header}
+                        className="w-full h-full object-cover rounded-xl"
+                      />
                     </div>
-                    <div className="rf-ccard-content-desc">
-                      <p className="text-sm pt-3">{product.description}</p>
-                      <p className="text-sm pt-2">{product.price}</p>
+                    <div
+                      className="rf-ccard-content-info w-full p-4 lg:p-10 absolute top-0"
+                      style={{ color: combinedProducts[0].textColor }}
+                    >
+                      <div className="rf-ccard-content-header">
+                        <h3 className="text-xl font-bold">
+                          {combinedProducts[0].header}
+                        </h3>
+                      </div>
+                      <div className="rf-ccard-content-desc">
+                        <p className="text-sm pt-2">
+                          {combinedProducts[0].description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
+
+                <div className="rounded-xl h-[215px] lg:h-[235px] w-full relative bg-white shadow-lg transform transition duration-500 lg:hover:scale-105">
+                  <a
+                    href={combinedProducts[1].link}
+                    className="block h-full w-full"
+                  >
+                    <div className="rf-ccard-img-full-wrapper h-full w-full">
+                      <img
+                        src={combinedProducts[1].imageUrl}
+                        alt={combinedProducts[1].header}
+                        className="w-full h-full object-cover rounded-xl"
+                      />
+                    </div>
+                    <div
+                      className="rf-ccard-content-info w-3/5 p-4 lg:p-10 absolute top-2"
+                      style={{ color: combinedProducts[1].textColor }}
+                    >
+                      <div className="rf-ccard-content-header">
+                        <h3 className="text-xl font-bold">
+                          {combinedProducts[1].header}
+                        </h3>
+                      </div>
+                      <div className="rf-ccard-content-desc">
+                        <p className="text-sm pt-2">
+                          {combinedProducts[1].description}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
               </div>
             </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+          </Swiper>
+        </div>
+      )}
     </>
   );
 };

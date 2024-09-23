@@ -34,12 +34,12 @@ function Header() {
               onMouseEnter={() => setHoveredMenu("store")}
               // onMouseLeave={() => setHoveredMenu(null)}
             >
-              <a
-                href="#"
+              <Link
+                to="/store"
                 className="hidden md:flex items-center h-full text-xs px-2"
               >
                 스토어
-              </a>
+              </Link>
             </li>
             <li
               onMouseEnter={() => setHoveredMenu("mac")}
@@ -146,17 +146,17 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="#" className="inline-block px-4 md:px-2">
+              <Link to="/shop/bag" className="inline-block px-4 md:px-2">
                 <CART fill={headerColor.textColor} />
-              </a>
+              </Link>
             </li>
             <li className="md:hidden">
-              <a
-                href="#"
+              <Link
+                to=""
                 className="inline-block px-4 md:px-2 flex items-center h-full"
               >
                 <MENU fill={headerColor.textColor} />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
