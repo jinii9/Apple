@@ -15,13 +15,34 @@ export const productList = [
     in_the_box: [`MagSafe형 iPhone 16 투명 케이스`],
     compatible_devices: [`iPhone 16`],
     isNew: true,
+    isSelectable: true,
+    isMagSafe: true,
+    isiPhone: true,
     img: [
-      { id: "1", url: "../assets/images/iPhone_16_t_case/MA6A4.jpg" },
-      { id: "2", url: "../assets/images/iPhone_16_t_case/MA6A4_AV1.jpg" },
-      { id: "3", url: "../assets/images/iPhone_16_t_case/MA6A4_AV2.jpg" },
-      { id: "4", url: "../assets/images/iPhone_16_t_case/MA6A4_AV3.jpg" },
-      { id: "5", url: "../assets/images/iPhone_16_t_case/MA6A4_AV4.jpg" },
-      { id: "6", url: "../assets/images/iPhone_16_t_case/MA6A4_AV5.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6A4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723935350333",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6A4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723935347103",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6A4_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723935350271",
+      },
+      {
+        id: "4",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6A4_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723935349409",
+      },
+      {
+        id: "5",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6A4_AV4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723935350248",
+      },
+      {
+        id: "6",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6A4_AV5?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1724816185174",
+      },
     ],
   },
   {
@@ -39,12 +60,30 @@ export const productList = [
     in_the_box: [`MagSafe형 iPhone 16 Plus 투명 케이스`],
     compatible_devices: [`iPhone 16 Plus`],
     isNew: true,
+    isSelectable: true,
+    isMagSafe: true,
+    isiPhone: true,
     img: [
-      { id: "1", url: "../assets/images/iPhone_16_Plus_t_case/MA7D4.jpg" },
-      { id: "2", url: "../assets/images/iPhone_16_Plus_t_case/MA7D4_AV1.jpg" },
-      { id: "3", url: "../assets/images/iPhone_16_Plus_t_case/MA7D4_AV2.jpg" },
-      { id: "4", url: "../assets/images/iPhone_16_Plus_t_case/MA7D4_AV3.jpg" },
-      { id: "5", url: "../assets/images/iPhone_16_Plus_t_case/MA7D4_AV4.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7D4_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1723162498919",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7D4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1723162498901",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7D4?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1723162499227",
+      },
+      {
+        id: "4",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7D4_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1723162498857",
+      },
+      {
+        id: "5",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7D4_AV4?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1723162498889",
+      },
     ],
   },
   {
@@ -62,12 +101,30 @@ export const productList = [
     in_the_box: [`MagSafe형 iPhone 16 Pro 투명 케이스`],
     compatible_devices: [`iPhone 16 Pro`],
     isNew: true,
+    isSelectable: true,
+    isMagSafe: true,
+    isiPhone: true,
     img: [
-      { id: "1", url: "../assets/images/iPhone_16_Pro_t_case/MA7E4.jpg" },
-      { id: "2", url: "../assets/images/iPhone_16_Pro_t_case/MA7E4_AV1.jpg" },
-      { id: "3", url: "../assets/images/iPhone_16_Pro_t_case/MA7E4_AV2.jpg" },
-      { id: "4", url: "../assets/images/iPhone_16_Pro_t_case/MA7E4_AV3.jpg" },
-      { id: "5", url: "../assets/images/iPhone_16_Pro_t_case/MA7E4_AV4.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930332796",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930328706",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930328743",
+      },
+      {
+        id: "4",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930328567",
+      },
+      {
+        id: "5",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1724816499443",
+      },
     ],
   },
   {
@@ -85,19 +142,25 @@ export const productList = [
     in_the_box: [`MagSafe형 iPhone 16 Pro Max 투명 케이스`],
     compatible_devices: [`iPhone 16 Pro Max`],
     isNew: true,
+    isSelectable: true,
+    isMagSafe: true,
+    isiPhone: true,
     img: [
-      { id: "1", url: "../assets/images/iPhone_16_Pro_Max_t_case/MA7F4.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930328567",
+      },
       {
         id: "2",
-        url: "../assets/images/iPhone_16_Pro_Max_t_case/MA7F4_AV1.jpg",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930328706",
       },
       {
         id: "3",
-        url: "../assets/images/iPhone_16_Pro_Max_t_case/MA7F4_AV2.jpg",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930328743",
       },
       {
         id: "4",
-        url: "../assets/images/iPhone_16_Pro_Max_t_case/MA7F4_AV3.jpg",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7E4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930332796",
       },
     ],
   },
@@ -136,11 +199,26 @@ export const productList = [
       "iPhone 12",
     ],
     isNew: true,
+    isSelectable: false,
+    isMagSafe: true,
+    isiPhone: true,
     img: [
-      { id: "1", url: "../assets/images/iPhone_pine_wallet/MA6Y4.jpg" },
-      { id: "2", url: "../assets/images/iPhone_pine_wallet/MA6Y4_AV1.jpg" },
-      { id: "3", url: "../assets/images/iPhone_pine_wallet/MA6Y4_AV2.jpg" },
-      { id: "4", url: "../assets/images/iPhone_pine_wallet/MA6Y4_AV3.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6W4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723573541163",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6W4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723573541537",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6W4_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1724181940844",
+      },
+      {
+        id: "4",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA6W4_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1724181940880",
+      },
     ],
   },
   /* AirTag 파인우븐 키링 */
@@ -155,11 +233,25 @@ export const productList = [
     in_the_box: ["AirTag 파인우븐 키링"],
     compatible_devices: [],
     isNew: true,
+    isSelectable: false,
+    isMagSafe: false,
     img: [
-      { id: "1", url: "../assets/images/AirTag_pine_keyring/MA7L4.jpg" },
-      { id: "2", url: "../assets/images/AirTag_pine_keyring/MA7L4_AV1.jpg" },
-      { id: "3", url: "../assets/images/AirTag_pine_keyring/MA7H4.jpg" },
-      { id: "4", url: "../assets/images/AirTag_pine_keyring/MA7H4_AV1.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7K4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723856728623",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7K4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723856728297",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7L4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723856728705",
+      },
+      {
+        id: "4",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MA7L4_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723856728169",
+      },
     ],
   },
   /* 전원 어댑터 */
@@ -207,10 +299,21 @@ export const productList = [
       "iPhone 8 Plus",
     ],
     isNew: false,
+    isSelectable: false,
+    isMagSafe: false,
     img: [
-      { id: "1", url: "../assets/images/20w_adaptor/MU822.jpg" },
-      { id: "2", url: "../assets/images/20w_adaptor/MU822_AV1.jpg" },
-      { id: "3", url: "../assets/images/20w_adaptor/MU822_AV2.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MU822?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1542407282469",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MU822_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1542407278345",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MU822_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1544468114955",
+      },
     ],
   },
   {
@@ -233,9 +336,17 @@ export const productList = [
       "iPhone 15 Plus",
     ],
     isNew: false,
+    isSelectable: false,
+    isMagSafe: false,
     img: [
-      { id: "1", url: "../assets/images/240w_cable/MU2G3.jpg" },
-      { id: "2", url: "../assets/images/240w_cable/MU2G3_AV1.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MU2G3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1693236163178",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MU2G3_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1693236162212",
+      },
     ],
   },
   {
@@ -258,9 +369,17 @@ export const productList = [
       "iPhone 15 Plus",
     ],
     isNew: false,
+    isSelectable: false,
+    isMagSafe: false,
     img: [
-      { id: "1", url: "../assets/images/60w_cable/MQKJ3.jpg" },
-      { id: "2", url: "../assets/images/60w_cable/MQKJ3_AV1.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MQKJ3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1701898734502",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MQKJ3_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1674496556083",
+      },
     ],
   },
   {
@@ -285,10 +404,21 @@ export const productList = [
       "iPhone 15 Plus",
     ],
     isNew: false,
+    isSelectable: false,
+    isMagSafe: false,
     img: [
-      { id: "1", url: "../assets/images/USB-C_adaptor/MUQX3.jpg" },
-      { id: "2", url: "../assets/images/USB-C_adaptor/MUQX3_AV1.jpg" },
-      { id: "3", url: "../assets/images/USB-C_adaptor/MUQX3_AV2.jpg" },
+      {
+        id: "1",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MUQX3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1692831819729",
+      },
+      {
+        id: "2",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MUQX3_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1692831818783",
+      },
+      {
+        id: "3",
+        url: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MUQX3_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1692831819191",
+      },
     ],
   },
 ];
