@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { addComma } from "../../utils/priceFormat";
 
 function CartItem({ item }) {
-  const imageUrl = require("../../assets/images/iPhone_16_t_case/MA6A4.jpg");
   const dispatch = useDispatch();
   const [seletedCnt, setSelectedCnt] = useState(1);
 
@@ -31,7 +30,7 @@ function CartItem({ item }) {
         <div className="max-w-[203px] flex-1">
           <img
             className="w-full h-full object-cover"
-            src={imageUrl}
+            src={item.img[0].url}
             alt="상품 이미지"
           />
         </div>

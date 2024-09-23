@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 /** 장바구니가 비어 있을 경우 */
 function EmptyCart() {
+  const navigate = useNavigate();
   return (
     <div className="mx-3">
       <div className="flex flex-col items-start">
@@ -13,7 +15,12 @@ function EmptyCart() {
         </p>
       </div>
       <div className="mt-8">
-        <button className="py-4 px-36 border border-blue01 rounded-xl text-blue01">
+        <button
+          className="py-4 px-36 border border-blue01 rounded-xl text-blue01"
+          onClick={() => {
+            navigate("/store");
+          }}
+        >
           쇼핑 계속하기
         </button>
       </div>

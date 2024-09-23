@@ -20,7 +20,7 @@ export const productList = [
     isiPhone: true,
     badge: "New",
     colors: [],
-    count: 0,
+    count: 1,
     img: [
       {
         id: "1",
@@ -68,7 +68,7 @@ export const productList = [
     isiPhone: true,
     badge: "New",
     colors: [],
-    count: 0,
+    count: 1,
     img: [
       {
         id: "1",
@@ -112,7 +112,7 @@ export const productList = [
     isiPhone: true,
     badge: "New",
     colors: [],
-    count: 0,
+    count: 1,
     img: [
       {
         id: "1",
@@ -156,7 +156,7 @@ export const productList = [
     isiPhone: true,
     badge: "New",
     colors: [],
-    count: 0,
+    count: 1,
     img: [
       {
         id: "1",
@@ -180,6 +180,7 @@ export const productList = [
   {
     id: 5,
     product_name: `MagSafe형 iPhone 파인우븐 카드지갑`,
+    count: 1,
     price: 85000,
     model_code: "A3323",
     overview: [
@@ -267,7 +268,7 @@ export const productList = [
     ],
     in_the_box: ["AirTag 파인우븐 키링"],
     compatible_devices: [],
-    count: 0,
+    count: 1,
     isNew: true,
     isSelectable: false,
     isMagSafe: false,
@@ -323,6 +324,7 @@ export const productList = [
     id: 7,
     product_name: "20W USB-C 전원 어댑터",
     price: 28000,
+    count: 1,
     model_code: "A2464",
     overview: [
       "Apple 20W USB-C 전원 어댑터는 집이나 사무실에서 혹은 이동 중에 빠르고 효율적으로 충전할 수 있게 해줍니다. iPhone 8 이후 모델과 페어링하면 급속 충전이 가능해 약 30분에 50%까지 충전할 수 있고,¹ iPad Pro 및 iPad Air와 페어링하면 최상의 충전 성능을 구현할 수 있죠. 이 어댑터는 모든 USB-C 지원 기기와 호환됩니다.",
@@ -367,7 +369,6 @@ export const productList = [
     isMagSafe: false,
     badge: "",
     colors: [],
-    count: 0,
     img: [
       {
         id: "1",
@@ -407,7 +408,7 @@ export const productList = [
     isMagSafe: false,
     badge: "",
     colors: [],
-    count: 0,
+    count: 1,
     img: [
       {
         id: "1",
@@ -443,7 +444,7 @@ export const productList = [
     isMagSafe: false,
     badge: "",
     colors: [],
-    count: 0,
+    count: 1,
     img: [
       {
         id: "1",
@@ -481,7 +482,7 @@ export const productList = [
     isMagSafe: false,
     badge: "",
     colors: [],
-    count: 0,
+    count: 1,
     img: [
       {
         id: "1",

@@ -5,10 +5,9 @@ import shoppingBagIcon from "../../assets/images/productdetail/shopping_icon.png
 import speechBubbleIcon from "../../assets/images/productdetail/speechbubble_icon.png";
 import bookMarkIcon from "../../assets/images/productdetail/bookmark.svg";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../redux/actions";
 
 function ProductDetailMain({ product }) {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const { id } = useParams();
   const [mainImage, setMainImage] = useState(product.img[0].url);
@@ -25,9 +24,13 @@ function ProductDetailMain({ product }) {
   };
 
   // 장바구니에 상품을 추가합니다.
-  // const handleAddToCart = () => {
-  //   dispatch(addToCart(product));
-  // };
+  const handleAddToCart = () => {
+    // console.log(product);
+    dispatch({
+      type: "ADD_ITEM",
+      payload: product,
+    });
+  };
 
   return (
     <div className="w-full">
@@ -135,7 +138,7 @@ function ProductDetailMain({ product }) {
                 </div>
                 <div>
                   <button
-                    // onClick={handleAddToCart}
+                    onClick={handleAddToCart}
                     className="bg-blue02 active:bg-blue_active rounded-lg w-full text-white py-2 px-4 mt-8 "
                   >
                     장바구니에 담기
